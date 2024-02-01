@@ -1,0 +1,14 @@
+nav{
+    width: 100%;
+    @include between;
+    align-items: center;
+    padding:20px 0;
+    background-color: $toastify-color-dark;
+    i{
+        color: $toastify-text-color-info;
+    }
+    .center{
+        @include center;
+        gap: 10px;
+    }
+}
