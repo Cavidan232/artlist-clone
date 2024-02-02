@@ -71,6 +71,10 @@ nav .center li a {
   font-size: 18px;
   font-weight: 600;
 }
+nav .list2 {
+  display: none;
+  font-size: 20px;
+}
 nav .right {
   display: flex;
   align-items: center;
@@ -97,7 +101,81 @@ nav .right button:hover {
   nav .center {
     display: none;
   }
+  nav button {
+    display: none;
+  }
+  nav .right {
+    display: none;
+  }
+  nav .bi-list {
+    display: none;
+  }
+  nav .list2 {
+    display: block;
+  }
 }
+.nav2 {
+  position: fixed;
+  min-height: 100vh;
+  background-color: #121213;
+  width: 100%;
+  z-index: 10000000000000000000000;
+  transform: translateX(100%);
+  transition: all 0.2s ease-in;
+  flex-direction: column;
+  padding: 60px 0;
+  gap: 30px;
+}
+.nav2 .bi-x {
+  position: absolute;
+  font-size: 30px;
+  color: #fff;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.nav2 .button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+.nav2 .button button {
+  width: 130px;
+  padding: 10px;
+  font-weight: 600;
+  border-radius: 20px;
+  font-size: 15px;
+}
+.nav2 .button button:nth-child(1) {
+  background-color: #ffda2a;
+  transition: all 0.5s ease;
+}
+.nav2 .button button:nth-child(1):hover {
+  filter: brightness(50%);
+}
+.nav2 .button button:nth-child(2) {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+  transition: all 0.5s ease;
+}
+.nav2 .button button:nth-child(2):hover {
+  background-color: #fff;
+  color: #000;
+}
+.nav2 ul li {
+  width: 100%;
+}
+.nav2 ul li a {
+  color: #fff;
+  font-size: 25px;
+}
+
+.menu-open {
+  transform: translateX(0);
+}
+
 .section1 {
   width: 100%;
   min-height: 100vh;
@@ -114,6 +192,45 @@ nav .right button:hover {
   justify-content: center;
   flex-direction: column;
   gap: 260px;
+  position: relative;
+}
+.section1 .section11 .imag1 {
+  top: 50px;
+  left: 50px;
+}
+.section1 .section11 .imag1:hover {
+  transform: translate(-10px, -10px);
+}
+.section1 .section11 .imag2 {
+  bottom: 50px;
+  left: 5px;
+}
+.section1 .section11 .imag2:hover {
+  transform: translate(-10px, 10px);
+}
+.section1 .section11 .imag3 {
+  top: 50px;
+  right: 50px;
+}
+.section1 .section11 .imag3:hover {
+  transform: translate(10px, -10px);
+}
+.section1 .section11 .imag4 {
+  bottom: 50px;
+  right: 50px;
+}
+.section1 .section11 .imag4:hover {
+  transform: translate(10px, 10px);
+}
+.section1 .section11 .imag {
+  width: 15%;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+.section1 .section11 .imag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .section1 .section11 .hidden {
   display: flex;
@@ -166,7 +283,7 @@ nav .right button:hover {
 }
 .section1 .section11 .text h1 {
   font-size: 57px;
-  color: rgb(255, 218, 42);
+  color: #F7BF53;
 }
 .section1 .section11 .text p {
   color: #fff;
@@ -185,7 +302,13 @@ nav .right button:hover {
 
 @media screen and (max-width: 991px) {
   .section1 {
-    min-height: 50vh;
+    min-height: 100vh;
+  }
+  .section1 .section11 {
+    gap: 100pX;
+  }
+  .section1 .section11 .imag {
+    display: none;
   }
   .section1 .section11 .center {
     opacity: 1;
@@ -551,7 +674,7 @@ nav .right button:hover {
   width: 100%;
   flex-direction: column;
   text-align: center;
-  color: #fff;
+  color: #F7BF53;
   gap: 20px;
 }
 .section5 .section51 .text button {
@@ -964,6 +1087,10 @@ footer .top .right ul li a:hover {
   .plugin2 .plugin21 .top {
     width: 100%;
   }
+  .plugin2 .plugin21 .comp ul {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 }
 .app {
   width: 100%;
@@ -1120,6 +1247,7 @@ footer .top .right ul li a:hover {
   .app2 .app21 .top p {
     width: 100%;
     text-align: center;
+    font-size: 20px;
   }
   .app2 .app21 .cart {
     flex-direction: column;
@@ -1253,6 +1381,7 @@ footer .top .right ul li a:hover {
   .app3 .app31 .top p {
     width: 100%;
     text-align: center;
+    font-size: 25px;
   }
   .app3 .app31 .cart {
     flex-direction: column;
@@ -1277,5 +1406,106 @@ footer .top .right ul li a:hover {
   .app3 .app31 .cart2 .image {
     width: 100%;
     order: 2;
+  }
+}
+.music1 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 200px;
+  background-image: url(../image/music-homepage-banner-1280.jpg);
+}
+.music1 .music11 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  gap: 200px;
+}
+.music1 .music11 .bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.music1 .music11 .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 40px;
+}
+.music1 .music11 .top .text {
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-direction: column;
+}
+.music1 .music11 .top .text h1 {
+  font-size: 50px;
+  color: #F7BF53;
+  font-weight: 600;
+}
+.music1 .music11 .top .text .button {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.music1 .music11 .top .text .button :nth-child(1) {
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-weight: 600;
+  background-color: #ffda2a;
+  transition: all 0.5s ease;
+  filter: brightness(100%);
+}
+.music1 .music11 .top .text .button :nth-child(1):hover {
+  filter: brightness(50%);
+}
+.music1 .music11 .top .text .button :nth-child(2) {
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-weight: 600;
+  background-color: transparent;
+  border: 1px solid #fff;
+  transition: all 0.5s ease;
+  color: #fff;
+}
+.music1 .music11 .top .text .button :nth-child(2):hover {
+  background-color: #fff;
+  color: #000;
+}
+
+@media screen and (max-width: 776px) {
+  .music1 {
+    padding: 40px 0;
+  }
+  .music1 .music11 .top {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .music1 .music11 .top .text {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .music1 .music11 .top .text h1 {
+    font-size: 30px;
+  }
+  .music1 .music11 .top .text .button {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }/*# sourceMappingURL=style.css.map */

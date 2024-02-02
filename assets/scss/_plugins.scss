@@ -201,6 +201,12 @@ h1{
             .top{
                 width: 100%;
             }
+            .comp{
+                ul{
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                }
+            }
         }
     }
 }

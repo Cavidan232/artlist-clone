@@ -33,3 +33,30 @@ plusbtn.forEach((plsbtn,index)=>{
         }
     });
 })
+
+let list2Icon = document.querySelector('.list2');
+let nav2 = document.querySelector('.nav2');
+
+list2Icon.addEventListener("click",()=>{
+    if (nav2.style.transform === "translateX(100%)") {
+        nav2.style.transform = "translateX(0)"
+    }
+    else{
+        nav2.style.transform = "translateX(100%)"
+    }
+})
+
+let xicon= document.querySelector(".bi-x");
+xicon.addEventListener("click",()=>{
+
+        nav2.style.transform = "translateX(100%)"
+   
+  
+})
+
+window.addEventListener("resize",()=>{
+    if (window.innerWidth >991) {
+        nav2.style.transform = "translateX(100%)"
+        
+    }
+})

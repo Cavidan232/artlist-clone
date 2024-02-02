@@ -11,6 +11,46 @@
         @include center;
         flex-direction: column;
         gap: 260px;
+        position: relative;
+        .imag1{
+            top: 50px;
+            left: 50px;
+            &:hover{
+                transform: translate(-10px, -10px);
+            }
+        }
+        .imag2{
+            bottom: 50px;
+            left: 5px;
+            &:hover{
+                transform: translate(-10px, 10px);
+            }
+        }
+        .imag3{
+            top: 50px;
+            right: 50px;
+            &:hover{
+                transform: translate(10px, -10px);
+            }
+        }
+        .imag4{
+            bottom: 50px;
+            right: 50px;
+            &:hover{
+                transform: translate(10px, 10px);
+            }
+        }
+        .imag{
+           width: 15%;
+            position: absolute;
+            transition: all 0.5s ease;
+            
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
         .hidden {
             @include center;
             flex-direction: column;
@@ -55,7 +95,7 @@
             text-align: center;
             h1 {
                 font-size: 57px;
-                color: $colors-orange-500;
+                color: #F7BF53;
             }
             p {
                 color: $toastify-color-light;
@@ -77,8 +117,12 @@
 
 @media screen and (max-width: 991px) {
     .section1 {
-        min-height: 50vh;
+        min-height: 100vh;
         .section11 {
+            gap: 100pX;
+            .imag{
+                display: none;
+            }
             .center {
                 opacity: 1;
                 a {
@@ -425,7 +469,7 @@
             width: 100%;
             flex-direction: column;
             text-align: center;
-            color: #fff;
+            color: #F7BF53;
             gap: 20px;
 
             button {
