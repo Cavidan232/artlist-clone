@@ -2,13 +2,55 @@ nav{
     width: 100%;
     @include between;
     align-items: center;
-    padding:20px 0;
+    position: fixed;
+    z-index: 12345;
+    padding:10px 5px;
     background-color: $toastify-color-dark;
     i{
         color: $toastify-text-color-info;
     }
+    .left{
+        @include center;
+        gap: 10px;  
+        .bi-search{
+            font-size: 16px;
+        }
+    }
     .center{
         @include center;
-        gap: 10px;
+        gap: 20px;
+        li{
+            a{
+                color: $toastify-text-color-light;
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
     }
+    .right{
+        @include center;
+        gap: 10px;  
+        a{
+            color: $toastify-text-color-light;
+        }
+        button{
+            padding: 5px 4px;
+            font-weight: 600;
+            border-radius: 20px;
+            background-color: #ffda2a;
+            transition: all 0.5s ease;
+            filter: brightness(100%);
+            &:hover{
+                filter: brightness(50%);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+nav{
+    .center{
+        display: none;
+    }
+}
 }
