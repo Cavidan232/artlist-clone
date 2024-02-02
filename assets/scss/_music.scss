@@ -206,6 +206,7 @@ grid-template-columns: repeat(6,1fr);
         .list11{
            .bottom{
             gap: 5px;
+            grid-template-columns: repeat(2,1fr);
          ul{
             li{
                 font-size: 10px;

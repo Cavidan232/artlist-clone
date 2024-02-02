@@ -77,7 +77,7 @@ nav {
     background-color: #121213;
     width: 100%;
     z-index: 10000000000000000000000;
-   
+   overflow:scroll;
     transform: translateX(100%);
  transition: all 0.2s ease-in;
     flex-direction: column;
