@@ -659,6 +659,7 @@ nav .right button:hover {
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding: 50px 0;
   background-image: url(../image/guestHomePageFooterSectionBackground.avif);
 }
 .section5 .section51 {
@@ -922,6 +923,14 @@ footer .top .right ul li a:hover {
   border-radius: 30px;
 }
 
+@media screen and (max-width: 776px) {
+  .plugin .container .plugin1 .text {
+    width: 100%;
+  }
+  .plugin .container .plugin1 .text h1 {
+    width: 100%;
+  }
+}
 .plugin3 {
   background-color: #121213;
   padding-block: 100px;
@@ -1107,7 +1116,7 @@ footer .top .right ul li a:hover {
   gap: 50px;
 }
 .app .app1 .text {
-  width: 60%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1118,7 +1127,6 @@ footer .top .right ul li a:hover {
   background-image: linear-gradient(54.08deg, rgb(112, 105, 255) 18.46%, rgb(253, 194, 202) 95.34%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-box-decoration-break: clone;
 }
 .app .app1 .text button {
   width: 130px;
@@ -1140,6 +1148,11 @@ footer .top .right ul li a:hover {
   border-radius: 30px;
 }
 
+@media screen and (max-width: 776px) {
+  .app .container .app1 .text h1 {
+    width: 100%;
+  }
+}
 .app2 {
   width: 100%;
   min-height: 100vh;
@@ -1378,6 +1391,12 @@ footer .top .right ul li a:hover {
 }
 
 @media screen and (max-width: 776px) {
+  .app3 .app31 {
+    width: 100%;
+  }
+  .app3 .app31 .top {
+    width: 100%;
+  }
   .app3 .app31 .top p {
     width: 100%;
     text-align: center;
@@ -1450,7 +1469,7 @@ footer .top .right ul li a:hover {
 }
 .music1 .music11 .top .text h1 {
   font-size: 50px;
-  color: #F7BF53;
+  color: #f7bf53;
   font-weight: 600;
 }
 .music1 .music11 .top .text .button {
@@ -1507,5 +1526,108 @@ footer .top .right ul li a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+}
+.list {
+  width: 100%;
+  background-color: #121213;
+}
+.list .container .list11 {
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  color: #fff;
+  gap: 20px;
+}
+.list .container .list11 .top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  background-color: #fff;
+  height: 2px;
+  opacity: 0.2;
+}
+.list .container .list11 .center {
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  color: #fff;
+  gap: 20px;
+  text-align: center;
+}
+.list .container .list11 .center h1 {
+  font-size: 35px;
+  font-weight: 800;
+  width: 60%;
+}
+.list .container .list11 .center p {
+  font-size: 22px;
+  font-weight: 300;
+  width: 100%;
+}
+.list .container .list11 button {
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-weight: 600;
+  background-color: #ffda2a;
+  transition: all 0.5s ease;
+  filter: brightness(100%);
+}
+.list .container .list11 button:hover {
+  filter: brightness(50%);
+}
+.list .container .list11 .bottom {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(6, 1fr);
+}
+.list .container .list11 .bottom ul {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.list .container .list11 .bottom ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+.list .container .list11 .bottom ul li i {
+  font-size: 30px;
+  color: #ffda2a;
+}
+
+@media screen and (max-width: 991px) {
+  .list .container .list11 .bottom {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 776px) {
+  .list .container .list11 .center h1 {
+    width: 100%;
+    font-size: 20px;
+  }
+  .list .container .list11 .center p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 571px) {
+  .list .container .list11 .bottom {
+    gap: 5px;
+  }
+  .list .container .list11 .bottom ul li {
+    font-size: 10px;
+  }
+  .list .container .list11 .bottom ul li i {
+    font-size: 10px;
   }
 }/*# sourceMappingURL=style.css.map */

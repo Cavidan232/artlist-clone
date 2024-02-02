@@ -45,6 +45,20 @@ background-color: #121213;
     }
 }
 }
+@media screen and (max-width:776px){
+    .plugin{
+        .container{
+        .plugin1{
+            .text{
+                width: 100%;
+                h1{
+                    width: 100%;
+                }
+            }
+        }
+        }
+    }
+}
 .plugin3{
     background-color: #121213;
     padding-block: 100px;
