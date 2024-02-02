@@ -45,7 +45,7 @@ nav {
   align-items: center;
   position: fixed;
   z-index: 12345;
-  padding: 10px 5px;
+  padding: 10px 32px;
   background-color: #121212;
 }
 nav i {
@@ -81,12 +81,13 @@ nav .right a {
   color: #757575;
 }
 nav .right button {
-  padding: 5px 4px;
+  padding: 4px 22px;
   font-weight: 600;
   border-radius: 20px;
   background-color: #ffda2a;
   transition: all 0.5s ease;
   filter: brightness(100%);
+  font-size: 15px;
 }
 nav .right button:hover {
   filter: brightness(50%);
@@ -184,7 +185,7 @@ nav .right button:hover {
 
 @media screen and (max-width: 991px) {
   .section1 {
-    min-height: 70vh;
+    min-height: 50vh;
   }
   .section1 .section11 .center {
     opacity: 1;
@@ -204,7 +205,7 @@ nav .right button:hover {
     border: 1px solid rgb(15, 45, 74);
   }
   .section1 .section11 .text {
-    width: 50%;
+    width: 100%;
     gap: 15px;
   }
   .section1 .section11 .text h1 {
@@ -962,5 +963,319 @@ footer .top .right ul li a:hover {
 @media screen and (max-width: 771px) {
   .plugin2 .plugin21 .top {
     width: 100%;
+  }
+}
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(5, 0, 192, 0.8) 0%, rgba(23, 23, 23, 0.8) 100%);
+  padding: 100px 0;
+}
+.app .app1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 50px;
+}
+.app .app1 .text {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.app .app1 .text h1 {
+  background-image: linear-gradient(54.08deg, rgb(112, 105, 255) 18.46%, rgb(253, 194, 202) 95.34%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+}
+.app .app1 .text button {
+  width: 130px;
+  height: 40px;
+  font-weight: 600;
+  border-radius: 50px;
+  background-color: #fff;
+  transition: all 0.5s ease;
+  filter: brightness(100%);
+}
+.app .app1 .text button:hover {
+  filter: brightness(50%);
+}
+.app .app1 .image {
+  width: 100%;
+}
+.app .app1 .image img {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.app2 {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(90% 60% at 80% 0%, rgba(247, 52, 0, 0.4) 0%, rgba(233, 10, 119, 0.4) 40%, rgb(23, 23, 23) 80%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+}
+.app2 .app21 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 40px;
+  flex-direction: column;
+}
+.app2 .app21 .cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.app2 .app21 .cart .text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 50%;
+  gap: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 45%;
+}
+.app2 .app21 .cart .text .date {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.app2 .app21 .cart .text .date .bit {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.app2 .app21 .cart .text .date .bit span {
+  color: yellow;
+}
+.app2 .app21 .cart .text .date .bit p {
+  text-align: start;
+}
+.app2 .app21 .cart .text span {
+  color: #fff;
+  font-size: 45px;
+  font-weight: 600;
+}
+.app2 .app21 .cart .text p {
+  color: rgb(242, 242, 242);
+  font-size: 15px;
+}
+.app2 .app21 .cart .image {
+  width: 40%;
+  min-width: 240px;
+  min-height: 240px;
+}
+.app2 .app21 .cart .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.app2 .app21 .top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  gap: 40px;
+  flex-direction: column;
+}
+.app2 .app21 .top button {
+  width: 130px;
+  height: 40px;
+  font-weight: 600;
+  border-radius: 50px;
+  background-color: #fff;
+  transition: all 0.5s ease;
+  filter: brightness(100%);
+}
+.app2 .app21 .top button:hover {
+  filter: brightness(50%);
+}
+.app2 .app21 .top p {
+  color: #fff;
+  font-weight: 800;
+  font-size: 30px;
+  text-align: center;
+}
+.app2 a {
+  color: rgb(242, 242, 242);
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 776px) {
+  .app2 .app21 .top p {
+    width: 100%;
+    text-align: center;
+  }
+  .app2 .app21 .cart {
+    flex-direction: column;
+  }
+  .app2 .app21 .cart .text {
+    width: 100%;
+  }
+  .app2 .app21 .cart .text .date {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .app2 .app21 .cart .image {
+    width: 100%;
+  }
+  .app2 .app21 .cart2 {
+    flex-direction: column;
+  }
+  .app2 .app21 .cart2 .text {
+    width: 100%;
+    order: 1;
+  }
+  .app2 .app21 .cart2 .image {
+    width: 100%;
+    order: 2;
+  }
+}
+.app3 {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: radial-gradient(100% 45% at 20% 0%, rgba(255, 0, 245, 0.3) 19.79%, rgb(23, 23, 23) 80%);
+  padding: 100px 0;
+}
+.app3 .app31 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 40px;
+  flex-direction: column;
+}
+.app3 .app31 .cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.app3 .app31 .cart .text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 50%;
+  gap: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 45%;
+}
+.app3 .app31 .cart .text .date {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.app3 .app31 .cart .text .date .bit {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.app3 .app31 .cart .text .date .bit span {
+  color: yellow;
+}
+.app3 .app31 .cart .text .date .bit p {
+  text-align: start;
+}
+.app3 .app31 .cart .text span {
+  color: #fff;
+  font-size: 45px;
+  font-weight: 600;
+}
+.app3 .app31 .cart .text p {
+  color: rgb(242, 242, 242);
+  font-size: 15px;
+}
+.app3 .app31 .cart .image {
+  width: 40%;
+  min-width: 240px;
+  min-height: 240px;
+}
+.app3 .app31 .cart .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.app3 .app31 .top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  gap: 40px;
+  flex-direction: column;
+}
+.app3 .app31 .top button {
+  width: 130px;
+  height: 40px;
+  font-weight: 600;
+  border-radius: 50px;
+  background-color: #fff;
+  transition: all 0.5s ease;
+  filter: brightness(100%);
+}
+.app3 .app31 .top button:hover {
+  filter: brightness(50%);
+}
+.app3 .app31 .top p {
+  color: #fff;
+  font-weight: 800;
+  font-size: 30px;
+  text-align: center;
+}
+.app3 a {
+  color: rgb(242, 242, 242);
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 776px) {
+  .app3 .app31 .top p {
+    width: 100%;
+    text-align: center;
+  }
+  .app3 .app31 .cart {
+    flex-direction: column;
+  }
+  .app3 .app31 .cart .text {
+    width: 100%;
+  }
+  .app3 .app31 .cart .text .date {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .app3 .app31 .cart .image {
+    width: 100%;
+  }
+  .app3 .app31 .cart2 {
+    flex-direction: column;
+  }
+  .app3 .app31 .cart2 .text {
+    width: 100%;
+    order: 1;
+  }
+  .app3 .app31 .cart2 .image {
+    width: 100%;
+    order: 2;
   }
 }/*# sourceMappingURL=style.css.map */

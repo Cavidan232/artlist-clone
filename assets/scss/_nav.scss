@@ -4,7 +4,7 @@ nav{
     align-items: center;
     position: fixed;
     z-index: 12345;
-    padding:10px 5px;
+    padding:10px 32px;
     background-color: $toastify-color-dark;
     i{
         color: $toastify-text-color-info;
@@ -34,12 +34,13 @@ nav{
             color: $toastify-text-color-light;
         }
         button{
-            padding: 5px 4px;
+            padding: 4px 22px;
             font-weight: 600;
             border-radius: 20px;
             background-color: #ffda2a;
             transition: all 0.5s ease;
             filter: brightness(100%);
+            font-size: 15px;
             &:hover{
                 filter: brightness(50%);
             }
