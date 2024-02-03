@@ -89,3 +89,13 @@ window.addEventListener("resize",()=>{
         
     }
 })
+
+let navLinks = document.querySelectorAll('nav ul li a');
+let nav = document.querySelector("nav");
+
+navLinks.forEach((element) => {
+    element.addEventListener("click", (event) => {
+        nav.style.borderBottom = '2px solid #ffda2a';
+    });
+});
+

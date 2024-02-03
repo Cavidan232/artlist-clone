@@ -30,3 +30,30 @@ button,input{
 img,i{
     cursor: pointer;
 }
+.active{
+    position: relative;
+    &::before{
+        position: absolute;
+        width: 150%;
+        content: "";
+        height: 4px;
+        background-color: #ffda2a;
+        bottom:-18px;
+        left: -10px;
+    }
+}
+.ap{
+    position: relative;
+    &::after{
+        position: absolute;
+        width: 2px;
+        content: "";
+        height:150%;
+        right: -12px;
+        bottom: -5px;
+        background-color: $colors-gray-300;
+      
+    }
+}
+
+

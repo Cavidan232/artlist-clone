@@ -37,6 +37,32 @@ img, i {
   cursor: pointer;
 }
 
+.active {
+  position: relative;
+}
+.active::before {
+  position: absolute;
+  width: 150%;
+  content: "";
+  height: 4px;
+  background-color: #ffda2a;
+  bottom: -18px;
+  left: -10px;
+}
+
+.ap {
+  position: relative;
+}
+.ap::after {
+  position: absolute;
+  width: 2px;
+  content: "";
+  height: 150%;
+  right: -12px;
+  bottom: -5px;
+  background-color: rgb(77, 77, 77);
+}
+
 nav {
   width: 100%;
   display: flex;
@@ -244,6 +270,9 @@ nav .right button:hover {
   font-size: 25px;
 }
 
+.menu-open {
+  transform: translateX(0);
+}
 
 .section1 {
   width: 100%;
@@ -272,7 +301,7 @@ nav .right button:hover {
 }
 .section1 .section11 .imag2 {
   bottom: 50px;
-  left: 5px;
+  left: 50px;
 }
 .section1 .section11 .imag2:hover {
   transform: translate(-10px, 10px);

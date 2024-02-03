@@ -21,3 +21,32 @@ $('.menu-toggle').click(function(){
    $(".nav").toggleClass("mobile-nav");
    $(this).toggleClass("is-active");
 });
+
+
+// let url = "http://localhost:3000/acount";
+// let userinp = document.querySelector("#user");
+// let pasinp = document.querySelector("#pas");
+// let form = document.querySelector(".sign-in-form");
+// let login = document.querySelector(".log2");
+// window.addEventListener('load', () => {
+//     const savedUsername = localStorage.getItem('username');
+//     if (savedUsername) {
+//         login.innerText = savedUsername;
+//     }
+// });
+
+// form.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     axios.post(url, {
+//         name: userinp.value,
+//         password: pasinp.value,
+//     })
+//     .then(response => {
+//         console.log(response.data);
+//         const username = userinp.value;
+//         login.innerText = username;
+//         localStorage.setItem('username', username);
+//     })
+// });
+
+
