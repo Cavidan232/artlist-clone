@@ -819,9 +819,9 @@ nav .right button:hover {
 }
 .section6 .section61 .text .text2 h1 {
   background: rgba(255, 255, 255, 0.2);
-  padding: 10px;
-  font-size: 20px;
-  border-radius: 10px;
+  padding: 15px 12px;
+  font-size: 15px;
+  border-radius: 6px;
 }
 .section6 .section61 .text .text2 span {
   position: absolute;
@@ -834,6 +834,8 @@ nav .right button:hover {
   overflow: hidden;
   transition: all 0.5s ease;
   display: none;
+  font-size: 14px;
+  padding: 0 12px;
 }
 .section6 .sp {
   color: white;
