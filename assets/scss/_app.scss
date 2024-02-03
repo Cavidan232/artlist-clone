@@ -294,10 +294,7 @@ padding: 100px 0;
                 flex-direction: column;
                 .text{
                     width: 100%;
-                    .date{
-                        display: grid;
-                        grid-template-columns:repeat(2,1fr);
-                    }
+                  
                 }
                 .image{
                     width: 100%;
@@ -309,6 +306,9 @@ padding: 100px 0;
                 .text{
                     width: 100%;
                     order: 1;
+                    span{
+                        font-size: 30px;
+                    }
                 }
                 .image{
                     width: 100%;

@@ -60,3 +60,32 @@ window.addEventListener("resize",()=>{
         
     }
 })
+
+
+
+let list3Icon = document.querySelector('.list1');
+let nav3 = document.querySelector('.nav3');
+
+list3Icon.addEventListener("click",()=>{
+    if (nav3.style.transform === "translateX(-100%)") {
+        nav3.style.transform = "translateX(0)"
+    }
+    else{
+        nav3.style.transform = "translateX(-100%)"
+    }
+})
+
+let xicon1= document.querySelector(".x2");
+xicon1.addEventListener("click",()=>{
+
+        nav3.style.transform = "translateX(-100%)"
+   
+  
+})
+
+window.addEventListener("resize",()=>{
+    if (window.innerWidth >991) {
+        nav3.style.transform = "translateX(-100%)"
+        
+    }
+})
