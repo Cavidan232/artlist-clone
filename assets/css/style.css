@@ -201,6 +201,9 @@ nav .right a {
   color: #757575;
   font-size: 20px;
 }
+nav .right .logout {
+  display: none;
+}
 nav .right button {
   min-width: 130px;
   font-weight: 600;

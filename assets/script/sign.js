@@ -1,5 +1,5 @@
 const sign_in_btn = document.querySelector("#sign-in-btn");
-const sign_up_btn = document.querySelector("#sign-up-btn");
+const sign_up_btn = document.querySelector(".btn2");
 const container = document.querySelector(".container");
 
 sign_up_btn.addEventListener("click", () => {
@@ -23,30 +23,19 @@ $('.menu-toggle').click(function(){
 });
 
 
-// let url = "http://localhost:3000/acount";
-// let userinp = document.querySelector("#user");
-// let pasinp = document.querySelector("#pas");
-// let form = document.querySelector(".sign-in-form");
-// let login = document.querySelector(".log2");
-// window.addEventListener('load', () => {
-//     const savedUsername = localStorage.getItem('username');
-//     if (savedUsername) {
-//         login.innerText = savedUsername;
-//     }
-// });
+let url = "http://localhost:3000/acount";
+let nameInp = document.querySelector("#upname");
+let mailInp = document.querySelector("#upmail");
+let pasInp = document.querySelector("#uppasword");
+let formUp = document.querySelector(".sign-up-form");
+formUp.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-// form.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     axios.post(url, {
-//         name: userinp.value,
-//         password: pasinp.value,
-//     })
-//     .then(response => {
-//         console.log(response.data);
-//         const username = userinp.value;
-//         login.innerText = username;
-//         localStorage.setItem('username', username);
-//     })
-// });
+  await axios.post(url, {
+    name: nameInp.value,
+    mail: mailInp.value,
+    password: pasInp.value
+  });
 
-
+  window.location = "./index.html";
+});

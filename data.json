@@ -1,12 +1,13 @@
 {
   "acount": [
     {
-      "name": "Cavidan",
-      "password": "kjbkefl;lwe",
+      "name": "Cavidan1907",
+      "mail": "Cavidanvelizade9@gmail.com",
+      "password": "ewvrwre",
       "id": 1
     }
   ],
-  "musicData" :[
+  "musicData": [
     {
       "backgroundImage": "./assets/images/poster-1.jpg",
       "posterUrl": "./assets/images/poster-1.jpg",
@@ -15,7 +16,7 @@
       "year": 2022,
       "artist": "No Spirit x Tonion",
       "musicPath": "./assets/music/music-1.mp3",
-      "id":1
+      "id": 1
     },
     {
       "backgroundImage": "./assets/images/poster-1.jpg",
@@ -25,7 +26,7 @@
       "year": 2022,
       "artist": "No Spirit x Tonion",
       "musicPath": "./assets/music/music-1.mp3",
-      "id":2
+      "id": 2
     },
     {
       "backgroundImage": "./assets/images/poster-2.jpg",
@@ -33,7 +34,7 @@
       "title": "We Are Going To Be Ok (Master)",
       "album": "No Spirit",
       "year": 2022,
-      "id":3,
+      "id": 3,
       "artist": "No Spirit x Jhove",
       "musicPath": "./assets/music/music-2.mp3"
     },
@@ -43,7 +44,7 @@
       "title": "Winter Meadow",
       "album": "No Spirit",
       "year": 2022,
-      "id":4,
+      "id": 4,
       "artist": "No Spirit x  juniorodeo",
       "musicPath": "./assets/music/music-3.mp3"
     },
@@ -54,7 +55,7 @@
       "album": "No Spirit",
       "year": 2022,
       "artist": "No Spirit",
-      "id":5,
+      "id": 5,
       "musicPath": "./assets/music/music-4.mp3"
     },
     {
@@ -64,7 +65,7 @@
       "album": "No Spirit",
       "year": 2022,
       "artist": "No Spirit",
-      "id":6,
+      "id": 6,
       "musicPath": "./assets/music/music-5.mp3"
     },
     {
@@ -74,7 +75,7 @@
       "album": "Ceza",
       "year": 2022,
       "artist": "ceza",
-      "id":7,
+      "id": 7,
       "musicPath": "./assets/music/CEZA - Intro.mp3"
     },
     {
@@ -84,7 +85,7 @@
       "album": "Tepki",
       "year": 2022,
       "artist": "tepki",
-      "id":8,
+      "id": 8,
       "musicPath": "./assets/music/Menekse.mp3"
     },
     {
@@ -94,9 +95,8 @@
       "album": "uzeyir",
       "year": 2022,
       "artist": "uzeyir",
-      "id":9,
+      "id": 9,
       "musicPath": "./assets/music/Revayet.m4a"
     }
   ]
-  
 }
