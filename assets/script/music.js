@@ -1,11 +1,11 @@
 /**
  * Tüm geçilen öğeler üzerine eventListener ekle
  */
-const addEventOnElements = function (elements, eventType, callback) {
-  for (let i = 0, len = elements.length; i < len; i++) {
-    elements[i].addEventListener(eventType, callback);
-  }
-}
+// const addEventOnElements = function (elements, eventType, callback) {
+//   for (let i = 0, len = elements.length; i < len; i++) {
+//     elements[i].addEventListener(eventType, callback);
+//   }
+// }
 
 /**
  * ÇALMA LİSTESİ
@@ -77,6 +77,13 @@ const togglePlaylist = function () {
   overlay.classList.toggle("active");
   document.body.classList.toggle("modalActive");
 }
+
+const addEventOnElements = function (elements, eventType, callback) {
+  for (let i = 0, len = elements.length; i < len; i++) {
+    elements[i].addEventListener(eventType, callback);
+  }
+}
+
 
 addEventOnElements(playlistTogglers, "click", togglePlaylist);
 
