@@ -5,6 +5,18 @@
       "mail": "Cavidanvelizade9@gmail.com",
       "password": "ewvrwre",
       "id": 1
+    },
+    {
+      "name": "Cavidan1907",
+      "mail": "Cavidanvelizade9@gmail.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "name": "Cavidan1907",
+      "mail": "Cavidanvelizade9@gmail.com",
+      "password": "rqüfüfq",
+      "id": 3
     }
   ],
   "musicData": [
@@ -12,91 +24,145 @@
       "backgroundImage": "./assets/images/poster-1.jpg",
       "posterUrl": "./assets/images/poster-1.jpg",
       "title": "Happy Moments (Master)",
-      "album": "No Spirit",
-      "year": 2022,
       "artist": "No Spirit x Tonion",
       "musicPath": "./assets/music/music-1.mp3",
+      "janre": "POP",
       "id": 1
     },
     {
-      "backgroundImage": "./assets/images/poster-1.jpg",
-      "posterUrl": "./assets/images/poster-1.jpg",
-      "title": "Happy Moments (Master)",
-      "album": "No Spirit",
-      "year": 2022,
-      "artist": "No Spirit x Tonion",
-      "musicPath": "./assets/music/music-1.mp3",
-      "id": 2
-    },
-    {
-      "backgroundImage": "./assets/images/poster-2.jpg",
-      "posterUrl": "./assets/images/poster-2.jpg",
-      "title": "We Are Going To Be Ok (Master)",
-      "album": "No Spirit",
-      "year": 2022,
-      "id": 3,
-      "artist": "No Spirit x Jhove",
-      "musicPath": "./assets/music/music-2.mp3"
-    },
-    {
-      "backgroundImage": "./assets/images/poster-3.jpg",
-      "posterUrl": "./assets/images/poster-3.jpg",
-      "title": "Winter Meadow",
-      "album": "No Spirit",
-      "year": 2022,
-      "id": 4,
-      "artist": "No Spirit x  juniorodeo",
-      "musicPath": "./assets/music/music-3.mp3"
-    },
-    {
-      "backgroundImage": "./assets/images/poster-4.jpg",
-      "posterUrl": "./assets/images/poster-4.jpg",
-      "title": "From Where We Started",
-      "album": "No Spirit",
-      "year": 2022,
-      "artist": "No Spirit",
-      "id": 5,
-      "musicPath": "./assets/music/music-4.mp3"
-    },
-    {
-      "backgroundImage": "./assets/images/poster-5.jpg",
-      "posterUrl": "./assets/images/poster-5.jpg",
-      "title": "Where I Found You",
-      "album": "No Spirit",
-      "year": 2022,
-      "artist": "No Spirit",
-      "id": 6,
-      "musicPath": "./assets/music/music-5.mp3"
-    },
-    {
-      "backgroundImage": "./assets/images/indir.jpeg",
-      "posterUrl": "./assets/images/indir.jpeg",
-      "title": "Where I Found You",
-      "album": "Ceza",
-      "year": 2022,
-      "artist": "ceza",
-      "id": 7,
+      "backgroundImage": "./assets/images/Rapstar.jpg",
+      "posterUrl": "./assets/images/Rapstar.jpg",
+      "title": "Ceza-İntro",
+      "artist": "Ceza",
+      "janre": "Hip-Hop",
+      "id": 2,
       "musicPath": "./assets/music/CEZA - Intro.mp3"
     },
     {
       "backgroundImage": "./assets/images/264x264.jpg",
       "posterUrl": "./assets/images/264x264.jpg",
-      "title": "tepki",
-      "album": "Tepki",
-      "year": 2022,
-      "artist": "tepki",
-      "id": 8,
+      "title": "Tepki - Menekşe",
+      "artist": "Tepki",
+      "janre": "Hip-Hop",
+      "id": 3,
       "musicPath": "./assets/music/Menekse.mp3"
     },
     {
-      "backgroundImage": "./assets/images/poster-5.jpg",
+      "backgroundImage": "./assets/images/500x500.jpg",
       "posterUrl": "./assets/images/500x500.jpg",
-      "title": "uzeyir",
-      "album": "uzeyir",
-      "year": 2022,
-      "artist": "uzeyir",
-      "id": 9,
+      "title": "Üzeyir - Rəvayət",
+      "artist": "Üzeyir",
+      "janre": "POP",
+      "id": 4,
       "musicPath": "./assets/music/Revayet.m4a"
+    },
+    {
+      "backgroundImage": "./assets/images/Rapstar.jpg",
+      "posterUrl": "./assets/images/Rapstar.jpg",
+      "title": "Ceza-Rapstar",
+      "artist": "Ceza",
+      "janre": "Hip-Hop",
+      "id": 5,
+      "musicPath": "./assets/music/CEZA - Rapstar.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/images.jpeg",
+      "posterUrl": "./assets/images/images.jpeg",
+      "title": "Adele - Skyfall",
+      "artist": "Adele",
+      "janre": "",
+      "id": 7,
+      "musicPath": "./assets/music/Adele_Adele_-_Skyfall.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/Rapstar.jpg",
+      "posterUrl": "./assets/images/Rapstar.jpg",
+      "title": "Ceza - Yerli Plaka",
+      "artist": "Ceza",
+      "janre": "Hip-Hop",
+      "id": 6,
+      "musicPath": "./assets/music/Ceza - Yerli Plaka.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/Rapstar.jpg",
+      "posterUrl": "./assets/images/Rapstar.jpg",
+      "title": "CEZA - Med Cezir",
+      "artist": "Ceza",
+      "janre": "Hip-Hop",
+      "id": 8,
+      "musicPath": "./assets/music/CEZA - Med Cezir.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/264x264.jpg",
+      "posterUrl": "./assets/images/264x264.jpg",
+      "title": "Tepki - Üzgünüm Anne",
+      "artist": "Tepki",
+      "janre": "Hip-Hop",
+      "id": 9,
+      "musicPath": "./assets/music/uzgunumanne.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/kma.jpg",
+      "posterUrl": "./assets/images/kma.jpg",
+      "title": "Rafat Hasanlı - Kısa Mesafe",
+      "artist": "Rafat Hasanlı",
+      "janre": "POP",
+      "id": 10,
+      "musicPath": "./assets/music/Rafat Hasanlı - Kısa Mesafe.m4a"
+    },
+    {
+      "backgroundImage": "./assets/images/500x500.jpg",
+      "posterUrl": "./assets/images/500x500.jpg",
+      "title": "Üzeyir - Yaxşı olar",
+      "artist": "Üzeyir",
+      "janre": "POP",
+      "id": 11,
+      "musicPath": "./assets/music/yaxsiolar.m4a"
+    },
+    {
+      "backgroundImage": "./assets/images/xpert.jpg",
+      "posterUrl": "./assets/images/xpert.jpg",
+      "title": "Xpert - Qan Rəngi Yaşıl",
+      "artist": "Xpert",
+      "janre": "Hip-Hop",
+      "id": 12,
+      "musicPath": "./assets/music/Qan rəngi yaşıl.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/xpert.jpg",
+      "posterUrl": "./assets/images/xpert.jpg",
+      "title": "Xpert - Sarışan Hallar",
+      "artist": "Xpert",
+      "janre": "Hip-Hop",
+      "id": 13,
+      "musicPath": "./assets/music/Xpert - Sarışan Hallar (Official Music Video)(MP3_70K).mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/xpert.jpg",
+      "posterUrl": "./assets/images/xpert.jpg",
+      "title": "Xpert - Qan Rəngi Yaşıl",
+      "artist": "Xpert",
+      "janre": "Hip-Hop",
+      "id": 14,
+      "musicPath": "./assets/music/Qan rəngi yaşıl.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/xpert.jpg",
+      "posterUrl": "./assets/images/xpert.jpg",
+      "title": "Xpert - Və bir də",
+      "artist": "Xpert",
+      "janre": "Hip-Hop",
+      "id": 15,
+      "musicPath": "./assets/music/Xpert - Və bir də (Official Music Video)(MP3_70K).mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/xpert.jpg",
+      "posterUrl": "./assets/images/xpert.jpg",
+      "title": "Xpert - Məhşərdən Qətrə",
+      "artist": "Xpert",
+      "janre": "Hip-Hop",
+      "id": 16,
+      "musicPath": "./assets/music/Xpert - Məhşərdən Qətrə(MP3_70K).mp3"
     }
   ]
 }

@@ -320,12 +320,6 @@ body:hover::-webkit-scrollbar-thumb {
     margin-block: 8px 4px;
 }
 
-.label-wrapper span:first-child::after {
-    content: "|";
-    display: inline-block;
-    margin-inline: 4px;
-}
-
 .artist {
     opacity: 0.6;
     margin-block-end: 36px;
