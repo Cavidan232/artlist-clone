@@ -122,11 +122,11 @@
     {
       "backgroundImage": "./assets/images/xpert.jpg",
       "posterUrl": "./assets/images/xpert.jpg",
-      "title": "Xpert - Qan Rəngi Yaşıl",
+      "title": "Xpert - Mantral Dua",
       "artist": "Xpert",
       "janre": "Hip-Hop",
       "id": 12,
-      "musicPath": "./assets/music/Qan rəngi yaşıl.mp3"
+      "musicPath": "./assets/music/Mantral Dua.mp3"
     },
     {
       "backgroundImage": "./assets/images/xpert.jpg",
@@ -136,6 +136,15 @@
       "janre": "Hip-Hop",
       "id": 13,
       "musicPath": "./assets/music/Xpert - Sarışan Hallar (Official Music Video)(MP3_70K).mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/okaber.jpg",
+      "posterUrl": "./assets/images/okaber.jpg",
+      "title": "Okaber - Sen Olsaydin",
+      "artist": "Okaber",
+      "janre": "Hip-Hop",
+      "id": 19,
+      "musicPath": "./assets/music/Okaber - Sen Olsaydin.mp3"
     },
     {
       "backgroundImage": "./assets/images/xpert.jpg",
@@ -162,6 +171,36 @@
       "artist": "Xpert",
       "janre": "Hip-Hop",
       "id": 16,
+      "musicPath": "./assets/music/Xpert - Məhşərdən Qətrə(MP3_70K).mp3"
+    }
+    ,
+    {
+      "backgroundImage": "./assets/images/okaber.jpg",
+      "posterUrl": "./assets/images/okaber.jpg",
+      "title": "Okaber - Son Mahnı",
+      "artist": "Okaber",
+      "janre": "Hip-Hop",
+      "id": 17,
+      "musicPath": "./assets/music/Okaber _ Son Mahnı.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/okaber.jpg",
+      "posterUrl": "./assets/images/okaber.jpg",
+      "title": "Okaber - Axtarma",
+      "artist": "Okaber",
+      "janre": "Hip-Hop",
+      "id": 18,
+      "musicPath": "./assets/music/Okaber - Axtarma.mp3"
+    }
+    
+    ,
+    {
+      "backgroundImage": "./assets/images/xpert.jpg",
+      "posterUrl": "./assets/images/xpert.jpg",
+      "title": "Xpert - Məhşərdən Qətrə",
+      "artist": "Xpert",
+      "janre": "Hip-Hop",
+      "id": 20,
       "musicPath": "./assets/music/Xpert - Məhşərdən Qətrə(MP3_70K).mp3"
     }
   ]

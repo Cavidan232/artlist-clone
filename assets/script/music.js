@@ -15,7 +15,9 @@
 
 let urlM = "http://localhost:3000/musicData";
 const playlist = document.querySelector("[data-music-list]");
-
+let filter=[];
+let copy=[];
+let search= document.querySelector("#search")
 async function musicAll() {
   try {
     let res = await axios.get(urlM);
@@ -26,7 +28,7 @@ async function musicAll() {
       playlist.innerHTML +=
         `
         <li>
-          <button onclick="uptade((${element.id}))"  class="music-item ${i === 0 ? "playing" : ""}" data-playlist-toggler data-playlist-item="${i}">
+          <button class="music-item ${i === 0 ? "playing" : ""}" data-playlist-toggler data-playlist-item="${i}">
             <img src="${element.posterUrl}" width="800" height="800" alt="${element.title} Albüm Poster" class="img-cover">
             <div class="item-icon">
               <span class="material-symbols-rounded">equalizer</span>
@@ -43,20 +45,6 @@ async function musicAll() {
 musicAll();
 
 let material=document.querySelector(".material-symbols-rounded");
-
-let imag= document.querySelector(".im")
-
-let upid = null;
-
-async function uptade(id) {
-  let res = await axios.get(urlM + "/" + id)
-  let element = await res.data
-  upid = id;
-imag.src= element.posterUrl,
-imag.alt=element.title
-  
-}
-
 
 
 
