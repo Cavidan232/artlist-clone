@@ -206,6 +206,7 @@ nav .right .logout {
 }
 nav .right button {
   min-width: 130px;
+  padding: 5px;
   font-weight: 600;
   border-radius: 20px;
   background-color: #ffda2a;

@@ -102,15 +102,7 @@ navLinks.forEach((element) => {
 let logins = document.querySelectorAll(".login");
 let logs = document.querySelectorAll(".log");
 
-logins.forEach((login) => {
-    login.addEventListener("click", (e) => {
-        if (login.textContent === "Start Free Now") {
-            window.location.href = "./login.html";
-        } else {
-            alert("Home Page");
-        }
-    });
-});
+
 
 let urll = "http://localhost:3000/acount";
 let logoutBtn = document.querySelector('.logout');
@@ -129,15 +121,21 @@ async function updateLoginText() {
     let data = await fetchData();
 
     logs.forEach((log23) => {
+
+log23.addEventListener("click",(e)=>{
+    e.preventDefault();
+    window.location="./login.html"
+})
+
         if (user) {
-            log23.innerHTML = `${user}!`;  
-        }
-        if (logoutBtn.style.display === "none") {
+            log23.innerHTML = `${user}`;  
+            log23.style.color="#fff"
+            console.log(logoutBtn.style);
             logoutBtn.style.display = "block";
+            logoutBtn.style.color="#fff"
         }
-        else {
-            logoutBtn.style.display = "none";
-        }
+    
+    
     });
     logins.forEach((login) => {
         login.textContent = "Subscribe Now";
@@ -152,11 +150,12 @@ async function logout() {
 
     if (logoutBtn.style.display === "block") {
         logoutBtn.addEventListener('click', () => {
+            logoutBtn.style.display = "none";
             localStorage.removeItem('currentUser');
             logs.forEach((log23) => {
                 log23.textContent = "Sign In";
+                log23.style.color="#fff"
             });
-            logoutBtn.style.display = "none";
         });
     }
 
