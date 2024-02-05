@@ -105,6 +105,38 @@ formUp.addEventListener("submit", async (e) => {
     mail: mailInp.value,
     password: pasInp.value
   });
-
-  window.location = "./index.html";
 });
+
+
+let user = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).name : null;
+
+if(user){
+    window.location = './index.html'
+}
+console.log(user);
+
+
+let form2= document.querySelector(".sign-in-form");
+form2.addEventListener('submit',(e)=>{
+    e.preventDefault();
+
+    let name =  document.querySelector("#user").value;
+    let password = document.querySelector("#pas").value;
+
+    fetch('http://localhost:3000/acount', {
+      }).then(res=>res.json())
+      .then(data => {
+        console.log(data);
+        let currentUserInfo = data.find((user)=>user.name == name)
+        if(currentUserInfo){
+            if(currentUserInfo.password == password){
+                localStorage.setItem('currentUser', JSON.stringify(currentUserInfo));
+                window.location = './index.html'
+            }else{
+                alert("wrong pasword")
+            }      
+        }else{
+           alert("wrong name")
+        }
+      })
+})

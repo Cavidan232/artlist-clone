@@ -112,51 +112,55 @@ logins.forEach((login) => {
     });
 });
 
-// let urll = "http://localhost:3000/acount";
-// let logoutBtn = document.querySelector('.logout');
+let urll = "http://localhost:3000/acount";
+let logoutBtn = document.querySelector('.logout');
 
-// async function fetchData() {
-//     let res = await axios.get(urll);
-//     return res.data;
-// }
+async function fetchData() {
+    let res = await axios.get(urll);
+    return res.data;
+}
+fetchData()
 
-// let user = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).name : null;
+let user = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).name : null;
+console.log(user);
 
-// async function updateLoginText() {
+async function updateLoginText() {
 
-//     let data = await fetchData();
+    let data = await fetchData();
 
-//     logs.forEach((log23) => {
-//         log23.innerHTML = `${user}!`;
-//         if (logoutBtn.style.display === "none") {
-//             logoutBtn.style.display = "block";
-//         }
-//         else {
-//             logoutBtn.style.display = "block";
-//         }
-//     });
-//     logins.forEach((login) => {
-//         login.textContent = "Subscribe Now";
-//     });
+    logs.forEach((log23) => {
+        if (user) {
+            log23.innerHTML = `${user}!`;  
+        }
+        if (logoutBtn.style.display === "none") {
+            logoutBtn.style.display = "block";
+        }
+        else {
+            logoutBtn.style.display = "none";
+        }
+    });
+    logins.forEach((login) => {
+        login.textContent = "Subscribe Now";
+    });
 
-// }
+}
 
-// updateLoginText();
+updateLoginText();
 
-// async function logout() {
-//     let data = await fetchData();
+async function logout() {
+    let data = await fetchData();
 
-//     if (logoutBtn.style.display === "block") {
-//         logoutBtn.addEventListener('click', () => {
-//             localStorage.removeItem('currentUser');
-//             logs.forEach((log23) => {
-//                 log23.textContent = "Sign In";
-//             });
-//             logoutBtn.style.display = "none";
-//         });
-//     }
+    if (logoutBtn.style.display === "block") {
+        logoutBtn.addEventListener('click', () => {
+            localStorage.removeItem('currentUser');
+            logs.forEach((log23) => {
+                log23.textContent = "Sign In";
+            });
+            logoutBtn.style.display = "none";
+        });
+    }
 
-// }
+}
 
-// logout();
+logout();
 

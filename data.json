@@ -1,22 +1,16 @@
 {
   "acount": [
     {
-      "name": "Cavidan1907",
-      "mail": "Cavidanvelizade9@gmail.com",
-      "password": "ewvrwre",
+      "name": "Cavidan1907456",
+      "mail": "cavidan9@gmail.com",
+      "password": "2325",
       "id": 1
     },
     {
-      "name": "Cavidan1907",
-      "mail": "Cavidanvelizade9@gmail.com",
-      "password": "1234",
+      "name": "HS",
+      "mail": "cav1@mail.com",
+      "password": "123",
       "id": 2
-    },
-    {
-      "name": "Cavidan1907",
-      "mail": "Cavidanvelizade9@gmail.com",
-      "password": "rqüfüfq",
-      "id": 3
     }
   ],
   "musicData": [
@@ -172,8 +166,7 @@
       "janre": "Hip-Hop",
       "id": 16,
       "musicPath": "./assets/music/Xpert - Məhşərdən Qətrə(MP3_70K).mp3"
-    }
-    ,
+    },
     {
       "backgroundImage": "./assets/images/okaber.jpg",
       "posterUrl": "./assets/images/okaber.jpg",
@@ -191,9 +184,7 @@
       "janre": "Hip-Hop",
       "id": 18,
       "musicPath": "./assets/music/Okaber - Axtarma.mp3"
-    }
-    
-    ,
+    },
     {
       "backgroundImage": "./assets/images/xpert.jpg",
       "posterUrl": "./assets/images/xpert.jpg",
