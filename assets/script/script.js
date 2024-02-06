@@ -114,7 +114,7 @@ async function fetchData() {
 fetchData()
 
 let user = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).name : null;
-console.log(user);
+
 
 async function updateLoginText() {
 
@@ -130,7 +130,6 @@ log23.addEventListener("click",(e)=>{
         if (user) {
             log23.innerHTML = `${user}`;  
             log23.style.color="#fff"
-            console.log(logoutBtn.style);
             logoutBtn.style.display = "block";
             logoutBtn.style.color="#fff"
         }

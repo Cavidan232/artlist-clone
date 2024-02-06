@@ -1,11 +1,12 @@
 /**
  * Tüm geçilen öğeler üzerine eventListener ekle
  */
-// const addEventOnElements = function (elements, eventType, callback) {
-//   for (let i = 0, len = elements.length; i < len; i++) {
-//     elements[i].addEventListener(eventType, callback);
-//   }
-// }
+const addEventOnElements = function (elements, eventType, callback) {
+  for (let i = 0, len = elements.length; i < len; i++) {
+    elements[i].addEventListener(eventType, callback);
+  }
+}
+
 
 /**
  * ÇALMA LİSTESİ
@@ -24,13 +25,13 @@ async function musicAll() {
 copy = data;
 playlist.innerHTML=" ";
 filter= filter.length || search.value ? filter : data ; 
-    filter.map((element, i) => {
+    filter.map((element) => {
       playlist.innerHTML +=
         `
-        <li>
-          <button class="music-item ${i === 0 ? "playing" : ""}" data-playlist-toggler data-playlist-item="${i}">
+        <li class="musical">
+          <button class="music-item ${element.id === 0 ? "playing" : ""}" data-playlist-toggler data-playlist-item="${element.id}">
             <img src="${element.posterUrl}" width="800" height="800" alt="${element.title} Albüm Poster" class="img-cover">
-    <p>${element.title}</p>
+    <p style="color:#ffda2a; font-size:12px;">${element.title}</p>
             <div class="item-icon">
               <span class="material-symbols-rounded">equalizer</span>
             </div>
@@ -43,19 +44,9 @@ filter= filter.length || search.value ? filter : data ;
 
 musicAll();
 
-search.addEventListener("input",(el)=>{
-  filter=copy
-      filter=filter.filter((e)=>{
-          return e.title.toLocaleLowerCase().includes(el.target.value.toLocaleLowerCase())
-      })
-    musicAll()
-  })
 
 
 let material=document.querySelector(".material-symbols-rounded");
-
-
-
 
 /**
  * ÇALMA LİSTESİ MODAL YAN PANELİ AÇMA/KAPAMA
@@ -74,38 +65,10 @@ const togglePlaylist = function () {
   document.body.classList.toggle("modalActive");
 }
 
-const addEventOnElements = function (elements, eventType, callback) {
-  for (let i = 0, len = elements.length; i < len; i++) {
-    elements[i].addEventListener(eventType, callback);
-  }
-}
-
 
 addEventOnElements(playlistTogglers, "click", togglePlaylist);
 
-/**
- * ÇALMA LİSTESİ ÖĞESİ
- * 
- * Son çalınan müzikten aktif durumu kaldır
- * ve tıklanan müziğe aktif durum ekle
- */
 
-const playlistItems = document.querySelectorAll("[data-playlist-item]");
-let currentMusic = 0;
-let lastPlayedMusic = 0;
-
-const changePlaylistItem = function () {
-  if (playlistItems[lastPlayedMusic] && playlistItems[currentMusic]) {
-    playlistItems[lastPlayedMusic].classList.remove("playing");
-    playlistItems[currentMusic].classList.add("playing");
-  }
-}
-
-addEventOnElements(playlistItems, "click", function () {
-  lastPlayedMusic = currentMusic;
-  currentMusic = Number(this.dataset.playlistItem);
-  changePlaylistItem();
-});
 
 /**
  * ÇALAR
@@ -123,7 +86,13 @@ async function musicAll2() {
   try {
     let res = await axios.get(urlM);
     let data = await res.data;
-    console.log(data);
+
+
+
+
+    const playlistItems = document.querySelectorAll("[data-playlist-item]");
+    let currentMusic = 0;
+    let lastPlayedMusic = 0;
 
     const audioSource = new Audio(data[currentMusic].musicPath);
 
@@ -135,20 +104,45 @@ async function musicAll2() {
       }
     };
 
-    const changePlayerInfo = function () {
-      playerBanner.src = data[currentMusic].posterUrl;
-      playerBanner.setAttribute("alt", `${data[currentMusic].title} Albüm Poster`);
-      document.body.style.backgroundImage = `url(${data[currentMusic].backgroundImage})`;
-      playerTitle.textContent = data[currentMusic].title;
-      playerAlbum.textContent = data[currentMusic].album;
-      playerYear.textContent = data[currentMusic].year;
-      playerArtist.textContent = data[currentMusic].artist;
 
-      audioSource.src = data[currentMusic].musicPath;
 
-      audioSource.addEventListener("loadeddata", updateDuration);
-      playMusic();
+
+
+    
+    const changePlaylistItem = function (e) {
+      if (playlistItems[lastPlayedMusic - 1] && playlistItems[currentMusic - 1]) {
+        playlistItems[lastPlayedMusic - 1].classList.remove("playing");
+        playlistItems[currentMusic - 1].classList.add("playing");
+      }
     }
+ 
+
+
+
+
+
+    const changePlayerInfo = function () {
+      if (data[currentMusic]) {
+        console.log(currentMusic);
+        playerBanner.src = data[currentMusic - 1].posterUrl;
+        playerBanner.setAttribute("alt", `${data[currentMusic - 1].title} Albüm Poster`);
+        document.body.style.backgroundImage = `url(${data[currentMusic - 1].backgroundImage})`;
+        playerTitle.textContent = data[currentMusic - 1].title;
+        playerAlbum.textContent = data[currentMusic - 1].album;
+        playerYear.textContent = data[currentMusic - 1].year;
+        playerArtist.textContent = data[currentMusic - 1].artist;
+        audioSource.src = data[currentMusic - 1].musicPath;
+        playMusic();
+      } else {
+        console.error("Belirtilen indekse sahip müzik bulunamadı.");
+      }
+    }
+    addEventOnElements(playlistItems, "click", function () {
+      lastPlayedMusic = currentMusic;
+      currentMusic = Number(this.dataset.playlistItem);
+      changePlaylistItem();
+      changePlayerInfo();
+  });
 
     addEventOnElements(playlistItems, "click", changePlayerInfo);
 
@@ -191,7 +185,6 @@ async function musicAll2() {
         clearInterval(playInterval);
       }
     }
-
     playBtn.addEventListener("click", playMusic);
 
     /** müzik çalarken süreyi güncelle */
@@ -380,3 +373,13 @@ musicAll2()
 
 // Playlist öğelerine tıklandığında müzik değişikliğini izle
 
+search.addEventListener("input",(el)=>{
+  filter=copy
+      filter=filter.filter((e)=>{
+          return e.title.toLocaleLowerCase().includes(el.target.value.toLocaleLowerCase())
+      })
+    musicAll();
+    musicAll2()
+  })
+
+  

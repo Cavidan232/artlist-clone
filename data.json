@@ -108,15 +108,6 @@
       "musicPath": "./assets/music/CEZA - Rapstar.mp3"
     },
     {
-      "backgroundImage": "./assets/images/images.jpeg",
-      "posterUrl": "./assets/images/images.jpeg",
-      "title": "Adele - Skyfall",
-      "artist": "Adele",
-      "janre": "",
-      "id": 7,
-      "musicPath": "./assets/music/Adele_Adele_-_Skyfall.mp3"
-    },
-    {
       "backgroundImage": "./assets/images/Rapstar.jpg",
       "posterUrl": "./assets/images/Rapstar.jpg",
       "title": "Ceza - Yerli Plaka",
@@ -125,6 +116,16 @@
       "id": 6,
       "musicPath": "./assets/music/Ceza - Yerli Plaka.mp3"
     },
+    {
+      "backgroundImage": "./assets/images/images.jpeg",
+      "posterUrl": "./assets/images/images.jpeg",
+      "title": "Adele - Skyfall",
+      "artist": "Adele",
+      "janre": "",
+      "id": 7,
+      "musicPath": "./assets/music/Adele_Adele_-_Skyfall.mp3"
+    },
+  
     {
       "backgroundImage": "./assets/images/Rapstar.jpg",
       "posterUrl": "./assets/images/Rapstar.jpg",
@@ -179,15 +180,7 @@
       "id": 13,
       "musicPath": "./assets/music/Xpert - Sarışan Hallar (Official Music Video)(MP3_70K).mp3"
     },
-    {
-      "backgroundImage": "./assets/images/okaber.jpg",
-      "posterUrl": "./assets/images/okaber.jpg",
-      "title": "Okaber - Sen Olsaydin",
-      "artist": "Okaber",
-      "janre": "Hip-Hop",
-      "id": 19,
-      "musicPath": "./assets/music/Okaber - Sen Olsaydin.mp3"
-    },
+  
     {
       "backgroundImage": "./assets/images/xpert.jpg",
       "posterUrl": "./assets/images/xpert.jpg",
@@ -232,6 +225,15 @@
       "janre": "Hip-Hop",
       "id": 18,
       "musicPath": "./assets/music/Okaber - Axtarma.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/okaber.jpg",
+      "posterUrl": "./assets/images/okaber.jpg",
+      "title": "Okaber - Sen Olsaydin",
+      "artist": "Okaber",
+      "janre": "Hip-Hop",
+      "id": 19,
+      "musicPath": "./assets/music/Okaber - Sen Olsaydin.mp3"
     },
     {
       "backgroundImage": "./assets/images/xpert.jpg",
