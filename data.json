@@ -125,7 +125,6 @@
       "id": 7,
       "musicPath": "./assets/music/Adele_Adele_-_Skyfall.mp3"
     },
-  
     {
       "backgroundImage": "./assets/images/Rapstar.jpg",
       "posterUrl": "./assets/images/Rapstar.jpg",
@@ -180,7 +179,6 @@
       "id": 13,
       "musicPath": "./assets/music/Xpert - Sarışan Hallar (Official Music Video)(MP3_70K).mp3"
     },
-  
     {
       "backgroundImage": "./assets/images/xpert.jpg",
       "posterUrl": "./assets/images/xpert.jpg",
@@ -261,6 +259,35 @@
       "janre": "Hip-Hop",
       "id": 22,
       "musicPath": "./assets/music/Tərlan Məmmədhüseynov – Ümid Rəqsi(MP3_70K).mp3"
+    }
+  ],
+  "fav": [
+    {
+      "backgroundImage": "./assets/images/Rapstar.jpg",
+      "posterUrl": "./assets/images/Rapstar.jpg",
+      "title": "Ceza-Rapstar",
+      "artist": "Ceza",
+      "janre": "Hip-Hop",
+      "id": 5,
+      "musicPath": "./assets/music/CEZA - Rapstar.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/264x264.jpg",
+      "posterUrl": "./assets/images/264x264.jpg",
+      "title": "Tepki - Üzgünüm Anne",
+      "artist": "Tepki",
+      "janre": "Hip-Hop",
+      "id": 9,
+      "musicPath": "./assets/music/uzgunumanne.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/poster-1.jpg",
+      "posterUrl": "./assets/images/poster-1.jpg",
+      "title": "Happy Moments (Master)",
+      "artist": "No Spirit x Tonion",
+      "musicPath": "./assets/music/music-1.mp3",
+      "janre": "POP",
+      "id": 1
     }
   ]
 }

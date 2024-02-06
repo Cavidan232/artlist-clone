@@ -32,11 +32,13 @@ filter= filter.length || search.value ? filter : data ;
           <button class="music-item ${element.id === 0 ? "playing" : ""}" data-playlist-toggler data-playlist-item="${element.id}">
             <img src="${element.posterUrl}" width="800" height="800" alt="${element.title} Albüm Poster" class="img-cover">
     <p style="color:#ffda2a; font-size:12px;">${element.title}</p>
+   
             <div class="item-icon">
               <span class="material-symbols-rounded">equalizer</span>
             </div>
           </button>
         </li>
+         <i onclick="Favorite(${element.id})" style="font-size: 20px; margin-left:20px;" class="bi bi-heart"></i>
       `;
     });
 
@@ -94,7 +96,7 @@ async function musicAll2() {
     let currentMusic = 0;
     let lastPlayedMusic = 0;
 
-    const audioSource = new Audio(data[currentMusic].musicPath);
+    const audioSource = new Audio(copy[currentMusic].musicPath);
 
     const updateRangeFill = function () {
       let element = this || ranges[0];
@@ -122,16 +124,16 @@ async function musicAll2() {
 
 
     const changePlayerInfo = function () {
-      if (data[currentMusic]) {
+      if (copy[currentMusic]) {
         console.log(currentMusic);
-        playerBanner.src = data[currentMusic - 1].posterUrl;
-        playerBanner.setAttribute("alt", `${data[currentMusic - 1].title} Albüm Poster`);
-        document.body.style.backgroundImage = `url(${data[currentMusic - 1].backgroundImage})`;
-        playerTitle.textContent = data[currentMusic - 1].title;
-        playerAlbum.textContent = data[currentMusic - 1].album;
-        playerYear.textContent = data[currentMusic - 1].year;
-        playerArtist.textContent = data[currentMusic - 1].artist;
-        audioSource.src = data[currentMusic - 1].musicPath;
+        playerBanner.src = copy[currentMusic - 1].posterUrl;
+        playerBanner.setAttribute("alt", `${copy[currentMusic - 1].title} Albüm Poster`);
+        document.body.style.backgroundImage = `url(${copy[currentMusic - 1].backgroundImage})`;
+        playerTitle.textContent = copy[currentMusic - 1].title;
+        playerAlbum.textContent = copy[currentMusic - 1].album;
+        playerYear.textContent = copy[currentMusic - 1].year;
+        playerArtist.textContent = copy[currentMusic - 1].artist;
+        audioSource.src = copy[currentMusic - 1].musicPath;
         playMusic();
       } else {
         console.error("Belirtilen indekse sahip müzik bulunamadı.");
@@ -176,6 +178,8 @@ async function musicAll2() {
 
     const playMusic = function () {
       if (audioSource.paused) {
+        audioSource.pause(); 
+        audioSource.currentTime = 0;
         audioSource.play();
         playBtn.classList.add("active");
         playInterval = setInterval(updateRunningTime, 500);
@@ -271,7 +275,7 @@ async function musicAll2() {
       if (isShuffled) {
         shuffleMusic();
       } else {
-        currentMusic <= 0 ? currentMusic = data.length - 1 : currentMusic--;
+        currentMusic <= 0 ? currentMusic =copy.length - 1 : currentMusic--;
       }
 
       changePlayerInfo();
@@ -285,7 +289,7 @@ async function musicAll2() {
      */
 
     /** karıştırmak için rastgele bir sayı al */
-    const getRandomMusic = () => Math.floor(Math.random() * data.length);
+    const getRandomMusic = () => Math.floor(Math.random() * copy.length);
 
     const shuffleMusic = () => currentMusic = getRandomMusic();
 
@@ -374,12 +378,43 @@ musicAll2()
 // Playlist öğelerine tıklandığında müzik değişikliğini izle
 
 search.addEventListener("input",(el)=>{
-  filter=copy
+  filter=copy;
       filter=filter.filter((e)=>{
           return e.title.toLocaleLowerCase().includes(el.target.value.toLocaleLowerCase())
       })
     musicAll();
-    musicAll2()
+    musicAll2();
   })
 
+  function Favorite(id) {
+
+    if (event.target.classList.contains('bi-heart')) {
+      event.target.classList.remove('bi-heart')
+      event.target.classList.add('bi-heart-fill')
   
+      axios.get(`http://localhost:3000/musicData/${id}`)
+        .then(res => {
+          console.log(res.data);
+          return res.data
+        })
+        .then(res => {
+          axios.get(`http://localhost:3000/fav`)
+            .then(response => {
+              let iD = response.data.find(f => f.id === response.id);
+              if (!iD) {
+                axios.post(`http://localhost:3000/fav`, res)
+                console.log(event.target);
+              }
+              else {
+                axios.delete(` http://localhost:3000/fav/${iD.id}`)
+              }
+            })
+        })
+    }
+    else {
+      event.preventDefault();
+      event.target.classList.remove('bi-heart-fill')
+      event.target.classList.add('bi-heart')
+      axios.delete(` http://localhost:3000/fav/${id}`)
+    }
+  }
