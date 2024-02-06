@@ -23,6 +23,42 @@
       "mail": "Cavidanvelizade9@gmail.com",
       "password": "345",
       "id": 4
+    },
+    {
+      "name": "Sadıq",
+      "mail": "cavidan9@gmail.com",
+      "password": "124",
+      "id": 5
+    },
+    {
+      "name": " Samir",
+      "mail": "samir9@gmail.com",
+      "password": "123",
+      "id": 6
+    },
+    {
+      "name": "Samir",
+      "mail": "cavidan9@gmail.com",
+      "password": "123",
+      "id": 7
+    },
+    {
+      "name": "Amaliya",
+      "mail": "amalak99@gmail.com",
+      "password": "123",
+      "id": 8
+    },
+    {
+      "name": "Nihad",
+      "mail": "Cavidanvelizade9@gmail.com",
+      "password": "123",
+      "id": 9
+    },
+    {
+      "name": "",
+      "mail": "",
+      "password": "",
+      "id": 10
     }
   ],
   "musicData": [
@@ -205,6 +241,24 @@
       "janre": "Hip-Hop",
       "id": 20,
       "musicPath": "./assets/music/Xpert - Məhşərdən Qətrə(MP3_70K).mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/xpert.jpg",
+      "posterUrl": "./assets/images/xpert.jpg",
+      "title": "Xpert - Həmdəm",
+      "artist": "Xpert",
+      "janre": "Hip-Hop",
+      "id": 21,
+      "musicPath": "./assets/music/hemdem.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/piano.jpg",
+      "posterUrl": "./assets/images/piano.jpg",
+      "title": "Tərlan Məmmədhüseynov – Ümid Rəqsi",
+      "artist": "Tərlan Məmmədhüseynov",
+      "janre": "Hip-Hop",
+      "id": 22,
+      "musicPath": "./assets/music/Tərlan Məmmədhüseynov – Ümid Rəqsi(MP3_70K).mp3"
     }
   ]
 }

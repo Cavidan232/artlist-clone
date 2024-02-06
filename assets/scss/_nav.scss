@@ -154,7 +154,7 @@ nav {
             width: 100%;
             a {
                 color: #fff;
-                font-size: 25px;
+                font-size: 15px;
             }
         }
     }
@@ -206,7 +206,7 @@ nav {
         button:nth-child(1) {
             background-color: #ffda2a;
             transition: all 0.5s ease;
-
+white-space: nowrap;
             &:hover {
                 filter: brightness(50%);
             }
@@ -230,7 +230,7 @@ nav {
             width: 100%;
             a {
                 color: #fff;
-                font-size: 25px;
+                font-size: 15px;
             }
         }
     }
@@ -238,4 +238,8 @@ nav {
 
 .menu-open {
     transform: translateX(0);
+}
+
+button{
+    white-space: nowrap;
 }

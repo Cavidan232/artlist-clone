@@ -474,12 +474,13 @@
             gap: 20px;
 
             button {
-                padding: 13px 8px;
                 font-weight: 600;
-                border-radius: 25px;
+                border-radius: 23px;
                 background-color: #ffda2a;
                 transition: all 0.5s ease;
                 filter: brightness(100%);
+                white-space: nowrap;
+                padding: 15px 25px;
                 &:hover {
                     filter: brightness(50%);
                 }

@@ -445,9 +445,11 @@ left: calc( 25% + 35px);
     border-bottom-left-radius: var(--radius-16);
     box-shadow: var(--shadow-2);
     overflow-y: overlay;
-    /* visibility: hidden; */
+overflow-x: hidden;
     transition: var(--transition-2);
     z-index: 4;
+    display: flex;
+    justify-content: center;
 }
 
 .playlist:hover::-webkit-scrollbar-thumb {
@@ -462,6 +464,7 @@ left: calc( 25% + 35px);
 .music-list {
     display: grid;
     gap: 20px;
+    width: auto;
 }
 
 .music-item {
@@ -469,6 +472,8 @@ left: calc( 25% + 35px);
     border-radius: var(--radius-12);
     background-color: var(--surface-variant);
     overflow: hidden;
+    width: auto;
+
 }
 
 .music-item .item-icon {
@@ -710,7 +715,7 @@ left: calc( 25% + 35px);
 
     .playlist {
         position: static;
-        visibility: visible;
+overflow-x: hidden;
         border-radius: 0;
         box-shadow: none;
         flex-shrink: 0;

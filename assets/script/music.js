@@ -19,17 +19,18 @@ let filter=[];
 let copy=[];
 let search= document.querySelector("#search")
 async function musicAll() {
-  try {
     let res = await axios.get(urlM);
     let data = await res.data;
-    console.log(data);
-
-    data.map((element, i) => {
+copy = data;
+playlist.innerHTML=" ";
+filter= filter.length || search.value ? filter : data ; 
+    filter.map((element, i) => {
       playlist.innerHTML +=
         `
         <li>
           <button class="music-item ${i === 0 ? "playing" : ""}" data-playlist-toggler data-playlist-item="${i}">
             <img src="${element.posterUrl}" width="800" height="800" alt="${element.title} Albüm Poster" class="img-cover">
+    <p>${element.title}</p>
             <div class="item-icon">
               <span class="material-symbols-rounded">equalizer</span>
             </div>
@@ -37,12 +38,19 @@ async function musicAll() {
         </li>
       `;
     });
-  } catch (error) {
-    console.error(error);
-  }
+
 };
 
 musicAll();
+
+search.addEventListener("input",(el)=>{
+  filter=copy
+      filter=filter.filter((e)=>{
+          return e.title.toLocaleLowerCase().includes(el.target.value.toLocaleLowerCase())
+      })
+    musicAll()
+  })
+
 
 let material=document.querySelector(".material-symbols-rounded");
 
@@ -363,6 +371,12 @@ repeatBtn.addEventListener("click", toggleRepeat);
   } catch (error) {
     console.error(error);
   }
+  
 };
 
 musicAll2()
+
+// musicAll2 fonksiyonu sonu veya hemen altına bu kod parçacığını ekleyin
+
+// Playlist öğelerine tıklandığında müzik değişikliğini izle
+

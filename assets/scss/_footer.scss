@@ -2,7 +2,7 @@ footer {
     background-color: #121213;
     width: 100%;
     flex-direction: column;
-    padding: 20px 0;
+    padding: 20px 32px;
     gap: 20px;
     .bottom{
         width: 100%;
@@ -41,10 +41,10 @@ footer {
             width: 30%;
 min-width: 240px;
             p{
-                color:$colors-gray-1200;
+                color:#fff;
             }
             img{
-                color: $colors-gray-100;
+                color:#ffda2a;
             }
         }
         .right{
@@ -65,11 +65,11 @@ min-width: 240px;
              }
                 li{
                     a{
-                        color: $colors-gray-1200;
+                        color: #ffff;
                         font-size: 15px;
                         transition: all 0.5s ease;
                         &:hover{
-                            color: #fff;
+                            color: #ffda2a;
                         }
                     }
                 }
