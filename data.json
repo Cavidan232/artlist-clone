@@ -1,64 +1,11 @@
 {
   "acount": [
     {
-      "name": "Cavidan1907456",
+      "name": "Cavidan1907",
       "mail": "cavidan9@gmail.com",
       "password": "2325",
       "id": 1
-    },
-    {
-      "name": "HS",
-      "mail": "cav1@mail.com",
-      "password": "123",
-      "id": 2
-    },
-    {
-      "name": "Ceyhun",
-      "mail": "cav1@mail.com",
-      "password": "123",
-      "id": 3
-    },
-    {
-      "name": "Cavidan1907",
-      "mail": "Cavidanvelizade9@gmail.com",
-      "password": "345",
-      "id": 4
-    },
-    {
-      "name": "Sadıq",
-      "mail": "cavidan9@gmail.com",
-      "password": "124",
-      "id": 5
-    },
-    {
-      "name": " Samir",
-      "mail": "samir9@gmail.com",
-      "password": "123",
-      "id": 6
-    },
-    {
-      "name": "Samir",
-      "mail": "cavidan9@gmail.com",
-      "password": "123",
-      "id": 7
-    },
-    {
-      "name": "Amaliya",
-      "mail": "amalak99@gmail.com",
-      "password": "123",
-      "id": 8
-    },
-    {
-      "name": "Nihad",
-      "mail": "Cavidanvelizade9@gmail.com",
-      "password": "123",
-      "id": 9
-    },
-    {
-      "name": "",
-      "mail": "",
-      "password": "",
-      "id": 10
+
     }
   ],
   "musicData": [
@@ -259,9 +206,45 @@
       "janre": "Hip-Hop",
       "id": 22,
       "musicPath": "./assets/music/Tərlan Məmmədhüseynov – Ümid Rəqsi(MP3_70K).mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/piano.jpg",
+      "posterUrl": "./assets/images/piano.jpg",
+      "title": "Shopin - Spring Waltz",
+      "artist": "Paul de Senneville",
+      "janre": "Hip-Hop",
+      "id": 23,
+      "musicPath": "./assets/music/Mariage d_Amour - Paul de Senneville __ Jacob_s Piano(MP3_70K).mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/piano.jpg",
+      "posterUrl": "./assets/images/piano.jpg",
+      "title": "Emin Sabitoğlu - Aman ayrılıq",
+      "artist": "Emin Sabitoğlu",
+      "janre": "Hip-Hop",
+      "id": 24,
+      "musicPath": "./assets/music/amanayrilig.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/piano.jpg",
+      "posterUrl": "./assets/images/piano.jpg",
+      "title": "Emin Sabitoğlu - Aman ayrılıq",
+      "artist": "Emin Sabitoğlu",
+      "janre": "Hip-Hop",
+      "id": 25,
+      "musicPath": "./assets/music/amanayrilig.mp3"
     }
   ],
-  "fav": [
+  "fav": [    {
+    "backgroundImage": "./assets/images/poster-1.jpg",
+    "posterUrl": "./assets/images/poster-1.jpg",
+    "title": "Happy Moments (Master)",
+    "artist": "No Spirit x Tonion",
+    "musicPath": "./assets/music/music-1.mp3",
+    "janre": "POP",
+    "id": 1
+  },
+
     {
       "backgroundImage": "./assets/images/Rapstar.jpg",
       "posterUrl": "./assets/images/Rapstar.jpg",
@@ -279,15 +262,6 @@
       "janre": "Hip-Hop",
       "id": 9,
       "musicPath": "./assets/music/uzgunumanne.mp3"
-    },
-    {
-      "backgroundImage": "./assets/images/poster-1.jpg",
-      "posterUrl": "./assets/images/poster-1.jpg",
-      "title": "Happy Moments (Master)",
-      "artist": "No Spirit x Tonion",
-      "musicPath": "./assets/music/music-1.mp3",
-      "janre": "POP",
-      "id": 1
     }
   ]
 }

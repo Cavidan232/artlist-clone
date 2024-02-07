@@ -18,12 +18,14 @@ let urlM = "http://localhost:3000/musicData";
 const playlist = document.querySelector("[data-music-list]");
 let filter=[];
 let copy=[];
-let search= document.querySelector("#search")
+let search= document.querySelector("#search");
+let container = document.querySelector(".container23")
 async function musicAll() {
     let res = await axios.get(urlM);
     let data = await res.data;
 copy = data;
 playlist.innerHTML=" ";
+
 filter= filter.length || search.value ? filter : data ; 
     filter.map((element) => {
       playlist.innerHTML +=
