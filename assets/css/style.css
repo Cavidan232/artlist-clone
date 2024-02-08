@@ -1956,6 +1956,7 @@ footer .top .right ul li a:hover {
   justify-content: flex-start;
   white-space: nowrap;
   overflow-x: scroll;
+  gap: 10px;
   width: 100%;
 }
 .playlist .playlist1 .playimg .pop .image::-webkit-scrollbar-thumb, .playlist .playlist1 .playimg .Piano .image::-webkit-scrollbar-thumb, .playlist .playlist1 .playimg .Hiphop .image::-webkit-scrollbar-thumb {
@@ -1974,6 +1975,7 @@ footer .top .right ul li a:hover {
   height: 150px;
   border-radius: 99999px;
   object-fit: cover;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 991px) {
@@ -2007,38 +2009,51 @@ footer .top .right ul li a:hover {
   padding: 10px;
   box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1);
 }
-.music-container .music-controls button,
-.music-container .volume-control button {
+
+.music-controls button,
+.volume-control button {
   background-color: transparent;
   border: none;
   cursor: pointer;
   font-size: 20px;
   color: #ffc107; /* Sarı tonu */
 }
-.music-container .music-info {
+
+.music-info {
   flex-grow: 1;
   text-align: center;
 }
-.music-container .progress {
+
+.progress {
   flex-grow: 5;
   height: 10px;
   background-color: #ccc;
   border-radius: 5px;
   overflow: hidden;
+  position: relative; /* İlave */
 }
-.music-container .progress .progress-bar {
-  height: 100%;
-  background-color: #ffc107; /* Sarı tonu */
+
+.progress input[type=range] {
+  /* İlerleme çubuğunun rengi */
+  /* Sarı tonu */
+  width: 100%; /* İlave */
+  height: 100%; /* İlave */
+  position: absolute; /* İlave */
+  top: 0; /* İlave */
+  left: 0; /* İlave */
+  appearance: none; /* İlave */
+  border: none; /* İlave */
+  border-radius: 5px; /* İlave */
+  outline: none; /* İlave */
 }
-.music-container .volume-control {
+
+.volume-control {
   flex-grow: 1;
   display: flex;
   align-items: center;
 }
-.music-container .volume-control input[type=range] {
-  width: 100%;
-}
-.music-container .time-control {
+
+.time-control {
   flex-grow: 1;
   display: flex;
   justify-content: space-between;

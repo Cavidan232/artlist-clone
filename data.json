@@ -29,8 +29,8 @@
     {
       "backgroundImage": "./assets/images/poster-1.jpg",
       "posterUrl": "./assets/images/poster-1.jpg",
-      "title": "Happy Moments (Master)",
-      "artist": "No Spirit x Tonion",
+      "title": "Happy Moments",
+      "artist": "No Spirit",
       "musicPath": "./assets/music/music-1.mp3",
       "janre": "POP",
       "id": 1
@@ -38,7 +38,7 @@
     {
       "backgroundImage": "./assets/images/Rapstar.jpg",
       "posterUrl": "./assets/images/Rapstar.jpg",
-      "title": "Ceza-İntro",
+      "title": "İntro",
       "artist": "Ceza",
       "janre": "Hip-Hop",
       "id": 2,
@@ -47,7 +47,7 @@
     {
       "backgroundImage": "./assets/images/264x264.jpg",
       "posterUrl": "./assets/images/264x264.jpg",
-      "title": "Tepki - Menekşe",
+      "title": "Menekşe",
       "artist": "Tepki",
       "janre": "Hip-Hop",
       "id": 3,
@@ -56,7 +56,7 @@
     {
       "backgroundImage": "./assets/images/500x500.jpg",
       "posterUrl": "./assets/images/500x500.jpg",
-      "title": "Üzeyir - Rəvayət",
+      "title": "Rəvayət",
       "artist": "Üzeyir",
       "janre": "POP",
       "id": 4,
@@ -65,7 +65,7 @@
     {
       "backgroundImage": "./assets/images/Rapstar.jpg",
       "posterUrl": "./assets/images/Rapstar.jpg",
-      "title": "Ceza-Rapstar",
+      "title": "Rapstar",
       "artist": "Ceza",
       "janre": "Hip-Hop",
       "id": 5,
@@ -74,7 +74,7 @@
     {
       "backgroundImage": "./assets/images/Rapstar.jpg",
       "posterUrl": "./assets/images/Rapstar.jpg",
-      "title": "Ceza - Yerli Plaka",
+      "title": "Yerli Plaka",
       "artist": "Ceza",
       "janre": "Hip-Hop",
       "id": 6,
@@ -83,16 +83,16 @@
     {
       "backgroundImage": "./assets/images/images.jpeg",
       "posterUrl": "./assets/images/images.jpeg",
-      "title": "Adele - Skyfall",
+      "title": "Skyfall",
       "artist": "Adele",
-      "janre": "",
+      "janre": "POP",
       "id": 7,
       "musicPath": "./assets/music/Adele_Adele_-_Skyfall.mp3"
     },
     {
       "backgroundImage": "./assets/images/Rapstar.jpg",
       "posterUrl": "./assets/images/Rapstar.jpg",
-      "title": "CEZA - Med Cezir",
+      "title": "Med Cezir",
       "artist": "Ceza",
       "janre": "Hip-Hop",
       "id": 8,
@@ -101,7 +101,7 @@
     {
       "backgroundImage": "./assets/images/264x264.jpg",
       "posterUrl": "./assets/images/264x264.jpg",
-      "title": "Tepki - Üzgünüm Anne",
+      "title": "Üzgünüm Anne",
       "artist": "Tepki",
       "janre": "Hip-Hop",
       "id": 9,
@@ -110,7 +110,7 @@
     {
       "backgroundImage": "./assets/images/kma.jpg",
       "posterUrl": "./assets/images/kma.jpg",
-      "title": "Rafat Hasanlı - Kısa Mesafe",
+      "title": "Kısa Mesafe",
       "artist": "Rafat Hasanlı",
       "janre": "POP",
       "id": 10,
@@ -119,7 +119,7 @@
     {
       "backgroundImage": "./assets/images/500x500.jpg",
       "posterUrl": "./assets/images/500x500.jpg",
-      "title": "Üzeyir - Yaxşı olar",
+      "title": "Yaxşı olar",
       "artist": "Üzeyir",
       "janre": "POP",
       "id": 11,
@@ -128,7 +128,7 @@
     {
       "backgroundImage": "./assets/images/xpert.jpg",
       "posterUrl": "./assets/images/xpert.jpg",
-      "title": "Xpert - Mantral Dua",
+      "title": "Mantral Dua",
       "artist": "Xpert",
       "janre": "Hip-Hop",
       "id": 12,
@@ -137,7 +137,7 @@
     {
       "backgroundImage": "./assets/images/xpert.jpg",
       "posterUrl": "./assets/images/xpert.jpg",
-      "title": "Xpert - Sarışan Hallar",
+      "title": "Sarışan Hallar",
       "artist": "Xpert",
       "janre": "Hip-Hop",
       "id": 13,
@@ -146,7 +146,7 @@
     {
       "backgroundImage": "./assets/images/xpert.jpg",
       "posterUrl": "./assets/images/xpert.jpg",
-      "title": "Xpert - Qan Rəngi Yaşıl",
+      "title": "Qan Rəngi Yaşıl",
       "artist": "Xpert",
       "janre": "Hip-Hop",
       "id": 14,
@@ -155,7 +155,7 @@
     {
       "backgroundImage": "./assets/images/xpert.jpg",
       "posterUrl": "./assets/images/xpert.jpg",
-      "title": "Xpert - Və bir də",
+      "title": "Və bir də",
       "artist": "Xpert",
       "janre": "Hip-Hop",
       "id": 15,
@@ -164,7 +164,7 @@
     {
       "backgroundImage": "./assets/images/xpert.jpg",
       "posterUrl": "./assets/images/xpert.jpg",
-      "title": "Xpert - Məhşərdən Qətrə",
+      "title": "Məhşərdən Qətrə",
       "artist": "Xpert",
       "janre": "Hip-Hop",
       "id": 16,
@@ -173,7 +173,7 @@
     {
       "backgroundImage": "./assets/images/okaber.jpg",
       "posterUrl": "./assets/images/okaber.jpg",
-      "title": "Okaber - Son Mahnı",
+      "title": "Son Mahnı",
       "artist": "Okaber",
       "janre": "Hip-Hop",
       "id": 17,
@@ -182,7 +182,7 @@
     {
       "backgroundImage": "./assets/images/okaber.jpg",
       "posterUrl": "./assets/images/okaber.jpg",
-      "title": "Okaber - Axtarma",
+      "title": "Axtarma",
       "artist": "Okaber",
       "janre": "Hip-Hop",
       "id": 18,
@@ -191,7 +191,7 @@
     {
       "backgroundImage": "./assets/images/okaber.jpg",
       "posterUrl": "./assets/images/okaber.jpg",
-      "title": "Okaber - Sen Olsaydin",
+      "title": "Sən Olsaydın",
       "artist": "Okaber",
       "janre": "Hip-Hop",
       "id": 19,
@@ -200,7 +200,7 @@
     {
       "backgroundImage": "./assets/images/xpert.jpg",
       "posterUrl": "./assets/images/xpert.jpg",
-      "title": "Xpert - Məhşərdən Qətrə",
+      "title": "Məhşərdən Qətrə",
       "artist": "Xpert",
       "janre": "Hip-Hop",
       "id": 20,
@@ -209,7 +209,7 @@
     {
       "backgroundImage": "./assets/images/xpert.jpg",
       "posterUrl": "./assets/images/xpert.jpg",
-      "title": "Xpert - Həmdəm",
+      "title": "Həmdəm",
       "artist": "Xpert",
       "janre": "Hip-Hop",
       "id": 21,
@@ -218,7 +218,7 @@
     {
       "backgroundImage": "./assets/images/piano.jpg",
       "posterUrl": "./assets/images/piano.jpg",
-      "title": "Tərlan Məmmədhüseynov – Ümid Rəqsi",
+      "title": "Ümid Rəqsi",
       "artist": "Tərlan Məmmədhüseynov",
       "janre": "Piano",
       "id": 22,
@@ -227,7 +227,7 @@
     {
       "backgroundImage": "./assets/images/piano.jpg",
       "posterUrl": "./assets/images/piano.jpg",
-      "title": "Shopin - Spring Waltz",
+      "title": "Spring Waltz",
       "artist": "Paul de Senneville",
       "janre": "Piano",
       "id": 23,
@@ -236,49 +236,14 @@
     {
       "backgroundImage": "./assets/images/piano.jpg",
       "posterUrl": "./assets/images/piano.jpg",
-      "title": "Emin Sabitoğlu - Aman ayrılıq",
+      "title": "Aman ayrılıq",
       "artist": "Emin Sabitoğlu",
       "janre": "Piano",
       "id": 24,
       "musicPath": "./assets/music/amanayrilig.mp3"
-    },
-    {
-      "backgroundImage": "./assets/images/piano.jpg",
-      "posterUrl": "./assets/images/piano.jpg",
-      "title": "Emin Sabitoğlu - Aman ayrılıq",
-      "artist": "Emin Sabitoğlu",
-      "janre": "Piano",
-      "id": 25,
-      "musicPath": "./assets/music/amanayrilig.mp3"
     }
   ],
   "fav": [
-    {
-      "backgroundImage": "./assets/images/poster-1.jpg",
-      "posterUrl": "./assets/images/poster-1.jpg",
-      "title": "Happy Moments (Master)",
-      "artist": "No Spirit x Tonion",
-      "musicPath": "./assets/music/music-1.mp3",
-      "janre": "POP",
-      "id": 1
-    },
-    {
-      "backgroundImage": "./assets/images/Rapstar.jpg",
-      "posterUrl": "./assets/images/Rapstar.jpg",
-      "title": "Ceza-Rapstar",
-      "artist": "Ceza",
-      "janre": "Hip-Hop",
-      "id": 5,
-      "musicPath": "./assets/music/CEZA - Rapstar.mp3"
-    },
-    {
-      "backgroundImage": "./assets/images/264x264.jpg",
-      "posterUrl": "./assets/images/264x264.jpg",
-      "title": "Tepki - Üzgünüm Anne",
-      "artist": "Tepki",
-      "janre": "Hip-Hop",
-      "id": 9,
-      "musicPath": "./assets/music/uzgunumanne.mp3"
-    }
+
   ]
 }
