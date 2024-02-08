@@ -5,7 +5,24 @@
       "mail": "cavidan9@gmail.com",
       "password": "2325",
       "id": 1
-
+    },
+    {
+      "name": "Khadija",
+      "mail": "cavidan9@gmail.com",
+      "password": "gff",
+      "id": 2
+    },
+    {
+      "name": "",
+      "mail": "",
+      "password": "",
+      "id": 3
+    },
+    {
+      "name": "",
+      "mail": "",
+      "password": "",
+      "id": 4
     }
   ],
   "musicData": [
@@ -203,7 +220,7 @@
       "posterUrl": "./assets/images/piano.jpg",
       "title": "Tərlan Məmmədhüseynov – Ümid Rəqsi",
       "artist": "Tərlan Məmmədhüseynov",
-      "janre": "Hip-Hop",
+      "janre": "Piano",
       "id": 22,
       "musicPath": "./assets/music/Tərlan Məmmədhüseynov – Ümid Rəqsi(MP3_70K).mp3"
     },
@@ -212,7 +229,7 @@
       "posterUrl": "./assets/images/piano.jpg",
       "title": "Shopin - Spring Waltz",
       "artist": "Paul de Senneville",
-      "janre": "Hip-Hop",
+      "janre": "Piano",
       "id": 23,
       "musicPath": "./assets/music/Mariage d_Amour - Paul de Senneville __ Jacob_s Piano(MP3_70K).mp3"
     },
@@ -221,7 +238,7 @@
       "posterUrl": "./assets/images/piano.jpg",
       "title": "Emin Sabitoğlu - Aman ayrılıq",
       "artist": "Emin Sabitoğlu",
-      "janre": "Hip-Hop",
+      "janre": "Piano",
       "id": 24,
       "musicPath": "./assets/music/amanayrilig.mp3"
     },
@@ -230,21 +247,21 @@
       "posterUrl": "./assets/images/piano.jpg",
       "title": "Emin Sabitoğlu - Aman ayrılıq",
       "artist": "Emin Sabitoğlu",
-      "janre": "Hip-Hop",
+      "janre": "Piano",
       "id": 25,
       "musicPath": "./assets/music/amanayrilig.mp3"
     }
   ],
-  "fav": [    {
-    "backgroundImage": "./assets/images/poster-1.jpg",
-    "posterUrl": "./assets/images/poster-1.jpg",
-    "title": "Happy Moments (Master)",
-    "artist": "No Spirit x Tonion",
-    "musicPath": "./assets/music/music-1.mp3",
-    "janre": "POP",
-    "id": 1
-  },
-
+  "fav": [
+    {
+      "backgroundImage": "./assets/images/poster-1.jpg",
+      "posterUrl": "./assets/images/poster-1.jpg",
+      "title": "Happy Moments (Master)",
+      "artist": "No Spirit x Tonion",
+      "musicPath": "./assets/music/music-1.mp3",
+      "janre": "POP",
+      "id": 1
+    },
     {
       "backgroundImage": "./assets/images/Rapstar.jpg",
       "posterUrl": "./assets/images/Rapstar.jpg",

@@ -1,422 +1,139 @@
-/**
- * Tüm geçilen öğeler üzerine eventListener ekle
- */
-const addEventOnElements = function (elements, eventType, callback) {
-  for (let i = 0, len = elements.length; i < len; i++) {
-    elements[i].addEventListener(eventType, callback);
-  }
-}
-
-
-/**
- * ÇALMA LİSTESİ
- * 
- * 'data' içinden tüm müzikleri çalma listesine ekle
- */
-
 let urlM = "http://localhost:3000/musicData";
-const playlist = document.querySelector("[data-music-list]");
-let filter=[];
-let copy=[];
-let search= document.querySelector("#search");
-let container = document.querySelector(".container23")
+const playlist = document.querySelector(".song");
+let filter = [];
+let copy = [];
+let search = document.querySelector("#search");
+let all = document.querySelector("#all");
+let piano = document.querySelector("#piano");
+let pop = document.querySelector("#pop");
+let hip = document.querySelector("#hip");
 async function musicAll() {
-    let res = await axios.get(urlM);
-    let data = await res.data;
-copy = data;
-playlist.innerHTML=" ";
+  let res = await axios.get(urlM);
+  let data = await res.data;
+  copy = data;
+  playlist.innerHTML = "";
 
-filter= filter.length || search.value ? filter : data ; 
-    filter.map((element) => {
-      playlist.innerHTML +=
-        `
-        <li class="musical">
-          <button class="music-item ${element.id === 0 ? "playing" : ""}" data-playlist-toggler data-playlist-item="${element.id}">
-            <img src="${element.posterUrl}" width="800" height="800" alt="${element.title} Albüm Poster" class="img-cover">
-    <p style="color:#ffda2a; font-size:12px;">${element.title}</p>
-   
-            <div class="item-icon">
-              <span class="material-symbols-rounded">equalizer</span>
-            </div>
-          </button>
-        </li>
-         <i onclick="Favorite(${element.id})" style="font-size: 20px; margin-left:20px;" class="bi bi-heart"></i>
-      `;
-    });
-
-};
-
-musicAll();
-
-
-
-let material=document.querySelector(".material-symbols-rounded");
-
-/**
- * ÇALMA LİSTESİ MODAL YAN PANELİ AÇMA/KAPAMA
- * 
- * Üst uygulama çubuğundaki çalma listesi düğmesine tıklandığında 'playlist' modal yan panelini göster
- * ve overlay veya herhangi bir çalma listesi öğesine tıklandığında gizle
- */
-
-const playlistSideModal = document.querySelector("[data-playlist]");
-const playlistTogglers = document.querySelectorAll("[data-playlist-toggler]");
-const overlay = document.querySelector("[data-overlay]");
-
-const togglePlaylist = function () {
-  playlistSideModal.classList.toggle("active");
-  overlay.classList.toggle("active");
-  document.body.classList.toggle("modalActive");
+  filter = filter.length || search.value ? filter : data;
+  filter.forEach((element) => {
+    playlist.innerHTML += `
+      <div class="item">
+        <div class="img"><img src="${element.posterUrl}" alt=""></div>
+        <h1>${element.title}</h1>
+        <i class="bi playListPlay bi-play-circle-fill"></i>
+      </div>
+    `;
+  });
 }
 
-
-addEventOnElements(playlistTogglers, "click", togglePlaylist);
-
-
-
-/**
- * ÇALAR
- * 
- * Mevcut müziğe dayalı olarak çalar üzerindeki tüm görsel bilgileri değiştir
- */
-
-const playerBanner = document.querySelector("[data-player-banner]");
-const playerTitle = document.querySelector("[data-title]");
-const playerAlbum = document.querySelector("[data-album]");
-const playerYear = document.querySelector("[data-year]");
-const playerArtist = document.querySelector("[data-artist]");
-
-async function musicAll2() {
-  try {
-    let res = await axios.get(urlM);
-    let data = await res.data;
-
-
-
-
-    const playlistItems = document.querySelectorAll("[data-playlist-item]");
-    let currentMusic = 0;
-    let lastPlayedMusic = 0;
-
-    const audioSource = new Audio(copy[currentMusic].musicPath);
-
-    const updateRangeFill = function () {
-      let element = this || ranges[0];
-      if (element && element.nextElementSibling) {
-        const rangeValue = (element.value / element.max) * 100;
-        element.nextElementSibling.style.width = `${rangeValue}%`;
-      }
-    };
-
-
-
-
-
-    
-    const changePlaylistItem = function (e) {
-      if (playlistItems[lastPlayedMusic - 1] && playlistItems[currentMusic - 1]) {
-        playlistItems[lastPlayedMusic - 1].classList.remove("playing");
-        playlistItems[currentMusic - 1].classList.add("playing");
-      }
+async function setMusicByGenre(genre, targetElement) {
+  let res = await axios.get(urlM);
+  let data = await res.data;
+  targetElement.innerHTML = "";
+  data.forEach((element) => {
+    if (element.janre === genre) {
+      targetElement.innerHTML += `
+        <div class="imag">
+          <img src="${element.posterUrl}" alt="">
+        </div>
+      `;
     }
- 
+  });
+}
 
-
-
-
-
-    const changePlayerInfo = function () {
-      if (copy[currentMusic]) {
-        console.log(currentMusic);
-        playerBanner.src = copy[currentMusic - 1].posterUrl;
-        playerBanner.setAttribute("alt", `${copy[currentMusic - 1].title} Albüm Poster`);
-        document.body.style.backgroundImage = `url(${copy[currentMusic - 1].backgroundImage})`;
-        playerTitle.textContent = copy[currentMusic - 1].title;
-        playerAlbum.textContent = copy[currentMusic - 1].album;
-        playerYear.textContent = copy[currentMusic - 1].year;
-        playerArtist.textContent = copy[currentMusic - 1].artist;
-        audioSource.src = copy[currentMusic - 1].musicPath;
-        playMusic();
-      } else {
-        console.error("Belirtilen indekse sahip müzik bulunamadı.");
-      }
-    }
-    addEventOnElements(playlistItems, "click", function () {
-      lastPlayedMusic = currentMusic;
-      currentMusic = Number(this.dataset.playlistItem);
-      changePlaylistItem();
-      changePlayerInfo();
+async function filterByPiano() {
+  let res = await axios.get(urlM);
+  let data = await res.data;
+  let filteredData = data.filter((element) => {
+    return element.janre === "Piano";
   });
 
-    addEventOnElements(playlistItems, "click", changePlayerInfo);
-
-    /** çalar süresini güncelle */
-    const playerDuration = document.querySelector("[data-duration]");
-    const playerSeekRange = document.querySelector("[data-seek]");
-
-    /** saniyeleri geçir ve zaman kodu biçimini al */
-    const getTimecode = function (duration) {
-      const minutes = Math.floor(duration / 60);
-      const seconds = Math.ceil(duration - (minutes * 60));
-      const timecode = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
-      return timecode;
-    }
-
-    const updateDuration = function () {
-      playerSeekRange.max = Math.ceil(audioSource.duration);
-      playerDuration.textContent = getTimecode(Number(playerSeekRange.max));
-    }
-
-    audioSource.addEventListener("loadeddata", updateDuration);
-
-    /**
-     * MÜZİĞİ ÇAL
-     * 
-     * Çal düğmesine tıklandığında müziği oynat ve duraklat
-     */
-    const playBtn = document.querySelector("[data-play-btn]");
-
-    let playInterval;
-
-    const playMusic = function () {
-      if (audioSource.paused) {
-        audioSource.pause(); 
-        audioSource.currentTime = 0;
-        audioSource.play();
-        playBtn.classList.add("active");
-        playInterval = setInterval(updateRunningTime, 500);
-      } else {
-        audioSource.pause();
-        playBtn.classList.remove("active");
-        clearInterval(playInterval);
-      }
-    }
-    playBtn.addEventListener("click", playMusic);
-
-    /** müzik çalarken süreyi güncelle */
-
-    const playerRunningTime = document.querySelector("[data-running-time]");
-
-    const updateRunningTime = function () {
-      if (playerSeekRange) {
-        playerSeekRange.value = audioSource.currentTime;
-        playerRunningTime.textContent = getTimecode(audioSource.currentTime);
-        updateRangeFill.call(playerSeekRange);
-        isMusicEnd();
-
-      }
-    }
-
-    /**
-     * ARALIK DOLULUK GENİRLİĞİ
-     * 
-     * Aralık değeri değişirken 'rangeFill' genişliğini değiştir
-     */
-
-    const ranges = document.querySelectorAll("[data-range]");
-
-    addEventOnElements(ranges, "input", updateRangeFill);
-
-    /**
-     * MÜZİĞİ ARAMA
-     * 
-     * Çalar aralığını değiştirirken müziği ara
-     */
-
-    const seek = function () {
-      audioSource.currentTime = playerSeekRange.value;
-      playerRunningTime.textContent = getTimecode(playerSeekRange.value);
-    }
-
-    playerSeekRange.addEventListener("input", seek);
-
-    /**
-     * MÜZİĞİN SONU
-     */
-
-    const isMusicEnd = function () {
-      if (audioSource.ended) {
-        playBtn.classList.remove("active");
-        audioSource.currentTime = 0;
-        playerSeekRange.value = audioSource.currentTime;
-        playerRunningTime.textContent = getTimecode(audioSource.currentTime);
-        updateRangeFill();
-      }
-    }
-
-    /**
-     * SONRAKİ MÜZİĞE ATLA
-     */
-
-    const playerSkipNextBtn = document.querySelector("[data-skip-next]");
-
-    const skipNext = function () {
-      lastPlayedMusic = currentMusic;
-
-      if (isShuffled) {
-        shuffleMusic();
-      } else {
-        currentMusic >= data.length - 1 ? currentMusic = 0 : currentMusic++;
-      }
-
-      changePlayerInfo();
-      changePlaylistItem();
-    }
-
-    playerSkipNextBtn.addEventListener("click", skipNext);
-
-    /**
-     * ÖNCEKİ MÜZİĞE ATLA
-     */
-
-    const playerSkipPrevBtn = document.querySelector("[data-skip-prev]");
-
-    const skipPrev = function () {
-      lastPlayedMusic = currentMusic;
-
-      if (isShuffled) {
-        shuffleMusic();
-      } else {
-        currentMusic <= 0 ? currentMusic =copy.length - 1 : currentMusic--;
-      }
-
-      changePlayerInfo();
-      changePlaylistItem();
-    }
-
-    playerSkipPrevBtn.addEventListener("click", skipPrev);
-
-    /**
-     * MÜZİĞİ KARIŞTIR
-     */
-
-    /** karıştırmak için rastgele bir sayı al */
-    const getRandomMusic = () => Math.floor(Math.random() * copy.length);
-
-    const shuffleMusic = () => currentMusic = getRandomMusic();
-
-    const playerShuffleBtn = document.querySelector("[data-shuffle]");
-    let isShuffled = false;
-
-    const shuffle = function () {
-      playerShuffleBtn.classList.toggle("active");
-
-      isShuffled = isShuffled ? false : true;
-    }
-
-    playerShuffleBtn.addEventListener("click", shuffle);
-
-    /**
-     * MÜZİĞİ TEKRARLA
-     */
-
-   // Tekrar düğmesini seçin
-const repeatBtn = document.querySelector("[data-repeat]");
-
-// Müziği tekrar etme durumunu izlemek için bir değişken ekleyin
-let isRepeated = false;
-
-// Tekrar düğmesine tıklandığında çalışacak fonksiyon
-const toggleRepeat = function () {
-  isRepeated = !isRepeated; // Durumu tersine çevir
-  audioSource.loop = isRepeated; // Ses dosyasını tekrar etme durumuna göre ayarla
-
-  // Durumu göstermek için CSS sınıfını güncelle
-  repeatBtn.classList.toggle("active", isRepeated);
+  playlist.innerHTML = "";
+  filteredData.forEach((element) => {
+    playlist.innerHTML += `
+      <div class="item">
+        <div class="img"><img src="${element.posterUrl}" alt=""></div>
+        <h1>${element.title}</h1>
+        <i class="bi playListPlay bi-play-circle-fill"></i>
+      </div>
+    `;
+  });
 }
 
-// Tekrar düğmesine tıklama olayını dinleyin
-repeatBtn.addEventListener("click", toggleRepeat);
 
-    /**
-     * MÜZİK SESİ
-     * 
-     * Ses aralığını değiştirirken müziği aç veya kapa
-     */
+async function filterBypop() {
+  let res = await axios.get(urlM);
+  let data = await res.data;
+  let filteredData = data.filter((element) => {
+    return element.janre === "POP";
+  });
 
-    const playerVolumeRange = document.querySelector("[data-volume]");
-    const playerVolumeBtn = document.querySelector("[data-volume-btn]");
+  playlist.innerHTML = "";
+  filteredData.forEach((element) => {
+    playlist.innerHTML += `
+      <div class="item">
+        <div class="img"><img src="${element.posterUrl}" alt=""></div>
+        <h1>${element.title}</h1>
+        <i class="bi playListPlay bi-play-circle-fill"></i>
+      </div>
+    `;
+  });
+}
 
-    const changeVolume = function () {
-      audioSource.volume = playerVolumeRange.value;
-      audioSource.muted = false;
+async function filterByhiphop() {
+  let res = await axios.get(urlM);
+  let data = await res.data;
+  let filteredData = data.filter((element) => {
+    return element.janre === "Hip-Hop";
+  });
 
-      if (audioSource.volume <= 0.1) {
-        playerVolumeBtn.children[0].textContent = "volume_mute";
-      } else if (audioSource.volume <= 0.5) {
-        playerVolumeBtn.children[0].textContent = "volume_down";
-      } else {
-        playerVolumeBtn.children[0].textContent = "volume_up";
-      }
-    }
+  playlist.innerHTML = "";
+  filteredData.forEach((element) => {
+    playlist.innerHTML += `
+      <div class="item">
+        <div class="img"><img src="${element.posterUrl}" alt=""></div>
+        <h1>${element.title}</h1>
+        <i class="bi playListPlay bi-play-circle-fill"></i>
+      </div>
+    `;
+  });
+}
 
-    playerVolumeRange.addEventListener("input", changeVolume);
 
-    /**
-     * SESİ KIS
-     */
 
-    const muteVolume = function () {
-      if (!audioSource.muted) {
-        audioSource.muted = true;
-        playerVolumeBtn.children[0].textContent = "volume_off";
-      } else {
-        changeVolume();
-      }
-    }
 
-    playerVolumeBtn.addEventListener("click", muteVolume);
 
-  } catch (error) {
-    console.error(error);
-  }
-  
-};
+async function musicAll4() {
+  await musicAll();
+}
+pop.addEventListener("click", async () => {
+  await filterBypop();
+});
 
-musicAll2()
+hip.addEventListener("click", async () => {
+  await filterByhiphop();
+});
 
-// musicAll2 fonksiyonu sonu veya hemen altına bu kod parçacığını ekleyin
+all.addEventListener("click", async () => {
+  await musicAll4();
+});
 
-// Playlist öğelerine tıklandığında müzik değişikliğini izle
+piano.addEventListener("click", async () => {
+  await filterByPiano();
+});
 
-search.addEventListener("input",(el)=>{
-  filter=copy;
-      filter=filter.filter((e)=>{
-          return e.title.toLocaleLowerCase().includes(el.target.value.toLocaleLowerCase())
-      })
-    musicAll();
-    musicAll2();
-  })
+search.addEventListener("input", (el) => {
+  filter = copy;
+  filter = filter.filter((e) => {
+    return e.title.toLowerCase().includes(el.target.value.toLowerCase());
+  });
+  musicAll();
+});
 
-  function Favorite(id) {
+async function init() {
+  await setMusicByGenre("POP", document.querySelector(".pop .image"));
+  await setMusicByGenre("Hip-Hop", document.querySelector(".Hiphop .image"));
+  await setMusicByGenre("Piano", document.querySelector(".Piano .image"));
+  await musicAll();
+}
 
-    if (event.target.classList.contains('bi-heart')) {
-      event.target.classList.remove('bi-heart')
-      event.target.classList.add('bi-heart-fill')
-  
-      axios.get(`http://localhost:3000/musicData/${id}`)
-        .then(res => {
-          console.log(res.data);
-          return res.data
-        })
-        .then(res => {
-          axios.get(`http://localhost:3000/fav`)
-            .then(response => {
-              let iD = response.data.find(f => f.id === response.id);
-              if (!iD) {
-                axios.post(`http://localhost:3000/fav`, res)
-                console.log(event.target);
-              }
-              else {
-                axios.delete(` http://localhost:3000/fav/${iD.id}`)
-              }
-            })
-        })
-    }
-    else {
-      event.preventDefault();
-      event.target.classList.remove('bi-heart-fill')
-      event.target.classList.add('bi-heart')
-      axios.delete(` http://localhost:3000/fav/${id}`)
-    }
-  }
+init();
