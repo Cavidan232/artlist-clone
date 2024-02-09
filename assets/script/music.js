@@ -10,6 +10,10 @@ let songs = [];
 let isShuffle = false;
 let isRepeat = false;
 
+let forwardPressCount = 0;
+let backwardPressCount = 0;
+let forwardTimeout;
+let backwardTimeout;
 
 async function fetchSongs() {
   try {
@@ -30,8 +34,10 @@ function renderPlaylist(songs) {
     playlist.innerHTML += `
       <div class="item">
         <div class="img"><img src="${song.posterUrl}" alt=""></div>
-        <h1>${song.title}</h1>
-        <p> ${song.artist}</p>
+      <div class="text">
+          <h1>${song.title}</h1>
+          <p> ${song.artist}</p>
+      </div>
         <i class="bi playListPlay bi-play-circle-fill" data-id="${song.id}" data-music-path="${song.musicPath}"></i>
       </div>
     `;
@@ -382,11 +388,29 @@ document.getElementById('download').addEventListener('click', downloadMusic);
 document.addEventListener("keydown", function(event) {
   // Sağ ok tuşu (ileri gitme)
   if (event.code === "ArrowRight") {
-    playNextSong();
+    if (forwardPressCount === 0) {
+      forwardTimeout = setTimeout(() => {
+        forwardPressCount = 0;
+      }, 1000);
+    }
+    forwardPressCount++;
+    if (forwardPressCount === 2) {
+      audioPlayer.currentTime += 5;
+      forwardPressCount = 0;
+    }
   }
   // Sol ok tuşu (geri gitme)
   else if (event.code === "ArrowLeft") {
-    playPreviousSong();
+    if (backwardPressCount === 0) {
+      backwardTimeout = setTimeout(() => {
+        backwardPressCount = 0;
+      }, 1000);
+    }
+    backwardPressCount++;
+    if (backwardPressCount === 2) {
+      audioPlayer.currentTime -= 5;
+      backwardPressCount = 0;
+    }
   }
   // Boşluk tuşu (oynat/duraklat)
   else if (event.code === "Space") {

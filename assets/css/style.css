@@ -1851,9 +1851,10 @@ footer .top .right ul li a:hover {
   padding: 30px;
 }
 .playlist .playlist1 .playsong #search {
-  padding: 13px 10px;
+  padding: 5px 3px;
+  font-size: 15px;
   border-radius: 10px;
-  margin: 10px;
+  width: 100%;
 }
 .playlist .playlist1 .playsong .song {
   display: flex;
@@ -1880,10 +1881,21 @@ footer .top .right ul li a:hover {
   border-radius: 10px;
   background-color: #4c5262;
 }
+.playlist .playlist1 .playsong .song .item .text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
 .playlist .playlist1 .playsong .song .item h1 {
-  font-size: 15px;
+  font-size: 14px;
   width: 150px;
   text-overflow: ellipsis;
+}
+.playlist .playlist1 .playsong .song .item p {
+  font-size: 14px;
+  width: 100%;
 }
 .playlist .playlist1 .playsong .song .item i {
   font-size: 25px;
@@ -1981,10 +1993,10 @@ footer .top .right ul li a:hover {
 
 @media screen and (max-width: 991px) {
   .playlist .playlist1 .playsong {
-    width: 50%;
+    width: 55%;
   }
   .playlist .playlist1 .playimg {
-    width: 50%;
+    width: 45%;
   }
 }
 @media screen and (max-width: 571px) {
