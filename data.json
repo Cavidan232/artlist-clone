@@ -13,16 +13,10 @@
       "id": 2
     },
     {
-      "name": "",
-      "mail": "",
-      "password": "",
-      "id": 3
-    },
-    {
-      "name": "",
-      "mail": "",
-      "password": "",
-      "id": 4
+      "name": "Amaliya",
+      "mail": "Cavidanvelizade9@gmail.com",
+      "password": "123",
+      "id": 5
     }
   ],
   "musicData": [
@@ -261,7 +255,5 @@
       "musicPath": "./assets/music/depositphotos_667596348-track-electronic-ambient-music-soft-glitchy.mp3"
     }
   ],
-  "fav": [
-
-  ]
+  "fav": []
 }

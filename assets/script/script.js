@@ -162,3 +162,10 @@ async function logout() {
 
 logout();
 
+let homs = document.querySelectorAll(".hom");
+homs.forEach((hom)=>{
+    hom.addEventListener("click",()=>{
+        window.location="./index.html";
+        nav.style.borderBottom = '2px solid #ffda2a';
+    })
+})

@@ -137,31 +137,25 @@ function toggleShuffle() {
   }
 }
 
-// Repeat düğmesine basıldığında tekrar modunu aç/kapat
 function toggleRepeat() {
   isRepeat = !isRepeat;
   const repeatButton = document.getElementById('repeat');
   const icon = repeatButton.querySelector('i');
-  if (!isRepeat) {
 
-    if (    icon.classList.contains('bi-arrow-repeat')) {
-      icon.classList.remove('bi-arrow-repeat'); // Eski ikonu kaldır
-      icon.classList.add('bi-repeat-1'); // Yeni ikonu ekle
-      console.log(("jhijij"));
-    }
- 
+  if (isRepeat) {
+    // Tekrar modu açıldığında
+    icon.classList.remove('bi-arrow-repeat');
+    icon.classList.add('bi-repeat-1');
+    console.log("Tekrar modu açıldı.");
   } else {
-    if (icon.classList.contains('bi-repeat-1')) {
-      icon.classList.remove('bi-repeat-1'); // Eski ikonu kaldır
-      icon.classList.add('bi-arrow-repeat'); // Yeni ikonu ekle
-      console.log(("jh567ijij"));
-    }
-  
+    // Tekrar modu kapatıldığında
+    icon.classList.remove('bi-repeat-1');
+    icon.classList.add('bi-arrow-repeat');
+    console.log("Tekrar modu kapatıldı.");
   }
 }
-document.getElementById('repeat').addEventListener('click', toggleRepeat);
 
-// Müzik tekrar etme işlevi
+
 audioPlayer.addEventListener('ended', function() {
   if (isRepeat) {
     // Eğer tekrar modu açıksa, aynı şarkıyı tekrar çal
@@ -173,7 +167,7 @@ audioPlayer.addEventListener('ended', function() {
   }
 });
 
-
+document.getElementById('repeat').addEventListener('click', toggleRepeat);
 
 // Shuffle Songs
 function shuffleSongs() {
