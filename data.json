@@ -4,19 +4,15 @@
       "name": "Cavidan1907",
       "mail": "cavidan9@gmail.com",
       "password": "2325",
-      "id": 1
+      "id": 1,
+      "fav": []
     },
     {
-      "name": "Khadija",
+      "name": "Cavidan19075",
       "mail": "cavidan9@gmail.com",
-      "password": "gff",
-      "id": 2
-    },
-    {
-      "name": "Amaliya",
-      "mail": "Cavidanvelizade9@gmail.com",
       "password": "123",
-      "id": 5
+      "fav": [],
+      "id": 2
     }
   ],
   "musicData": [
@@ -254,6 +250,5 @@
       "id": 24,
       "musicPath": "./assets/music/depositphotos_667596348-track-electronic-ambient-music-soft-glitchy.mp3"
     }
-  ],
-  "fav": []
+  ]
 }

@@ -1848,13 +1848,15 @@ footer .top .right ul li a:hover {
   justify-content: flex-start;
   flex-direction: column;
   gap: 30px;
-  padding: 30px;
+  padding: 20px;
 }
 .playlist .playlist1 .playsong #search {
-  padding: 5px 3px;
-  font-size: 15px;
+  padding: 5px 10px;
+  font-size: 10px;
   border-radius: 10px;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  width: 70%;
 }
 .playlist .playlist1 .playsong .song {
   display: flex;
@@ -1887,6 +1889,8 @@ footer .top .right ul li a:hover {
   justify-content: flex-start;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin-top: 18px;
 }
 .playlist .playlist1 .playsong .song .item h1 {
   font-size: 14px;
@@ -1898,7 +1902,7 @@ footer .top .right ul li a:hover {
   width: 100%;
 }
 .playlist .playlist1 .playsong .song .item i {
-  font-size: 25px;
+  font-size: 15px;
 }
 .playlist .playlist1 .playsong .song .item .img {
   width: 50px;
@@ -1951,6 +1955,8 @@ footer .top .right ul li a:hover {
 }
 .playlist .playlist1 .playimg h1 {
   font-size: 20px;
+  border-bottom: 1px solid #ffda2a;
+  display: inline-block;
 }
 .playlist .playlist1 .playimg .pop, .playlist .playlist1 .playimg .Piano, .playlist .playlist1 .playimg .Hiphop {
   width: 100%;
@@ -1958,7 +1964,7 @@ footer .top .right ul li a:hover {
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  gap: 20px;
+  gap: 1px;
 }
 .playlist .playlist1 .playimg .pop .title, .playlist .playlist1 .playimg .Piano .title, .playlist .playlist1 .playimg .Hiphop .title {
   width: 100%;
@@ -1971,21 +1977,23 @@ footer .top .right ul li a:hover {
   overflow-x: scroll;
   gap: 10px;
   width: 100%;
+  padding: 4px 0;
 }
 .playlist .playlist1 .playimg .pop .image::-webkit-scrollbar-thumb, .playlist .playlist1 .playimg .Piano .image::-webkit-scrollbar-thumb, .playlist .playlist1 .playimg .Hiphop .image::-webkit-scrollbar-thumb {
   background-color: #ffda2a;
+  cursor: pointer;
 }
 .playlist .playlist1 .playimg .pop .image::-webkit-scrollbar, .playlist .playlist1 .playimg .Piano .image::-webkit-scrollbar, .playlist .playlist1 .playimg .Hiphop .image::-webkit-scrollbar {
-  height: 5px;
+  height: 4px;
 }
 .playlist .playlist1 .playimg .pop .image .imag, .playlist .playlist1 .playimg .Piano .image .imag, .playlist .playlist1 .playimg .Hiphop .image .imag {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 99999px;
 }
 .playlist .playlist1 .playimg .pop .image .imag img, .playlist .playlist1 .playimg .Piano .image .imag img, .playlist .playlist1 .playimg .Hiphop .image .imag img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 99999px;
   object-fit: cover;
   overflow: hidden;
@@ -2021,6 +2029,9 @@ footer .top .right ul li a:hover {
   justify-content: space-between;
   padding: 10px;
   box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1);
+}
+.music-container h1 {
+  font-size: 15px;
 }
 
 .music-controls button,
@@ -2090,4 +2101,8 @@ input[type=range]::-webkit-slider-thumb {
   flex-grow: 1;
   display: flex;
   justify-content: space-between;
+}
+
+.song-title {
+  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */

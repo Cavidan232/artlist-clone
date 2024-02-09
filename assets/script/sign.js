@@ -35,7 +35,8 @@ formUp.addEventListener("submit", async (e) => {
   await axios.post(url, {
     name: nameInp.value,
     mail: mailInp.value,
-    password: pasInp.value
+    password: pasInp.value,
+    fav:[]
   });
 });
 

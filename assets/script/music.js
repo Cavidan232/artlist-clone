@@ -39,6 +39,7 @@ function renderPlaylist(songs) {
           <p> ${song.artist}</p>
       </div>
         <i class="bi playListPlay bi-play-circle-fill" data-id="${song.id}" data-music-path="${song.musicPath}"></i>
+        <i class="bi bi-heart"></i>
       </div>
     `;
   });
@@ -362,9 +363,9 @@ async function init() {
   await setMusicByGenre("Piano", document.querySelector(".Piano .image"));
   await fetchSongs();
 
-  // Sayfa açıldığında rastgele bir şarkıyı çal
-  const randomIndex = Math.floor(Math.random() * songs.length);
-  loadSong(randomIndex);
+
+  // const randomIndex = Math.floor(Math.random() * songs.length);
+  // loadSong(randomIndex);
 }
 
 init();
@@ -418,3 +419,4 @@ document.addEventListener("keydown", function(event) {
   }
   
 });
+
