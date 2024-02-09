@@ -1851,8 +1851,9 @@ footer .top .right ul li a:hover {
   padding: 30px;
 }
 .playlist .playlist1 .playsong #search {
-  padding: 5px 2px;
+  padding: 13px 10px;
   border-radius: 10px;
+  margin: 10px;
 }
 .playlist .playlist1 .playsong .song {
   display: flex;
@@ -2033,7 +2034,7 @@ footer .top .right ul li a:hover {
   position: relative; /* İlave */
 }
 
-.progress input[type=range] {
+.progress .progress-bar {
   /* İlerleme çubuğunun rengi */
   /* Sarı tonu */
   width: 100%; /* İlave */
@@ -2045,6 +2046,26 @@ footer .top .right ul li a:hover {
   border: none; /* İlave */
   border-radius: 5px; /* İlave */
   outline: none; /* İlave */
+  background-color: #ffda2a;
+}
+
+input[type=range] {
+  -webkit-appearance: none; /* Safari ve Chrome için varsayılan stilleri devre dışı bırak */
+  width: 100%;
+  height: 10px;
+  background: #ffda2a; /* Renk gradyanı */
+  border-radius: 5px;
+  outline: none; /* Odaklanıldığında kenarlığı kaldır */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Safari ve Chrome için varsayılan stilleri devre dışı bırak */
+  width: 20px;
+  height: 20px;
+  background: #121213; /* Başlangıçta beyaz renkte bir başlık */
+  border-radius: 50%; /* Yuvarlatılmış kenarlığı */
+  cursor: pointer; /* Fareyi el tipine dönüştür */
+  border: 2px solid #ccc; /* Kenarlık ekleyin */
 }
 
 .volume-control {

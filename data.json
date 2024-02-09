@@ -241,6 +241,24 @@
       "janre": "Piano",
       "id": 24,
       "musicPath": "./assets/music/amanayrilig.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/piano.jpg",
+      "posterUrl": "./assets/images/piano.jpg",
+      "title": "Ala Gözlüm",
+      "artist": "Akif İslamzadə",
+      "janre": "Piano",
+      "id": 24,
+      "musicPath": "./assets/music/WhatsApp Audio 2024-02-09 saat 01.15.19_e7def982.dat.unknown"
+    },
+    {
+      "backgroundImage": "./assets/images/piano.jpg",
+      "posterUrl": "./assets/images/piano.jpg",
+      "title": "Ala Gözlüm",
+      "artist": "Akif İslamzadə",
+      "janre": "Piano",
+      "id": 24,
+      "musicPath": "./assets/music/depositphotos_667596348-track-electronic-ambient-music-soft-glitchy.mp3"
     }
   ],
   "fav": [
