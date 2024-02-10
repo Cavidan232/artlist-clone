@@ -149,6 +149,7 @@ async function logout() {
 
     if (logoutBtn.style.display === "block") {
         logoutBtn.addEventListener('click', () => {
+            window.location.reload();
             logoutBtn.style.display = "none";
             localStorage.removeItem('currentUser');
             logs.forEach((log23) => {

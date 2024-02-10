@@ -406,6 +406,15 @@ async function filterAllSongs() {
   let data = await res.data;
   renderPlaylist(data);
 }
+// Favori şarkıları filtreleme işlevi
+function filterFavoriteSongs() {
+  const userData = getUserSession();
+  const { fav } = userData;
+  const favoriteSongs = songs.filter(song => fav.includes(song.id));
+  renderPlaylist(favoriteSongs);
+}
+// Favori şarkıları filtreleme düğmesine olay dinleyicisi ekle
+document.getElementById("favorit").addEventListener("click", filterFavoriteSongs);
 
 // Tür filtreleri için olay dinleyicileri
 document.getElementById("pop").addEventListener("click", filterByPop);
@@ -438,8 +447,8 @@ async function init() {
   await fetchSongs();
 
 
-  // const randomIndex = Math.floor(Math.random() * songs.length);
-  // loadSong(randomIndex);
+  const randomIndex = Math.floor(Math.random() * songs.length);
+  loadSong(randomIndex);
 }
 
 init();

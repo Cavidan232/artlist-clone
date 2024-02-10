@@ -6,9 +6,10 @@
       "password": "2325",
       "id": 1,
       "fav": [
-        1,
         2,
-        30
+        30,
+        23,
+        4
       ]
     },
     {
@@ -43,6 +44,17 @@
         5
       ],
       "id": 5
+    },
+    {
+      "name": "HS1",
+      "mail": "Cavidanvelizade9@gmail.com",
+      "password": "hs2",
+      "fav": [
+        22,
+        3,
+        2
+      ],
+      "id": 6
     }
   ],
   "musicData": [
