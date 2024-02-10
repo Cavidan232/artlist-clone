@@ -501,4 +501,3 @@ document.addEventListener("keydown", function(event) {
     playPause();
   }
 });
-

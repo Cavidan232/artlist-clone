@@ -55,6 +55,15 @@
         2
       ],
       "id": 6
+    },
+    {
+      "name": "talib",
+      "mail": "Cavidanvelizade9@gmail.com",
+      "password": "12",
+      "fav": [
+        2
+      ],
+      "id": 7
     }
   ],
   "musicData": [
@@ -336,6 +345,15 @@
       "janre": "POP",
       "id": 29,
       "musicPath": "./assets/music/Uzeyir Mehdizade - Boyuduk 2024 (Yeni Klip) 4K(M4A_128K).m4a"
+    },
+    {
+      "backgroundImage": "./assets/images/images (1).jpeg",
+      "posterUrl": "./assets/images/images (1).jpeg",
+      "title": "Bleeding",
+      "artist": "TalkinYoys",
+      "janre": "POP",
+      "id": 30,
+      "musicPath": "./assets/music/Amaliya.mp3"
     }
   ]
 }

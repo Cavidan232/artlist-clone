@@ -1877,7 +1877,7 @@ footer .top .right ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  justify-content: space-evenly;
+  justify-content: space-around;
   width: 100%;
   padding: 2px;
   border-radius: 10px;
@@ -1889,12 +1889,13 @@ footer .top .right ul li a:hover {
   justify-content: flex-start;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 18px;
+  width: 60%;
 }
 .playlist .playlist1 .playsong .song .item h1 {
   font-size: 14px;
-  width: 150px;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 .playlist .playlist1 .playsong .song .item p {
@@ -1922,6 +1923,7 @@ footer .top .right ul li a:hover {
   justify-content: center;
   gap: 5px;
   margin-top: 5px;
+  flex-wrap: wrap;
 }
 .playlist .playlist1 .button button {
   padding: 5px 10px;
