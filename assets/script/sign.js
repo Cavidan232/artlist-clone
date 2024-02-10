@@ -64,7 +64,7 @@ form2.addEventListener('submit',(e)=>{
         if(currentUserInfo){
             if(currentUserInfo.password == password){
                 localStorage.setItem('currentUser', JSON.stringify(currentUserInfo));
-                window.location = './index.html'
+                window.location = './music.html'
             }else{
                 alert("wrong pasword")
             }      

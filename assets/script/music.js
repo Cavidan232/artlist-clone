@@ -25,7 +25,6 @@ async function fetchSongs() {
   }
 }
 
-
 // Oynatma listesini oluştur
 function renderPlaylist(songs) {
   const playlist = document.querySelector('.song');
@@ -34,16 +33,91 @@ function renderPlaylist(songs) {
     playlist.innerHTML += `
       <div class="item">
         <div class="img"><img src="${song.posterUrl}" alt=""></div>
-      <div class="text">
+        <div class="text">
           <h1>${song.title}</h1>
-          <p> ${song.artist}</p>
-      </div>
+          <p>${song.artist}</p>
+        </div>
         <i class="bi playListPlay bi-play-circle-fill" data-id="${song.id}" data-music-path="${song.musicPath}"></i>
-        <i class="bi bi-heart"></i>
+        <i class="bi favorite-btn ${isFavorite(song.id) ? 'bi-heart-fill' : 'bi-heart'}" data-song-id="${song.id}" onclick="toggleFavorite(${song.id})"></i>
       </div>
     `;
   });
 }
+// Favori mi kontrolü
+function isFavorite(songId) {
+  const { fav } = getUserSession();
+  return fav.includes(songId);
+
+}
+
+// Kullanıcı oturumu bilgilerini güncelleme
+function updateUserSession(userData) {
+  localStorage.setItem('currentUser', JSON.stringify(userData));
+}
+
+// Favoriye ekleme/kaldırma işlevini gerçekleştirme
+async function toggleFavorite(songId) {
+  const userData = getUserSession();
+  const { fav } = userData;
+  const index = fav.indexOf(songId);
+  if (index !== -1) {
+    // Şarkı zaten favorilere ekli, bu yüzden kaldır
+    fav.splice(index, 1);
+  } else {
+    // Şarkı favorilere eklenmedi, ekle
+    fav.push(songId);
+  
+  }
+  console.log(userData);
+  console.log(userData.fav);
+  updateUserSession(userData); // Oturum bilgilerini güncelle
+  updateFavoriteButton(songId); // Favori düğmesinin görünümünü güncelle
+  
+  // Favori listesini sunucuya güncelle
+  try {
+
+    await axios.patch(`http://localhost:3000/acount/${userData.id}`, { fav: userData.fav });
+    console.log('Favori listesi güncellendi:', userData.fav);
+  } catch (error) {
+    console.error('Favori listesi güncellenirken bir hata oluştu:', error);
+  }
+}
+
+
+function loadFavoriteSongs() {
+  const userData = getUserSession();
+  const { fav } = userData;
+  const favoriteSongs = songs.filter(song => fav.includes(song.id));
+  renderPlaylist(favoriteSongs);
+}
+
+// Favori düğmesine tıklama işlevi
+function handleFavoriteClick(songId) {
+  toggleFavorite(songId); // Favoriye ekleme/kaldırma işlevini çağır
+}
+
+// Favori düğmesinin görünümünü ve işlevselliğini güncelleme
+function updateFavoriteButton(songId) {
+  const favoriteButton = document.querySelector(`.favorite-btn[data-song-id="${songId}"]`);
+  const userData = getUserSession();
+  const { fav } = userData;
+  const index = fav.indexOf(songId);
+  if (index !== -1) {
+    // Şarkı favorilere eklenmiş, dolayısıyla favori simgesini doldur
+    favoriteButton.classList.remove('bi-heart');
+    favoriteButton.classList.add('bi-heart-fill');
+  } else {
+    // Şarkı favorilere eklenmemiş, dolayısıyla favori simgesini boşalt
+    favoriteButton.classList.remove('bi-heart-fill');
+    favoriteButton.classList.add('bi-heart');
+  }
+}
+
+// Kullanıcı oturumu bilgilerini getiren fonksiyon
+function getUserSession() {
+  return JSON.parse(localStorage.getItem('currentUser')) || { id: null, fav: [] };
+}
+
 
 // Şarkıyı yükle
 function loadSong(index) {
@@ -417,6 +491,5 @@ document.addEventListener("keydown", function(event) {
   else if (event.code === "Space") {
     playPause();
   }
-  
 });
 

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Şarkı Ekle</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #121213;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-group button {
+  padding: 10px 20px;
+  background-color: #ffda2a;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #ffda2a;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+</style>
+<body>
+<div class="container">
+  <h2>Mahnı əlavə et</h2>
+  <form id="newSongForm" class="form">
+    <div class="form-group">
+      <label for="title">Mahnı  Adı:</label>
+      <input type="text" id="title" name="title" required>
+    </div>
+    <div class="form-group">
+      <label for="artist">İfaçı:</label>
+      <input type="text" id="artist" name="artist" required>
+    </div>
+    <div class="form-group">
+      <label for="genre">Janr</label>
+      <select id="genre" name="genre" required>
+        <option value="">Janr seçin</option>
+        <option value="POP">Pop</option>
+        <option value="Hip-Hop">Hip-Hop</option>
+        <option value="Piano">Piano</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="musicFile">Musiqi faylı seçin:</label>
+      <input type="file" id="musicFile" name="musicFile" accept=".mp3" required>
+    </div>
+    <div class="form-group">
+      <label for="posterFile">Poster şəkli Seçin:</label>
+      <input type="file" id="posterFile" name="posterFile" accept="image/*" required>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn">Mahnı əlavə et</button>
+    </div>
+  </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>

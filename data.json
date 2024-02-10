@@ -5,7 +5,11 @@
       "mail": "cavidan9@gmail.com",
       "password": "2325",
       "id": 1,
-      "fav": []
+      "fav": [
+        1,
+        2,
+        30
+      ]
     },
     {
       "name": "Cavidan19075",
@@ -13,6 +17,32 @@
       "password": "123",
       "fav": [],
       "id": 2
+    },
+    {
+      "name": "Cavidan1",
+      "mail": "Cavidanvelizade9@gmail.com",
+      "password": "123",
+      "fav": [],
+      "id": 3
+    },
+    {
+      "name": "Mirtalib",
+      "mail": "Mirtalib9@gmail.com",
+      "password": "123",
+      "fav": [],
+      "id": 4
+    },
+    {
+      "name": "HS",
+      "mail": "Cavidanvelizade9@gmail.com",
+      "password": "12",
+      "fav": [
+        23,
+        3,
+        4,
+        5
+      ],
+      "id": 5
     }
   ],
   "musicData": [
@@ -249,6 +279,51 @@
       "janre": "Piano",
       "id": 24,
       "musicPath": "./assets/music/depositphotos_667596348-track-electronic-ambient-music-soft-glitchy.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/eminem.jpeg",
+      "posterUrl": "./assets/images/eminem.jpeg",
+      "title": "Venom",
+      "artist": "Eminem",
+      "janre": "Hip-Hop",
+      "id": 25,
+      "musicPath": "./assets/music/Eminem - Venom.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/eminem.jpeg",
+      "posterUrl": "./assets/images/eminem.jpeg",
+      "title": "Lose Yourself",
+      "artist": "Eminem",
+      "janre": "Hip-Hop",
+      "id": 26,
+      "musicPath": "./assets/music/Eminem - Lose Yourself.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/eminem.jpeg",
+      "posterUrl": "./assets/images/eminem.jpeg",
+      "title": "Lose Yourself",
+      "artist": "Eminem",
+      "janre": "Hip-Hop",
+      "id": 27,
+      "musicPath": "./assets/music/Eminem - Lose Yourself.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/500x500.jpg",
+      "posterUrl": "./assets/images/500x500.jpg",
+      "title": "Simpatiçni oğlanam",
+      "artist": "Üzeyir",
+      "janre": "POP",
+      "id": 28,
+      "musicPath": "./assets/music/Üzeyir Mehdizade - Simpaticni oglanam (Original Mix)(M4A_128K).m4a"
+    },
+    {
+      "backgroundImage": "./assets/images/500x500.jpg",
+      "posterUrl": "./assets/images/500x500.jpg",
+      "title": "Böyüdük",
+      "artist": "Üzeyir",
+      "janre": "POP",
+      "id": 29,
+      "musicPath": "./assets/music/Uzeyir Mehdizade - Boyuduk 2024 (Yeni Klip) 4K(M4A_128K).m4a"
     }
   ]
 }
