@@ -419,7 +419,6 @@ function filterFavoriteSongs() {
 }
 // Favori şarkıları filtreleme düğmesine olay dinleyicisi ekle
 document.getElementById("favorit").addEventListener("click", filterFavoriteSongs);
-
 // Tür filtreleri için olay dinleyicileri
 document.getElementById("pop").addEventListener("click", filterByPop);
 document.getElementById("hip").addEventListener("click", filterByHipHop);

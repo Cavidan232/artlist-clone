@@ -56,7 +56,8 @@ if (alertDiv.style.opacity==="0") {
     name: nameInp.value,
     mail: mailInp.value,
     password: pasInp.value,
-    fav:[]
+    fav:[],
+    songId:[]
   });
 }
 });

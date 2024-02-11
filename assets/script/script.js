@@ -101,9 +101,9 @@ navLinks.forEach((element) => {
 
 let logins = document.querySelectorAll(".login");
 let logs = document.querySelectorAll(".log");
-
-
-
+let music1 = document.querySelector(".music1");
+let video2 = document.querySelector("#video-container2");
+let list = document.querySelector(".list");
 let urll = "http://localhost:3000/acount";
 let logoutBtn = document.querySelector('.logout');
 
@@ -111,34 +111,42 @@ async function fetchData() {
     let res = await axios.get(urll);
     return res.data;
 }
-fetchData()
 
 let user = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).name : null;
-
+let id = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).id : null;
 
 async function updateLoginText() {
-
     let data = await fetchData();
 
-    logs.forEach((log23) => {
-
-log23.addEventListener("click",(e)=>{
-    e.preventDefault();
-    window.location="./login.html"
-})
-
-        if (user) {
-            log23.innerHTML = `<i class="bi bi-person-circle"></i> ${user}`;  
-          
-            logoutBtn.style.display = "block";
-                  }
+    if (logs.length > 0) {
+        logs.forEach((log23) => {
+            if (user) {
+                logoutBtn.style.display = "block";
+                log23.addEventListener("click",(e)=>{
+                    e.preventDefault();
+                    window.location=`./user.html?id=${id}`
+                });
+                log23.innerHTML = `<i class="bi bi-person-circle"></i> ${user}`;  
+                // video2.style.display="block";
+                // music1.style.display="none";
+                // list.style.display="none";
+            } else {
+                log23.addEventListener("click",(e)=>{
+                    e.preventDefault();
+                    window.location="./login.html"
+                });
+            }
+        });
+    }
     
-    
-    });
     logins.forEach((login) => {
         login.textContent = "Subscribe Now";
     });
-
+    // music1.style.display = "block";
+    // list.style.display = "block";
+    // video2.style.display = "none";
+  
+    
 }
 
 updateLoginText();
@@ -146,19 +154,26 @@ updateLoginText();
 async function logout() {
     let data = await fetchData();
 
-    if (logoutBtn.style.display === "block") {
+    if (logoutBtn && logoutBtn.style.display === "block") {
         logoutBtn.addEventListener('click', () => {
             window.location.reload();
             logoutBtn.style.display = "none";
             localStorage.removeItem('currentUser');
             logs.forEach((log23) => {
                 log23.innerHTML =`<a href="#" class="log"> <i class="bi bi-person-circle"></i> sign in</a>`;
-                log23.style.color="#fff"
+                log23.style.color="#fff";
             });
+
+            // Check if music1, video2, and list exist and their styles are as expected before modifying them
+       
+            
+            music1.style.display="none";
+            list.style.display="none";
+            video2.style.display="block";
         });
     }
-
 }
+
 
 logout();
 
@@ -167,5 +182,5 @@ homs.forEach((hom)=>{
     hom.addEventListener("click",()=>{
         window.location="./index.html";
         nav.style.borderBottom = '2px solid #ffda2a';
-    })
-})
+    });
+});
