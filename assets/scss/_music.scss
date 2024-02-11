@@ -1,11 +1,12 @@
 .music1 {
+    background-image: url(../image/music-homepage-banner-1280.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
     min-height: 100vh;
     padding-top: 200px;
-    background-image: url(../image/music-homepage-banner-1280.jpg);
+
     .music11 {
         @include center;
         width: 100%;
@@ -38,7 +39,7 @@
                     @include start;
                     gap: 20px;
                     :nth-child(1) {
-                        padding: 15px 22px;
+                        padding: 10px 16px;
                         border-radius: 25px;
                         font-weight: 600;
                         background-color: #ffda2a;
@@ -50,7 +51,7 @@
                         }
                     }
                     :nth-child(2) {
-                        padding: 15px 22px;
+                        padding: 10px 16px;
                         border-radius: 25px;
                         font-weight: 600;
                         background-color: transparent;
@@ -73,6 +74,7 @@
     .music1 {
         padding: 40px 0;
         .music11 {
+            gap: 100px;
             .top {
                 align-items: center;
                 justify-content: center;

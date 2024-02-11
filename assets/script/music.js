@@ -218,6 +218,7 @@ function toggleShuffle() {
   }
 }
 
+
 function toggleRepeat() {
   isRepeat = !isRepeat;
   const repeatButton = document.getElementById('repeat');
@@ -236,18 +237,21 @@ function toggleRepeat() {
   }
 }
 
-
-audioPlayer.addEventListener('ended', function() {
+function handleSongEnd() {
   if (isRepeat) {
-    // Eğer tekrar modu açıksa, aynı şarkıyı tekrar çal
+    // Tekrar modu açıksa, aynı şarkıyı tekrar çal
     audioPlayer.currentTime = 0; // Şarkıyı başa al
-    audioPlayer.play();
+   
+    setTimeout(() => {
+      audioPlayer.play();
+    }, 100);
   } else {
-    // Eğer tekrar modu kapalıysa, bir sonraki şarkıyı çal
+    // Tekrar modu kapalıysa, bir sonraki şarkıyı çal
     playNextSong();
   }
-});
+}
 
+audioPlayer.addEventListener('ended', handleSongEnd);
 document.getElementById('repeat').addEventListener('click', toggleRepeat);
 
 // Shuffle Songs

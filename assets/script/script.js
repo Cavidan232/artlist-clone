@@ -128,11 +128,10 @@ log23.addEventListener("click",(e)=>{
 })
 
         if (user) {
-            log23.innerHTML = `${user}`;  
-            log23.style.color="#fff"
+            log23.innerHTML = `<i class="bi bi-person-circle"></i> ${user}`;  
+          
             logoutBtn.style.display = "block";
-            logoutBtn.style.color="#fff"
-        }
+                  }
     
     
     });
@@ -149,11 +148,11 @@ async function logout() {
 
     if (logoutBtn.style.display === "block") {
         logoutBtn.addEventListener('click', () => {
-            window.location.reload();
+            // window.location.reload();
             logoutBtn.style.display = "none";
             localStorage.removeItem('currentUser');
             logs.forEach((log23) => {
-                log23.textContent = "Sign In";
+                log23.innerHTML =`<a href="#" class="log"> <i class="bi bi-person-circle"></i> sign in</a>`;
                 log23.style.color="#fff"
             });
         });

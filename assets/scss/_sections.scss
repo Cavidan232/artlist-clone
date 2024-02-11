@@ -12,36 +12,53 @@
         flex-direction: column;
         gap: 260px;
         position: relative;
+        &:hover{
+            .imag1{
+                transform: translate(-10px, -10px);  
+            }
+            .imag2{
+              
+                    transform: translate(-10px, 10px);
+            }
+            .imag3{
+                    transform: translate(10px, -10px);
+
+            }
+            .imag4{
+
+                    transform: translate(10px, 10px);
+            }
+        }
         .imag1{
-            top: 50px;
-            left: 50px;
+            top: 30px;
+            left: 30px;
             &:hover{
-                transform: translate(-10px, -10px);
+                transform: translate(-15px, -15px);
             }
         }
         .imag2{
-            bottom: 50px;
-            left: 50px;
+            bottom: 30px;
+            left: 30px;
             &:hover{
-                transform: translate(-10px, 10px);
+                transform: translate(-15px, 15px);
             }
         }
         .imag3{
-            top: 50px;
-            right: 50px;
+            top: 30px;
+            right: 30px;
             &:hover{
-                transform: translate(10px, -10px);
+                transform: translate(15px, -15px);
             }
         }
         .imag4{
-            bottom: 50px;
-            right: 50px;
+            bottom: 30px;
+            right: 30px;
             &:hover{
-                transform: translate(10px, 10px);
+                transform: translate(15px, 15px);
             }
         }
         .imag{
-           width: 15%;
+           width: 14%;
             position: absolute;
             transition: all 0.5s ease;
             
