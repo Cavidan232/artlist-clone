@@ -435,7 +435,7 @@ document.getElementById("search").addEventListener("input", async (el) => {
   });
   if (filteredData.length === 0) {
     // Arama sonucunda şarkı bulunamazsa
-    document.querySelector('.song').innerHTML = '<p style="text-align: center;">Belə Mahnı yoxdur!</p>';
+    document.querySelector('.song').innerHTML = '<p style="text-align: center;">Axtarışa uyğun nətica tapılmadı ☹</p>';
   } else {
     // Arama sonucunda şarkılar bulunursa
     renderPlaylist(filteredData);

@@ -87,11 +87,15 @@
       <div class="signin-signup">
         <form action="#" class="sign-in-form">
           <h2 class="title">Sign in</h2>
+          <div id="wrong1" class="error-message" style="opacity: 0;">Wrong password! <i class="bi bi-x"></i> </div>
+          <div id="wrong2" class="error-message" style="opacity: 0;">Invalid username! <i class="bi bi-x"></i></div>
+          
           <div class="input-field">
             <i class="fas fa-user"></i>
             <input type="text" placeholder="Username" id="user" />
           </div>
           <div class="input-field">
+            
             <i class="fas fa-lock"></i>
             <input type="password" id="pas" placeholder="Password" />
           </div>
@@ -112,10 +116,13 @@
             </a>
           </div>
         </form>
+        
         <form action="#" class="sign-up-form">
+          <h1 class="alertdiv">"Zəhmət olmasa bütün xanaları düzgün doldurun!" <i class="bi bi-x"></i></h1>
           <h2 class="title">Sign up</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
+            
             <input type="text" id="upname" placeholder="Username" />
           </div>
           <div class="input-field">

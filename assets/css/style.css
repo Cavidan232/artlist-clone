@@ -1666,7 +1666,7 @@ footer .top .right ul li a:hover {
   background-position: center;
   width: 100%;
   min-height: 100vh;
-  padding-top: 200px;
+  padding-top: 100px;
 }
 .music1 .music11 {
   display: flex;
@@ -2147,6 +2147,7 @@ input[type=range]::-webkit-slider-thumb {
   flex-grow: 1;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .song-title {

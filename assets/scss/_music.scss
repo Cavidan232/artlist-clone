@@ -5,7 +5,7 @@
     background-position: center;
     width: 100%;
     min-height: 100vh;
-    padding-top: 200px;
+    padding-top: 100px;
 
     .music11 {
         @include center;
@@ -509,8 +509,10 @@ input[type="range"]::-webkit-slider-thumb {
 
 .time-control {
     flex-grow: 1;
+
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .song-title{
     font-size: 20px;
