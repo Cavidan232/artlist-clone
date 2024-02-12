@@ -40,7 +40,7 @@ saveProfileBtn.addEventListener("click", async (e) => {
     const email = emailInput.value;
 
 
- axios.put(`http://localhost:3000/acount/${id2}`, {
+ axios.patch(`http://localhost:3000/acount/${id2}`, {
             name: fullName,
             mail: email
         });
@@ -92,9 +92,10 @@ let artistInp = document.querySelector("#artist");
 let genreSelect = document.querySelector("#genre");
 
 let formAdd = document.querySelector("#newSongForm");
-
-
+let 
+usrerId=null;
 formAdd.addEventListener("submit",(e)=>{
+    console.log("nknk");
 e.preventDefault();
 axios.post(`http://localhost:3000/musicData`,{
     backgroundImage:   previewImage.src ,
@@ -102,7 +103,8 @@ axios.post(`http://localhost:3000/musicData`,{
     title: nameInp.value,
     artist: artistInp.value,
     janre: genreSelect.value,
-    musicPath: sour.src
+    musicPath: sour.src,
+    userId:id2
 })
 
 })
