@@ -1039,6 +1039,7 @@ footer .top .left {
   justify-content: flex-start;
   flex-direction: column;
   width: 30%;
+  gap: 15px;
   min-width: 240px;
 }
 footer .top .left p {
@@ -1046,6 +1047,10 @@ footer .top .left p {
 }
 footer .top .left img {
   color: #ffda2a;
+}
+footer .top .left .logos {
+  width: 35%;
+  height: 15%;
 }
 footer .top .right {
   display: flex;
@@ -2079,12 +2084,20 @@ footer .top .right ul li a:hover {
   font-size: 15px;
 }
 
-.music-controls button,
+.music-controls button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #ffc107; /* Sarı tonu */
+}
+
 .volume-control button {
   background-color: transparent;
   border: none;
   cursor: pointer;
   font-size: 20px;
+  margin-left: 20px;
   color: #ffc107; /* Sarı tonu */
 }
 
@@ -2094,8 +2107,8 @@ footer .top .right ul li a:hover {
 }
 
 .progress {
-  flex-grow: 5;
   height: 10px;
+  flex-grow: 1.2;
   background-color: #ccc;
   border-radius: 5px;
   overflow: hidden;
@@ -2137,15 +2150,16 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .volume-control {
-  flex-grow: 1;
+  flex-grow: 0.1;
   display: flex;
   align-items: center;
 }
 
 .time-control {
   flex-grow: 1;
+  margin-left: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 

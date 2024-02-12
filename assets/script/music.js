@@ -55,6 +55,7 @@ function updateUserSession(userData) {
   localStorage.setItem('currentUser', JSON.stringify(userData));
 }
 
+
 // Favoriye ekleme/kaldırma işlevini gerçekleştirme
 async function toggleFavorite(songId) {
   const userData = getUserSession();

@@ -169,7 +169,7 @@ async function logout() {
                 log23.style.color="#fff";
             });
 
-            // Check if music1, video2, and list exist and their styles are as expected before modifying them
+          
        
            
         });

@@ -34,11 +34,11 @@ footer {
         @include between;
         align-items: flex-start;
         flex-wrap: wrap;
-      
-        .left{
+     .left{
             @include start;
             flex-direction: column;
             width: 30%;
+            gap: 15px;
 min-width: 240px;
             p{
                 color:#fff;
@@ -46,6 +46,11 @@ min-width: 240px;
             img{
                 color:#ffda2a;
             }
+            .logos{
+                width: 35%;
+                height: 15%
+              }
+                
         }
         .right{
             @include between;
