@@ -186,3 +186,27 @@ homs.forEach((hom)=>{
         nav.style.borderBottom = '2px solid #ffda2a';
     });
 });
+
+let comentBtn= document.querySelector(".comment");
+let textArea= document.querySelector("textarea");
+let send= document.querySelector(".bi-send");
+
+comentBtn.addEventListener("click",()=>{
+if (    textArea.style.display=="none" &&
+send.style.display=="none") {
+    textArea.style.display="block";
+    send.style.display="block";
+} else {
+    textArea.style.display="none";
+    send.style.display="none"; 
+}
+});
+send.addEventListener("click",()=>{
+axios.post(`http://localhost:3000/comment`,{
+    coment:textArea.value
+})
+
+    textArea.style.display="none";
+    send.style.display="none";
+});
+

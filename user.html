@@ -121,9 +121,9 @@
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="email" disabled>
                             </div>
-                            <button type="button" class="btn btn-primary" id="editProfileBtn">Edit Profile</button>
-                            <button type="button" class="btn btn-primary" id="saveProfileBtn">Save Changes</button>
-                            <button type="button" class="btn btn-danger" class="logout"><i class="bi bi-box-arrow-left"></i> Logout</button>
+                            <button style="background-color: #ffda2a;"  type="button"  class="btn" id="editProfileBtn">Edit Profile</button>
+                            <button type="button" style="background-color: #ffda2a;" class="btn" id="saveProfileBtn">Save Changes</button>
+                           
                         </form>
                     </div>
                 </div>
@@ -158,19 +158,19 @@
                             <div class="mb-2">
                                 <label for="posterFile" class="form-label">Select Poster Image</label>
                                 <input type="file" class="form-control" id="posterFile" name="posterFile" accept="image/*" required>
-                                <img id="previewImage" src="./assets/images/193.jpg" alt="Preview" class="img-preview">
+                                <img id="previewImage" src="" alt="Preview" class="img-preview">
                             </div>
                             <div class="mb-2">
                                 <label for="audioFile" class="form-label">Select Audio File</label>
                                 <input type="file" class="form-control" id="audioFile" name="audioFile" accept=".mp3" required>
-                                <audio controls id="audioPlayer">
+                                <audio class="mb-2" controls id="audioPlayer">
                                     <source class="sour" src="" type="audio/mpeg">
                                     Tarayıcınız ses dosyalarını desteklemiyor.
                                   </audio>
                                   
                             </div>
                             <div class="d-grid gap-2">
-                                <input type="submit" placeholder="Add Song" class="btn btn-primary">
+                                <input type="submit" placeholder="Add Song" style="background-color: #ffda2a;"">
                             </div>
                         </form>
                     </div>
@@ -178,7 +178,7 @@
             </div>
         </div>
     </section>
-    
+ 
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 

@@ -2210,6 +2210,44 @@ input[type=range]::-webkit-slider-thumb {
   transform: translate(-50%, -50%);
 }
 
+@media screen and (max-width: 771px) {
+  .music-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 2px;
+  }
+  .time-control {
+    gap: 20px;
+  }
+}
+body {
+  position: relative;
+}
+body .comment {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #ffc107;
+}
+body .bi-send {
+  position: absolute;
+  bottom: 50px;
+  z-index: 2234445543;
+  right: 30px;
+  color: #ffc107;
+  display: none;
+}
+body textarea {
+  position: absolute;
+  resize: horizontal;
+  bottom: 50px;
+  display: none;
+  right: 20px;
+  color: #ffc107;
+  z-index: 1;
+  z-index: 12292929292929292000;
+}
+
 .acount {
   width: 100%;
   padding-block: 50px;
@@ -2272,6 +2310,9 @@ input[type=range]::-webkit-slider-thumb {
   .acount .acount1 .left {
     height: 30vh;
   }
+  .user-profile {
+    background-color: yellow;
+  }
 }
 .add-song {
   color: #fff;
@@ -2302,4 +2343,9 @@ select:focus {
   width: 150px;
   height: 150px;
   object-fit: cover;
+  border: 1px dashed white;
+}
+
+#audioPlayer {
+  margin: 10px 0;
 }/*# sourceMappingURL=style.css.map */

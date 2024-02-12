@@ -54,6 +54,9 @@ h1{
         }
     }
 }
+.user-profile{
+    background-color: yellow;
+}
 }
 .add-song{
     color: #fff;
@@ -82,4 +85,8 @@ select:focus {
     width: 150px;
     height: 150px;
     object-fit: cover;
+    border: 1px dashed white;
+}
+#audioPlayer{
+    margin: 10px 0;
 }

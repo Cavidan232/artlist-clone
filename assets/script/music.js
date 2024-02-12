@@ -58,6 +58,9 @@ function updateUserSession(userData) {
 
 // Favoriye ekleme/kaldırma işlevini gerçekleştirme
 async function toggleFavorite(songId) {
+  if (!user) {
+    window.location="./login.html"
+  }
   const userData = getUserSession();
   const { fav } = userData;
   const index = fav.indexOf(songId);
@@ -404,12 +407,19 @@ async function filterByHipHop() {
 
   renderPlaylist(filteredData);
 }
+ let userBtn= document.getElementById("userBtn");
+
 let id3 = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).id : null;
+let name4= localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).name : null;
+if (user) {
+  userBtn.innerHTML=`${name4} addsong`
+}
 console.log(id3);
 // Hip-Hop türüne göre filtrele
 async function filterByuser() {
   let res = await axios.get('http://localhost:3000/musicData');
   let data = await res.data;
+  
   let filteredData = data.filter((element) => {
     return element.userId=== id3;
   });
@@ -438,6 +448,12 @@ document.getElementById("hip").addEventListener("click", filterByHipHop);
 document.getElementById("all").addEventListener("click", filterAllSongs);
 document.getElementById("piano").addEventListener("click", filterByPiano);
 document.getElementById("userBtn").addEventListener("click", filterByuser);
+if (!user) {
+
+  userBtn.addEventListener("click",()=>{
+    window.location="./login.html";
+  })
+}
 // Arama işlevi
 document.getElementById("search").addEventListener("input", async (el) => {
   let res = await axios.get('http://localhost:3000/musicData');
@@ -463,8 +479,8 @@ async function init() {
   await fetchSongs();
 
 
-  // const randomIndex = Math.floor(Math.random() * songs.length);
-  // loadSong(randomIndex);
+  const randomIndex = Math.floor(Math.random() * songs.length);
+  loadSong(randomIndex);
 }
 
 init();

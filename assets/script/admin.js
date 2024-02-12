@@ -23,13 +23,12 @@ document.addEventListener("DOMContentLoaded", async function() {
             <td>${song.janre}</td>
             <td>${song.artist}</td>
             <td><i class="editBtn bi bi-arrow-clockwise" data-id="${song.id}"></i></td>
-            <td><i class="deleteBtn bi bi-trash" data-id="${song.id}"></i></td>
+            <td><i class="deleteBtn bi bi-trash" onclick="deleteCard(${song.id})" data-id="${song.id}"></i></td>
           </tr>
         `;
       });
     }
-
-    // Şarkıları türüne göre filtrele ve tabloya ekle
+ // Şarkıları türüne göre filtrele ve tabloya ekle
     async function filterAndRenderSongs(genre) {
       const filteredSongs = allSongs.filter(song => song.janre === genre);
       renderSongs(filteredSongs); // Filtrelenmiş şarkıları tabloya ekle
@@ -71,3 +70,9 @@ document.addEventListener("DOMContentLoaded", async function() {
     // Sayfa yüklendiğinde tüm şarkıları getir ve tabloya ekle
     await fetchAndRenderSongs();
   });
+  let url5='http://localhost:3000/musicData'
+  function deleteCard(id) {
+    axios.delete(`http://localhost:3000/musicData/${id}`)
+    window.location.reload();
+  }
+     
