@@ -127,9 +127,9 @@ async function updateLoginText() {
                     window.location=`./user.html?id=${id}`
                 });
                 log23.innerHTML = `<i class="bi bi-person-circle"></i> ${user}`;  
-                // video2.style.display="block";
-                // music1.style.display="none";
-                // list.style.display="none";
+                video2.style.display="block";
+                music1.style.display="none";
+                list.style.display="none";
             } else {
                 log23.addEventListener("click",(e)=>{
                     e.preventDefault();
@@ -142,11 +142,11 @@ async function updateLoginText() {
     logins.forEach((login) => {
         login.textContent = "Subscribe Now";
     });
-    // music1.style.display = "block";
-    // list.style.display = "block";
-    // video2.style.display = "none";
-  
-    
+   
+     
+    // music1.style.display="none";
+    // list.style.display="none";
+    // video2.style.display="block";
 }
 
 updateLoginText();
@@ -159,6 +159,11 @@ async function logout() {
             window.location.reload();
             logoutBtn.style.display = "none";
             localStorage.removeItem('currentUser');
+        window.location="./index.html";
+        music1.style.display = "block";
+        list.style.display = "block";
+        video2.style.display = "none";
+      
             logs.forEach((log23) => {
                 log23.innerHTML =`<a href="#" class="log"> <i class="bi bi-person-circle"></i> sign in</a>`;
                 log23.style.color="#fff";
@@ -166,10 +171,7 @@ async function logout() {
 
             // Check if music1, video2, and list exist and their styles are as expected before modifying them
        
-            
-            music1.style.display="none";
-            list.style.display="none";
-            video2.style.display="block";
+           
         });
     }
 }
