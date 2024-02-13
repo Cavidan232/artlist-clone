@@ -497,8 +497,23 @@ function downloadMusic() {
   document.body.removeChild(link); // <a> etiketini belgeden kaldır
 }
 
-// Müziği indirme işlevini #download düğmesine bağla
-document.getElementById('download').addEventListener('click', downloadMusic);
+// // Müziği indirme işlevini #download düğmesine bağla
+// document.getElementById('download').addEventListener('click', downloadMusic);
+
+let downloadMusic1 = document.querySelector("#download")
+
+downloadMusic1.addEventListener("click",()=>{
+  if (user) {
+    downloadMusic()
+  }
+  else{
+window.location="./login.html"
+  }
+})
+
+
+
+
 
 // Klavye olaylarını dinleyen fonksiyon
 document.addEventListener("keydown", function(event) {

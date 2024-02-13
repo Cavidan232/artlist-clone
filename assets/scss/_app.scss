@@ -146,6 +146,24 @@ padding: 100px 0;
         text-decoration: underline;
     }
 }
+@media screen and (max-width:850px){
+    .app2{
+        .app21{
+            .cart{
+               
+                flex-direction: column;
+                .text{
+                    width: 100%;
+                    .date{
+                        display: grid;
+                        grid-template-columns:repeat(2,1fr);
+                    }
+                }
+                }
+            
+        }
+    }
+}
 @media screen and (max-width:776px){
     .app2{
         .app21{

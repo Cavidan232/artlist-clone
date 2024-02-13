@@ -349,6 +349,8 @@ nav .right button:hover {
   color: #fff;
   white-space: wrap;
   margin-left: 20px;
+  font-size: 2vw;
+  cursor: pointer;
 }
 .nav3 .button button {
   width: 130px;
@@ -1493,6 +1495,18 @@ footer .top .right ul li a:hover {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 850px) {
+  .app2 .app21 .cart {
+    flex-direction: column;
+  }
+  .app2 .app21 .cart .text {
+    width: 100%;
+  }
+  .app2 .app21 .cart .text .date {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media screen and (max-width: 776px) {
   .app2 .app21 .top p {
     width: 100%;
