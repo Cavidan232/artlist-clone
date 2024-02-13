@@ -2234,34 +2234,6 @@ input[type=range]::-webkit-slider-thumb {
     gap: 20px;
   }
 }
-body {
-  position: relative;
-}
-body .comment {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  color: #ffc107;
-}
-body .bi-send {
-  position: absolute;
-  bottom: 50px;
-  z-index: 2234445543;
-  right: 30px;
-  color: #ffc107;
-  display: none;
-}
-body textarea {
-  position: absolute;
-  resize: horizontal;
-  bottom: 50px;
-  display: none;
-  right: 20px;
-  color: #ffc107;
-  z-index: 1;
-  z-index: 12292929292929292000;
-}
-
 .acount {
   width: 100%;
   padding-block: 50px;
