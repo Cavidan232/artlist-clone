@@ -171,6 +171,14 @@
       "fav": [],
       "songId": [],
       "id": 19
+    },
+    {
+      "name": "Cavidan190712",
+      "mail": "Cavidanvelizade@gmail.com",
+      "password": "yuyiu",
+      "fav": [],
+      "songId": [],
+      "id": 20
     }
   ],
   "comment": [
@@ -443,13 +451,13 @@
       "artist": "Akif İslamzadə",
       "janre": "Piano",
       "id": 27,
-      "musicPath": "./assets/music/WhatsApp Audio 2024-02-09 saat 01.15.19_e7def982.dat.unknown"
+      "musicPath": "./assets/music/Sara.unknown"
     },
     {
       "backgroundImage": "./assets/images/piano.jpg",
       "posterUrl": "./assets/images/piano.jpg",
-      "title": "Ala Gözlüm",
-      "artist": "Akif İslamzadə",
+      "title": "qısa mahnı",
+      "artist": "yoxlamaq",
       "janre": "Piano",
       "id": 28,
       "musicPath": "./assets/music/depositphotos_667596348-track-electronic-ambient-music-soft-glitchy.mp3"
@@ -604,6 +612,72 @@
       "pro": true,
       "id": 44,
       "musicPath": "./assets/music/Payızdan Sarılar(M4A_128K).m4a"
+    }
+    ,
+    {
+      "backgroundImage": "./assets/images/piano.jpg",
+      "posterUrl": "./assets/images/piano.jpg",
+      "title": "Valse",
+      "artist": "Evgeny Grinko",
+      "janre": "Hip-Hop",
+      "pro": false,
+      "id": 45,
+      "musicPath": "./assets/music/valse.mp3"
+    }
+    ,
+    {
+      "backgroundImage": "./assets/images/piano.jpg",
+      "posterUrl": "./assets/images/piano.jpg",
+      "title": "Jane Maryam",
+      "artist": "Evgeny Grinko",
+      "janre": "Hip-Hop",
+      "pro": false,
+      "id": 46,
+      "musicPath": "./assets/music/jane.mp3"
+    }
+    ,
+    {
+      "backgroundImage": "./assets/images/back.png",
+      "posterUrl": "./assets/images/back.png",
+      "title": "Back to Black",
+      "artist": "Amy Winehouse",
+      "janre": "POP",
+      "pro": false,
+      "id": 47,
+      "musicPath": "./assets/music/back.unknown"
+    }
+    ,
+    {
+      "backgroundImage": "./assets/images/model.jpg",
+      "posterUrl": "./assets/images/model.jpg",
+      "title": "Değmesin Ellerimiz",
+      "artist": "Model",
+      "janre": "POP",
+      "pro": false,
+      "id": 48,
+      "musicPath": "./assets/music/Model - Değmesin ellerimiz _ Lyrics_Sözleriyle(MP3_70K).mp3"
+    }
+    ,
+    {
+      "backgroundImage": "./assets/images/muslum.webp",
+      "posterUrl": "./assets/images/muslum.webp",
+      "title": "Affet",
+      "artist": "Müslüm Gurses",
+      "janre": "POP",
+      "pro": false,
+      "id": 49,
+      "musicPath": "./assets/music/Müslüm Gürses - Affet(M4A_128K).m4a"
+    }
+    ,
+    {
+      "backgroundImage": "./assets/images/muslum.webp",
+      "posterUrl": "./assets/images/muslum.webp",
+      "title": "Tutamıyorum Zamanı",
+      "artist": "Müslüm Gurses",
+      "janre": "POP",
+      "pro": false,
+      "id": 50,
+      "musicPath": "./assets/music/Müslüm Gürses - Tutamıyorum Zamanı(M4A_128K).m4a"
     }
   ]
 }

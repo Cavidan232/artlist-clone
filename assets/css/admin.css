@@ -8,8 +8,8 @@
   --page-header-txtColor: #dde9f8;
   --page-header-headingColor: #7889a4;
   --page-header-width: 220px;
-  --page-content-bgColor: #f0f1f6;
-  --page-content-txtColor: #171616;
+  --page-content-bgColor: #121213;
+  --page-content-txtColor: #fff;
   --page-content-blockColor: #fff;
   --white: #fff;
   --black: #333;
@@ -22,6 +22,7 @@
   --switch-moonColor: #f4f4f4;
   --switch-bgDarkModeColor: #1f1f27;
 }
+
 .adminLogout{
     background-color: red;
     color: #fff;
@@ -55,7 +56,6 @@ a,
 button {
   color: inherit;
 }
-
 a {
   text-decoration: none;
 }
@@ -81,6 +81,7 @@ label {
 button,
 input {
   border: none;
+  color: #000;
 }
 
 svg {
@@ -167,6 +168,8 @@ body {
   flex-direction: column;
   flex-grow: 1;
   margin-top: 35px;
+  backdrop-filter: blur(20px);
+  background-color: transparent;
 }
 
 .page-header .admin-menu li:nth-last-child(2) {
@@ -257,8 +260,9 @@ body {
   height: 50px;
   font-size: 1.5rem;
   padding-left: 15px;
-  background: var(--page-content-blockColor);
-  color: var(--white);
+  background: #ffda2a;
+  outline: none;
+  color: #000;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
@@ -618,4 +622,16 @@ table{
   .doctors--cards {
       overflow-x: scroll;
   }
+}
+.adminimag{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.div{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: flex-start;
 }
