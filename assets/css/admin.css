@@ -22,7 +22,25 @@
   --switch-moonColor: #f4f4f4;
   --switch-bgDarkModeColor: #1f1f27;
 }
-
+.adminLogout{
+    background-color: red;
+    color: #fff;
+    padding: 6px 8px;
+    border-radius: 20px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    transition: all 0.5s ease;
+    filter: brightness(100%);
+    font-size: 15px !important;
+    
+    i{
+        color: #000;
+    }
+    &:hover {
+        filter: brightness(50%);
+    }
+}
 * {
   padding: 0;
   margin: 0;

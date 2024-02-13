@@ -1,3 +1,14 @@
+const currentUser1 = JSON.parse(localStorage.getItem('currentUser1'));
+if (!currentUser1) {
+    window.location.href = './adlogin.html'; 
+}
+
+let adminLogout= document.querySelector(".adminLogout");
+adminLogout.addEventListener("click",()=>{
+  localStorage.removeItem('currentUser1');
+  window.location.reload();
+})
+
 document.addEventListener("DOMContentLoaded", async function() {
     const tableBody = document.querySelector('.tbody4');
     let allSongs = []; // Tüm şarkıları saklamak için bir dizi
