@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <input type="text" id="login">
+    <input type="password" id="pasin">
+    <button class="but" > admin</button>
+</body>
+<script>
+    let adname = document.querySelector("#login");
+    let pasad = document.querySelector("#pasin");
+    let but = document.querySelector(".but");
+    but.addEventListener("click",()=>{
+if (adname.value ==="Cavidan" || pasad.value ==="222") {
+    window.location="./admin.html"
+}
+else{
+    alert("sehv")
+}
+    })
+</script>
+</html>
