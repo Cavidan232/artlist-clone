@@ -3,7 +3,7 @@ let mail1 = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getIte
 let id2 = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).id : null;
 console.log(name1);
 console.log(mail1);
-
+let uptadeId=null;
 // Selecting elements
 const userProfileForm = document.getElementById("userProfileForm");
 const fullNameInput = document.getElementById("fullName");
@@ -87,24 +87,82 @@ musicFileInput.addEventListener("change", (e) => {
     }
 });
 
+
 let nameInp = document.querySelector("#title");
 let artistInp = document.querySelector("#artist");
 let genreSelect = document.querySelector("#genre");
 
+let tbody = document.querySelector(".tbody");
+async function getUsersongss() {
+    const res = await axios.get('http://localhost:3000/musicData');
+    const data = await res.data;
+    console.log(data);
+    data.forEach(element => {
+     if (element. userId === id2) {
+        tbody.innerHTML +=
+        `
+        <tr>
+        <td>${element.id}</td>
+        <td>${element.title}</td>
+        <td>${element.janre}</td>
+        <td>${element.artist}</td>
+        <td><i class="editBtn bi bi-arrow-clockwise" onclick="uptadeSong(${element.id})"></i></td>
+        <td><i class="deleteBtn bi bi-trash" onclick="deleteSong(${element.id})"></i></td>
+      </tr>
+    `;
+        
+     }   
+    });
+}
+
+
+getUsersongss();
+
+function uptadeSong(id){
+    axios.get(`http://localhost:3000/musicData/${id}`).then((res)=>{
+uptadeId = res.data.id,
+nameInp.value = res.data.title,
+ previewImage.src = res.data.posterUrl,
+ sour.src = res.data.musicPath,
+ genreSelect.value = res.data.janre,
+ artistInp.value =res.data.artist
+
+    });
+}
+
+
+
 let formAdd = document.querySelector("#newSongForm");
-let 
-usrerId=null;
 formAdd.addEventListener("submit",(e)=>{
     console.log("nknk");
 e.preventDefault();
-axios.post(`http://localhost:3000/musicData`,{
-    backgroundImage:   previewImage.src ,
-    posterUrl:previewImage.src ,
-    title: nameInp.value,
-    artist: artistInp.value,
-    janre: genreSelect.value,
-    musicPath: sour.src,
-    userId:id2
+if (!uptadeId) {
+    axios.post(`http://localhost:3000/musicData`,{
+        backgroundImage:   previewImage.src ,
+        posterUrl:previewImage.src ,
+        title: nameInp.value,
+        artist: artistInp.value,
+        janre: genreSelect.value,
+        musicPath: sour.src,
+        userId:id2
+    })   
+}
+
+else{
+    axios.patch(`http://localhost:3000/musicData/${uptadeId}`,{
+        posterUrl:previewImage.src ,
+        backgroundImage:   previewImage.src ,
+        posterUrl:previewImage.src ,
+        title: nameInp.value,
+        artist: artistInp.value,
+        janre: genreSelect.value,
+        musicPath: sour.src,
+    })
+}
 })
 
-})
+function deleteSong(id) {
+    axios.delete(`http://localhost:3000/musicData/${id}`)
+    window.location.reload();
+  }
+     

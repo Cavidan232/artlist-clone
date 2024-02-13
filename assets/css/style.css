@@ -2348,4 +2348,34 @@ select:focus {
 
 #audioPlayer {
   margin: 10px 0;
+}
+
+.form {
+  background-color: transparent !important;
+}
+
+table {
+  border: 1px solid white;
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  color: #fff;
+  margin: 30px auto;
+  border-collapse: collapse;
+  width: 50%;
+  overflow-y: scroll;
+}
+table::-webkit-scrollbar-thumb {
+  background-color: #ffda2a;
+}
+table::-webkit-scrollbar {
+  width: 2px;
+}
+table button {
+  background-color: transparent;
+  color: #fff;
+}
+table tr, table td, table th {
+  border: 1px solid white;
+  cursor: pointer;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

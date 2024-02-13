@@ -90,3 +90,33 @@ select:focus {
 #audioPlayer{
     margin: 10px 0;
 }
+
+.form{
+    background-color: transparent !important;
+}
+table{
+    border: 1px solid white;
+    background-color:  transparent;
+    backdrop-filter: blur(20px);
+    color: #fff;
+    margin: 30px auto;
+    border-collapse: collapse;
+    width: 50%;
+
+    overflow-y: scroll;
+    &::-webkit-scrollbar-thumb{
+     background-color: #ffda2a;
+    }
+    &::-webkit-scrollbar{
+     width: 2px;
+    }
+    button{
+        background-color: transparent;
+        color: #fff;
+    }
+    tr,td,th{
+        border: 1px solid white;
+        cursor: pointer; 
+      text-align: center;
+    }
+}
