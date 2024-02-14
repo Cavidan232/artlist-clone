@@ -479,8 +479,8 @@ async function init() {
   await fetchSongs();
 
 
-  // const randomIndex = Math.floor(Math.random() * songs.length);
-  // loadSong(randomIndex);
+  const randomIndex = Math.floor(Math.random() * songs.length);
+  loadSong(randomIndex);
 }
 
 init();

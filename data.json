@@ -612,8 +612,7 @@
       "pro": true,
       "id": 44,
       "musicPath": "./assets/music/Payızdan Sarılar(M4A_128K).m4a"
-    }
-    ,
+    },
     {
       "backgroundImage": "./assets/images/piano.jpg",
       "posterUrl": "./assets/images/piano.jpg",
@@ -623,8 +622,7 @@
       "pro": false,
       "id": 45,
       "musicPath": "./assets/music/valse.mp3"
-    }
-    ,
+    },
     {
       "backgroundImage": "./assets/images/piano.jpg",
       "posterUrl": "./assets/images/piano.jpg",
@@ -634,8 +632,7 @@
       "pro": false,
       "id": 46,
       "musicPath": "./assets/music/jane.mp3"
-    }
-    ,
+    },
     {
       "backgroundImage": "./assets/images/back.png",
       "posterUrl": "./assets/images/back.png",
@@ -645,8 +642,7 @@
       "pro": false,
       "id": 47,
       "musicPath": "./assets/music/back.unknown"
-    }
-    ,
+    },
     {
       "backgroundImage": "./assets/images/model.jpg",
       "posterUrl": "./assets/images/model.jpg",
@@ -656,8 +652,7 @@
       "pro": false,
       "id": 48,
       "musicPath": "./assets/music/Model - Değmesin ellerimiz _ Lyrics_Sözleriyle(MP3_70K).mp3"
-    }
-    ,
+    },
     {
       "backgroundImage": "./assets/images/muslum.webp",
       "posterUrl": "./assets/images/muslum.webp",
@@ -667,8 +662,7 @@
       "pro": false,
       "id": 49,
       "musicPath": "./assets/music/Müslüm Gürses - Affet(M4A_128K).m4a"
-    }
-    ,
+    },
     {
       "backgroundImage": "./assets/images/muslum.webp",
       "posterUrl": "./assets/images/muslum.webp",
