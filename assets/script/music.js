@@ -368,7 +368,8 @@ async function setMusicByGenre(genre, targetElement) {
       const imageDiv = document.createElement('div');
       imageDiv.classList.add('imag');
       imageDiv.innerHTML = `
-        <img src="${element.posterUrl}" alt="">
+        <img class="ms" src="${element.posterUrl}" alt="">
+        <p class="ms1">${element.title}</p>
       `;
       targetElement.appendChild(imageDiv);
 
