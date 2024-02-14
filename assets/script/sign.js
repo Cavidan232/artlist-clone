@@ -55,7 +55,7 @@ formUp.addEventListener("submit", async (e) => {
       alertDiv.style.opacity = "1";
     }
   } else if (data.some(item => item.mail === mailInp.value) || data.some(item => item.name === nameInp.value)) {
-   alert("Xahiş olunur başqa ad və ya email daxil edəsiz")
+   alert("Xahiş olunur başqa ad və ya email daxil edəsiz!")
   } else {
     await axios.post(url, {
       name: nameInp.value,

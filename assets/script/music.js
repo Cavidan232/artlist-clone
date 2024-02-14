@@ -359,18 +359,23 @@ document.addEventListener("click", function(event) {
 
 
 
-// Türüne göre müziği ayarla
 async function setMusicByGenre(genre, targetElement) {
   let res = await axios.get('http://localhost:3000/musicData');
   let data = await res.data;
   targetElement.innerHTML = "";
   data.forEach((element) => {
     if (element.janre === genre) {
-      targetElement.innerHTML += `
-        <div class="imag">
-          <img src="${element.posterUrl}" alt="">
-        </div> 
+      const imageDiv = document.createElement('div');
+      imageDiv.classList.add('imag');
+      imageDiv.innerHTML = `
+        <img src="${element.posterUrl}" alt="">
       `;
+      targetElement.appendChild(imageDiv);
+
+      // Oluşturulan görüntü div'ine tıklama olayı ekleme
+      imageDiv.addEventListener('click', () => {
+        playMusic(element.musicPath, element.title, element.artist, element.posterUrl);
+      });
     }
   });
 }
