@@ -21,7 +21,6 @@
       "id": 1
     }
   ],
-
   "musicData": [
     {
       "backgroundImage": "./assets/images/Fenerbahce.jpg",
@@ -547,8 +546,7 @@
       "pro": false,
       "id": 50,
       "musicPath": "./assets/music/Müslüm Gürses - Tutamıyorum Zamanı(M4A_128K).m4a"
-    }
-    ,
+    },
     {
       "backgroundImage": "./assets/images/unnamed.jpg",
       "posterUrl": "./assets/images/unnamed.jpg",
@@ -558,8 +556,7 @@
       "pro": false,
       "id": 53,
       "musicPath": "./assets/music/ayladikmen.mp3"
-    }
-    ,
+    },
     {
       "backgroundImage": "./assets/images/640x360.jpeg",
       "posterUrl": "./assets/images/640x360.jpeg",
@@ -569,8 +566,7 @@
       "pro": false,
       "id": 53,
       "musicPath": "./assets/music/gulmek.unknown"
-    }
-    ,
+    },
     {
       "backgroundImage": "./assets/images/g.avif",
       "posterUrl": "./assets/images/g.avif",
@@ -580,8 +576,7 @@
       "pro": false,
       "id": 54,
       "musicPath": "./assets/music/senevlisin.unknown"
-    }
-    ,
+    },
     {
       "backgroundImage": "./assets/images/g.avif",
       "posterUrl": "./assets/images/g.avif",
