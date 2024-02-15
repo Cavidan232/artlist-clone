@@ -1,3 +1,8 @@
+
+let user23=localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')): null;
+if (!user) {
+    window.location="./login.html"
+}
 let name1 = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).name : null;
 let mail1 = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).mail : null;
 let id2 = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')).id : null;

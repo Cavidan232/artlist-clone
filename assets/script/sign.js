@@ -61,8 +61,7 @@ formUp.addEventListener("submit", async (e) => {
       name: nameInp.value,
       mail: mailInp.value,
       password: pasInp.value,
-      fav: [],
-      songId: []
+      fav: []
     });
   }
 });

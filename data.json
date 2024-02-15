@@ -8,68 +8,7 @@
   ],
   "acount": [
     {
-      "name": "Cav",
-      "mail": "Cavidanvelizade9@gmail.com",
-      "password": "123",
-      "fav": [],
-      "songId": [],
-      "id": 1
-    },
-    {
-      "name": "Cavidan1907",
-      "mail": "Cavidanvelizade9@gmail.com",
-      "password": "123",
-      "fav": [],
-      "songId": [],
-      "id": 2
-    },
-    {
-      "name": "Cavidan12",
-      "mail": "Cavidanvelizade9@gmail.com",
-      "password": "123",
-      "fav": [],
-      "songId": [],
-      "id": 3
-    },
-    {
-      "name": "HS",
-      "mail": "cavidan9@gmail.com",
-      "password": "123",
-      "fav": [],
-      "songId": [],
-      "id": 4
-    },
-    {
-      "name": "Ali",
-      "mail": "Cavidanvelizade9@gmail.com",
-      "password": "12",
-      "fav": [
-        23,
-        24,
-        1,
-        2,
-        3,
-        4,
-        5,
-        7,
-        8,
-        10
-      ],
-      "id": 5
-    },
-    {
-      "name": "Sara Sedr",
-      "mail": "Sara@9gmail.com",
-      "password": "123",
-      "fav": [
-        4,
-        3
-      ],
-      "songId": [],
-      "id": 6
-    },
-    {
-      "name": "Cavidan19071",
+      "name": "Cavidan",
       "mail": "Cavidanvelizade9@gmail.com",
       "password": "1234",
       "fav": [
@@ -79,123 +18,31 @@
         24,
         2
       ],
-      "songId": [],
-      "id": 7
-    },
-    {
-      "name": "H",
-      "mail": "Cavidanvelizade9@gmail.com",
-      "password": "12",
-      "fav": [
-        2
-      ],
-      "songId": [],
-      "id": 8
-    },
-    {
-      "name": "Cavidan1907",
-      "mail": "Cavidanvelizade9@gmail.com",
-      "password": "12",
-      "fav": [],
-      "songId": [],
-      "id": 9
-    },
-    {
-      "name": "Cavidan190724r24",
-      "mail": "Cavidanvelizade9@gmail.com",
-      "password": "1223",
-      "fav": [],
-      "songId": [],
-      "id": 10
-    },
-    {
-      "name": "Cavidan1907",
-      "mail": "Cavidanvelizade9@gmail.com",
-      "password": "23r23",
-      "fav": [],
-      "songId": [],
-      "id": 11
-    },
-    {
-      "name": "Cavidan1907456",
-      "mail": "Cavidanvelizade9@gmail.com",
-      "password": "123",
-      "fav": [],
-      "songId": [],
-      "id": 12
-    },
-    {
-      "name": "Cavidan1907",
-      "mail": "Cavidanvelizade9@gmail.com",
-      "password": "123",
-      "fav": [],
-      "songId": [],
-      "id": 13
-    },
-    {
-      "name": "Cavidan1907",
-      "mail": "Cavidanvelizade9@gmail.com",
-      "password": "12",
-      "fav": [],
-      "songId": [],
-      "id": 14
-    },
-    {
-      "name": "Cavidan1907",
-      "mail": "Cavidanvelizade9@gmail.com",
-      "password": "123",
-      "fav": [],
-      "songId": [],
-      "id": 15
-    },
-    {
-      "name": "Cavidan1907",
-      "mail": "Cavidanvelizade2@gmail.com",
-      "password": "12",
-      "fav": [],
-      "songId": [],
-      "id": 16
-    },
-    {
-      "name": "Cavidan1907232222",
-      "mail": "cavidan459@gmail.com",
-      "password": "123",
-      "fav": [],
-      "songId": [],
-      "id": 17
-    },
-    {
-      "name": "Cavidan11",
-      "mail": "Cavidanvelizade6@gmail.com",
-      "password": "22",
-      "fav": [],
-      "songId": [],
-      "id": 18
-    },
-    {
-      "name": "Cavidan1",
-      "mail": "Cavidanvelizade99@gmail.com",
-      "password": "12",
-      "fav": [],
-      "songId": [],
-      "id": 19
-    },
-    {
-      "name": "Cavidan190712",
-      "mail": "Cavidanvelizade@gmail.com",
-      "password": "yuyiu",
-      "fav": [],
-      "songId": [],
-      "id": 20
-    }
-  ],
-  "comment": [
-    {
-      "coment": "bu mahninin cox  sevirem",
       "id": 1
     }
   ],
+
   "musicData": [
+    {
+      "backgroundImage": "./assets/images/Fenerbahce.jpg",
+      "posterUrl": "./assets/images/Fenerbahce.jpg",
+      "title": "100 Yıl Marşı",
+      "artist": "Kıraç",
+      "janre": "Hip-Hop",
+      "pro": true,
+      "id": 56,
+      "musicPath": "./assets/music/Fener.unknown"
+    },
+    {
+      "backgroundImage": "./assets/images/kr.jpg",
+      "posterUrl": "./assets/images/kr.jpg",
+      "title": "Endamın Yeter",
+      "artist": "Kıraç",
+      "janre": "Hip-Hop",
+      "pro": true,
+      "id": 57,
+      "musicPath": "./assets/music/Endam.mp3"
+    },
     {
       "backgroundImage": "./assets/images/qaraqan.jpg",
       "posterUrl": "./assets/images/qaraqan.jpg",
@@ -626,7 +473,7 @@
       "posterUrl": "./assets/images/piano.jpg",
       "title": "Valse",
       "artist": "Evgeny Grinko",
-      "janre": "Hip-Hop",
+      "janre": "Piano",
       "pro": false,
       "id": 45,
       "musicPath": "./assets/music/valse.mp3"
@@ -636,7 +483,7 @@
       "posterUrl": "./assets/images/piano.jpg",
       "title": "Jane Maryam",
       "artist": "Evgeny Grinko",
-      "janre": "Hip-Hop",
+      "janre": "Piano",
       "pro": false,
       "id": 46,
       "musicPath": "./assets/music/jane.mp3"
@@ -650,6 +497,26 @@
       "pro": false,
       "id": 47,
       "musicPath": "./assets/music/back.unknown"
+    },
+    {
+      "backgroundImage": "./assets/images/mırı.jpg",
+      "posterUrl": "./assets/images/mırı.jpg",
+      "title": "./assets/music/ata.unknown",
+      "artist": "Miri Yusif",
+      "janre": "Hip-Hop",
+      "pro": false,
+      "id": 51,
+      "musicPath": "./assets/music/ata.unknown"
+    },
+    {
+      "backgroundImage": "./assets/images/nough.jpg",
+      "posterUrl": "./assets/images/nough.jpg",
+      "title": "Softcore",
+      "artist": "The Neighbourhood",
+      "janre": "Hip-Hop",
+      "pro": false,
+      "id": 52,
+      "musicPath": "./assets/music/softcore.unknown"
     },
     {
       "backgroundImage": "./assets/images/model.jpg",
@@ -680,6 +547,50 @@
       "pro": false,
       "id": 50,
       "musicPath": "./assets/music/Müslüm Gürses - Tutamıyorum Zamanı(M4A_128K).m4a"
+    }
+    ,
+    {
+      "backgroundImage": "./assets/images/unnamed.jpg",
+      "posterUrl": "./assets/images/unnamed.jpg",
+      "title": "Anlamazdım",
+      "artist": "Ayla Dikmen",
+      "janre": "POP",
+      "pro": false,
+      "id": 53,
+      "musicPath": "./assets/music/ayladikmen.mp3"
+    }
+    ,
+    {
+      "backgroundImage": "./assets/images/640x360.jpeg",
+      "posterUrl": "./assets/images/640x360.jpeg",
+      "title": "Gülmek için yaratılmış",
+      "artist": "Ferdi Özbeğen",
+      "janre": "POP",
+      "pro": false,
+      "id": 53,
+      "musicPath": "./assets/music/gulmek.unknown"
+    }
+    ,
+    {
+      "backgroundImage": "./assets/images/g.avif",
+      "posterUrl": "./assets/images/g.avif",
+      "title": "Sev Evlisin",
+      "artist": "Gülden Karaböcek",
+      "janre": "POP",
+      "pro": false,
+      "id": 54,
+      "musicPath": "./assets/music/senevlisin.unknown"
+    }
+    ,
+    {
+      "backgroundImage": "./assets/images/g.avif",
+      "posterUrl": "./assets/images/g.avif",
+      "title": "Görmədim",
+      "artist": "Suleyman Nifteliyev",
+      "janre": "POP",
+      "pro": false,
+      "id": 55,
+      "musicPath": "./assets/music/gormedim.unknown"
     }
   ]
 }
