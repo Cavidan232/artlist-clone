@@ -2,6 +2,7 @@
 
 // Ses çalar öğesi oluştur
 const audioPlayer = document.createElement('audio');
+let imag23= document.querySelector(".imag23")
 
 // Global değişkenler
 let isPlaying = false;
@@ -127,6 +128,7 @@ function getUserSession() {
 function loadSong(index) {
   const song = songs[index];
   audioPlayer.src = song.musicPath;
+  imag23.src= song.posterUrl;
   document.querySelector('.song-title').textContent = song.title;
   document.querySelector('.artist').textContent = song.artist;
   // document.querySelector('.progress-bar').style.width = '0%';
@@ -267,10 +269,12 @@ function shuffleSongs() {
   renderPlaylist(songs);
 }
 
+
 // Müzik çalma işlevi
 function playMusic(musicPath, title, artist, posterUrl) {
   audioPlayer.src = musicPath;
   audioPlayer.play();
+  imag23.src= posterUrl;
   document.querySelector('.song-title').textContent = title;
   document.querySelector('.artist').textContent = artist;
 }
@@ -485,8 +489,8 @@ async function init() {
   await fetchSongs();
 
 
-  const randomIndex = Math.floor(Math.random() * songs.length);
-  loadSong(randomIndex);
+  // const randomIndex = Math.floor(Math.random() * songs.length);
+  // loadSong(randomIndex);
 }
 
 init();

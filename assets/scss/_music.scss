@@ -446,6 +446,7 @@ h1{
 }
 
 .music-controls button {
+    cursor: pointer;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -538,6 +539,23 @@ display: none;
     color: #ccc;
    
 }
+.imag23 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 20px;
+    cursor: pointer;
+    animation: rotateAnimation 10s linear infinite; /* 2 saniyə müddətində, linearna dövrələndirilən sonsuz animasiya */
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg); /* Başlanğıc rotasiya açısı */
+    }
+    to {
+        transform: rotate(360deg); /* 360 dərəcə (bir tam dövrə) rotasiya açısı */
+    }
+}
 
     .yaz {
         color: #ccc;
@@ -577,7 +595,7 @@ display: none;
     .music-container{
         flex-direction: column;
         width: 100%;
-        padding: 2px;
+
     }
     .time-control{
         gap: 20px;

@@ -12,16 +12,31 @@
       "mail": "Cavidanvelizade9@gmail.com",
       "password": "1234",
       "fav": [
-        1,
-        3,
         4,
         24,
-        2
+        60
       ],
       "id": 1
+    },
+    {
+      "name": "Sadiq",
+      "mail": "sadiq@gmail.com",
+      "password": "1212121212121212",
+      "fav": [],
+      "id": 2
     }
   ],
   "musicData": [
+    {
+      "backgroundImage": "./assets/images/maxresdefault (3).jpg",
+      "posterUrl": "./assets/images/maxresdefault (3).jpg",
+      "title": "Idea 10",
+      "artist": "Gibran Alcocer",
+      "janre": "Piano",
+      "pro": false,
+      "id": 67,
+      "musicPath": "./assets/music/y2mate.com - Gibran Alcocer  Idea 10 Slowed  Reverb.mp3"
+    },
     {
       "backgroundImage": "./assets/images/Fenerbahce.jpg",
       "posterUrl": "./assets/images/Fenerbahce.jpg",
@@ -93,16 +108,6 @@
       "musicPath": "./assets/music/Menekse.mp3"
     },
     {
-      "backgroundImage": "./assets/images/500x500.jpg",
-      "posterUrl": "./assets/images/500x500.jpg",
-      "title": "Rəvayət",
-      "artist": "Üzeyir",
-      "janre": "POP",
-      "pro": true,
-      "id": 6,
-      "musicPath": "./assets/music/Revayet.m4a"
-    },
-    {
       "backgroundImage": "./assets/images/Rapstar.jpg",
       "posterUrl": "./assets/images/Rapstar.jpg",
       "title": "Rapstar",
@@ -161,16 +166,6 @@
       "pro": false,
       "id": 12,
       "musicPath": "./assets/music/Rafat Hasanlı - Kısa Mesafe.m4a"
-    },
-    {
-      "backgroundImage": "./assets/images/500x500.jpg",
-      "posterUrl": "./assets/images/500x500.jpg",
-      "title": "Yaxşı olar",
-      "artist": "Üzeyir",
-      "pro": true,
-      "janre": "POP",
-      "id": 13,
-      "musicPath": "./assets/music/yaxsiolar.m4a"
     },
     {
       "backgroundImage": "./assets/images/xpert.jpg",
@@ -344,22 +339,14 @@
       "musicPath": "./assets/music/Eminem - Lose Yourself.mp3"
     },
     {
-      "backgroundImage": "./assets/images/500x500.jpg",
-      "posterUrl": "./assets/images/500x500.jpg",
-      "title": "Simpatiçni oğlanam",
-      "artist": "Üzeyir",
+      "backgroundImage": "./assets/images/1200x1200bf-60.jpg",
+      "posterUrl": "./assets/images/1200x1200bf-60.jpg",
+      "title": "I Break Again",
+      "artist": "DiHaj",
       "janre": "POP",
-      "id": 32,
-      "musicPath": "./assets/music/Üzeyir Mehdizade - Simpaticni oglanam (Original Mix)(M4A_128K).m4a"
-    },
-    {
-      "backgroundImage": "./assets/images/500x500.jpg",
-      "posterUrl": "./assets/images/500x500.jpg",
-      "title": "Böyüdük",
-      "artist": "Üzeyir",
-      "janre": "POP",
-      "id": 33,
-      "musicPath": "./assets/music/Uzeyir Mehdizade - Boyuduk 2024 (Yeni Klip) 4K(M4A_128K).m4a"
+      "pro": false,
+      "id": 64,
+      "musicPath": "./assets/music/y2mate.com - DiHaj ft Isfar Sarabsky  I Break Again.mp3"
     },
     {
       "backgroundImage": "./assets/images/images (1).jpeg",
@@ -586,6 +573,96 @@
       "pro": false,
       "id": 55,
       "musicPath": "./assets/music/gormedim.unknown"
+    },
+    {
+      "backgroundImage": "./assets/images/400x400bb.jpg",
+      "posterUrl": "./assets/images/400x400bb.jpg",
+      "title": "Olmaz",
+      "artist": "Sarkhan",
+      "janre": "Hip-Hop",
+      "pro": false,
+      "id": 58,
+      "musicPath": "./assets/music/y2mate.com - Sarkhan  Olmaz FMrecords.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/maxresdefault.jpg",
+      "posterUrl": "./assets/images/maxresdefault.jpg",
+      "title": "Eye Opener",
+      "artist": "Cyril Sorongon",
+      "janre": "POP",
+      "pro": false,
+      "id": 59,
+      "musicPath": "./assets/music/y2mate.com - Cyril Sorongon  Cathy Go  Eye Opener (1).mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/artworks-000076747334-h70022-t500x500.jpg",
+      "posterUrl": "./assets/images/artworks-000076747334-h70022-t500x500.jpg",
+      "title": "Mini World",
+      "artist": "Indila",
+      "janre": "POP",
+      "pro": false,
+      "id": 60,
+      "musicPath": "./assets/music/y2mate.com - Indila  Mini world.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/ab6761610000e5eb7e46697c357839ff34ddeb49.jpeg",
+      "posterUrl": "./assets/images/ab6761610000e5eb7e46697c357839ff34ddeb49.jpeg",
+      "title": "İntizar",
+      "artist": "Elmira Rəhimova",
+      "janre": "POP",
+      "pro": false,
+      "id": 61,
+      "musicPath": "./assets/music/y2mate.com - Elmira Rəhimova  İntizar Rəsmi Audio.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/maxresdefault (1).jpg",
+      "posterUrl": "./assets/images/maxresdefault (1).jpg",
+      "title": "Dəşti-Təsnifi",
+      "artist": "Joseph Abbas",
+      "janre": "POP",
+      "pro": false,
+      "id": 62,
+      "musicPath": "./assets/music/y2mate.com - Joseph Abbas  Dəşti Təsnifi Live session.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/Safura-Drip_Drop.jpg",
+      "posterUrl": "./assets/images/Safura-Drip_Drop.jpg",
+      "title": "Drip-Drop",
+      "artist": "Safura",
+      "janre": "POP",
+      "pro": false,
+      "id": 63,
+      "musicPath": "./assets/music/y2mate.com - Safura  Eurovision 2010 Azerbaijan  Drip Drop  Official Video HD.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/1200x1200bf-60.jpg",
+      "posterUrl": "./assets/images/1200x1200bf-60.jpg",
+      "title": "I Break Again",
+      "artist": "DiHaj",
+      "janre": "POP",
+      "pro": false,
+      "id": 64,
+      "musicPath": "./assets/music/y2mate.com - DiHaj ft Isfar Sarabsky  I Break Again.mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/maxresdefault (2).jpg",
+      "posterUrl": "./assets/images/maxresdefault (2).jpg",
+      "title": "yorma",
+      "artist": "Jahan",
+      "janre": "Hip-Hop",
+      "pro": false,
+      "id": 65,
+      "musicPath": "./assets/music/y2mate.com - yorma Prodby Js Beats (1).mp3"
+    },
+    {
+      "backgroundImage": "./assets/images/artworks-YL5WkENWwjrT-0-t500x500.jpg",
+      "posterUrl": "./assets/images/artworks-YL5WkENWwjrT-0-t500x500.jpg",
+      "title": "aşkım",
+      "artist": "İmpala",
+      "janre": "Hip-Hop",
+      "pro": false,
+      "id": 66,
+      "musicPath": "./assets/music/y2mate.com - aşkım.mp3"
     }
   ]
 }
