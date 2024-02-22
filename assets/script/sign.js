@@ -33,7 +33,7 @@ x.addEventListener("click", () => {
 })
 
 
-let url = "https://nostalgic-pumped-regnosaurus.glitch.me/acount";
+
 let nameInp = document.querySelector("#upname");
 let mailInp = document.querySelector("#upmail");
 let pasInp = document.querySelector("#uppasword");
@@ -46,8 +46,9 @@ let x2 = document.querySelector("#wrong2 i");
 
 formUp.addEventListener("submit", async (e) => {
   e.preventDefault();
-  let res = await axios.get(url); // axios.get asenkron olarak çalışacak şekilde düzeltildi
+  let res = await axios.get(`https://nostalgic-pumped-regnosaurus.glitch.me/acount`); // axios.get asenkron olarak çalışacak şekilde düzeltildi
   let data = res.data;
+  console.log(data);
   if (nameInp.value.trim() === "" || mailInp.value.trim() === "" || pasInp.value.trim() === "") {
     if (alertDiv.style.opacity === "0" || alertDiv.style.opacity === "") { // alertDiv kontrolü eklendi
       alertDiv.style.opacity = "1";
@@ -57,12 +58,15 @@ formUp.addEventListener("submit", async (e) => {
   } else if (data.some(item => item.mail === mailInp.value) || data.some(item => item.name === nameInp.value)) {
    alert("Xahiş olunur başqa ad və ya email daxil edəsiz!")
   } else {
-    await axios.post(url, {
+    await axios.post(`https://nostalgic-pumped-regnosaurus.glitch.me/acount`, {
       name: nameInp.value,
       mail: mailInp.value,
       password: pasInp.value,
       fav: []
     });
+    setTimeout(() => {
+      window.location.reload()
+    }, 3000);
   }
 });
 
