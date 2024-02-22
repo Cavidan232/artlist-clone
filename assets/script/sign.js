@@ -33,7 +33,7 @@ x.addEventListener("click", () => {
 })
 
 
-let url = "http://localhost:3000/acount";
+let url = "https://nostalgic-pumped-regnosaurus.glitch.me/acount";
 let nameInp = document.querySelector("#upname");
 let mailInp = document.querySelector("#upmail");
 let pasInp = document.querySelector("#uppasword");
@@ -83,7 +83,7 @@ form2.addEventListener('submit', (e) => {
   let name = document.querySelector("#user").value;
   let password = document.querySelector("#pas").value;
 
-  fetch('http://localhost:3000/acount')
+  fetch('https://nostalgic-pumped-regnosaurus.glitch.me/acount')
     .then(res => res.json())
     .then(data => {
       let currentUserInfo = data.find((user) => user.name === name);

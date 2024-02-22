@@ -42,7 +42,7 @@ formAdd.addEventListener("submit",(e)=>{
     console.log("nknk");
 e.preventDefault();
 
-    axios.post(`http://localhost:3000/musicData`,{
+    axios.post(`https://nostalgic-pumped-regnosaurus.glitch.me/musicData`,{
         backgroundImage:   previewImage.src ,
         posterUrl:previewImage.src ,
         title: nameInp.value,

@@ -18,7 +18,7 @@ let backwardTimeout;
 
 async function fetchSongs() {
   try {
-    const response = await axios.get('http://localhost:3000/musicData');
+    const response = await axios.get('https://nostalgic-pumped-regnosaurus.glitch.me/musicData');
     songs = response.data;
     renderPlaylist(songs);
   } catch (error) {
@@ -364,7 +364,7 @@ document.addEventListener("click", function(event) {
 
 
 async function setMusicByGenre(genre, targetElement) {
-  let res = await axios.get('http://localhost:3000/musicData');
+  let res = await axios.get('https://nostalgic-pumped-regnosaurus.glitch.me/musicData');
   let data = await res.data;
   targetElement.innerHTML = "";
   data.forEach((element) => {
@@ -387,7 +387,7 @@ async function setMusicByGenre(genre, targetElement) {
 
 // Piyano türüne göre filtrele
 async function filterByPiano() {
-  let res = await axios.get('http://localhost:3000/musicData');
+  let res = await axios.get('https://nostalgic-pumped-regnosaurus.glitch.me/musicData');
   let data = await res.data;
   let filteredData = data.filter((element) => {
     return element.janre === "Piano";
@@ -398,7 +398,7 @@ async function filterByPiano() {
 
 // Pop türüne göre filtrele
 async function filterByPop() {
-  let res = await axios.get('http://localhost:3000/musicData');
+  let res = await axios.get('https://nostalgic-pumped-regnosaurus.glitch.me/musicData');
   let data = await res.data;
   let filteredData = data.filter((element) => {
     return element.janre === "POP";
@@ -409,7 +409,7 @@ async function filterByPop() {
 
 // Hip-Hop türüne göre filtrele
 async function filterByHipHop() {
-  let res = await axios.get('http://localhost:3000/musicData');
+  let res = await axios.get('https://nostalgic-pumped-regnosaurus.glitch.me/musicData');
   let data = await res.data;
   let filteredData = data.filter((element) => {
     return element.janre === "Hip-Hop";
@@ -427,7 +427,7 @@ if (user) {
 console.log(id3);
 // Hip-Hop türüne göre filtrele
 async function filterByuser() {
-  let res = await axios.get('http://localhost:3000/musicData');
+  let res = await axios.get('https://nostalgic-pumped-regnosaurus.glitch.me/musicData');
   let data = await res.data;
   
   let filteredData = data.filter((element) => {
@@ -439,7 +439,7 @@ async function filterByuser() {
 
 // Tüm şarkıları filtrele
 async function filterAllSongs() {
-  let res = await axios.get('http://localhost:3000/musicData');
+  let res = await axios.get('https://nostalgic-pumped-regnosaurus.glitch.me/musicData');
   let data = await res.data;
   renderPlaylist(data);
 }
@@ -466,7 +466,7 @@ if (!user) {
 }
 // Arama işlevi
 document.getElementById("search").addEventListener("input", async (el) => {
-  let res = await axios.get('http://localhost:3000/musicData');
+  let res = await axios.get('https://nostalgic-pumped-regnosaurus.glitch.me/musicData');
   let data = await res.data;
   let filteredData = data.filter((e) => {
     return e.title.toLowerCase().includes(el.target.value.toLowerCase());

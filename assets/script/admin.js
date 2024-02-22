@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", async function() {
   
     async function fetchAndRenderSongs() {
 
-        const response = await axios.get('http://localhost:3000/musicData');
+        const response = await axios.get('https://nostalgic-pumped-regnosaurus.glitch.me/musicData');
         allSongs = response.data;
         renderSongs(allSongs); // Tüm şarkıları tabloya ekle
      
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     // Arama işlevi
 document.getElementById("search2").addEventListener("input", async (el) => {
   const searchText = el.target.value.trim().toLowerCase();
-  const response = await axios.get('http://localhost:3000/musicData');
+  const response = await axios.get('https://nostalgic-pumped-regnosaurus.glitch.me/musicData');
   const data = await response.data;
   const filteredData = data.filter((e) => {
       return e.title.toLowerCase().includes(searchText);
@@ -88,9 +88,9 @@ document.getElementById("search2").addEventListener("input", async (el) => {
     // Sayfa yüklendiğinde tüm şarkıları getir ve tabloya ekle
     await fetchAndRenderSongs();
   });
-  let url5='http://localhost:3000/musicData'
+  let url5='https://nostalgic-pumped-regnosaurus.glitch.me/musicData'
   function deleteCard(id) {
-    axios.delete(`http://localhost:3000/musicData/${id}`)
+    axios.delete(`https://nostalgic-pumped-regnosaurus.glitch.me/musicData/${id}`)
     window.location.reload();
   }
      
@@ -162,7 +162,7 @@ for (const link of menuLinks) {
 
 let user = document.querySelector(".user");
 let tbody5 = document.querySelector(".tbody5");
-let url21 = "http://localhost:3000/acount";
+let url21 = "https://nostalgic-pumped-regnosaurus.glitch.me/acount";
 
 async function userAll(){
   let res = await axios.get(url21);

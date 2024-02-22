@@ -11,7 +11,7 @@ document.getElementById("loginAdd").addEventListener("submit", function(event) {
     let name = document.querySelector("#username").value;
     let password = document.querySelector("#password").value;
 
-    fetch('http://localhost:3000/admin')
+    fetch('https://nostalgic-pumped-regnosaurus.glitch.me/admin')
         .then(res => res.json())
         .then(data => {
             let currentUserInfo = data.find((user) => user.name === name);
