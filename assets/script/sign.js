@@ -64,8 +64,9 @@ formUp.addEventListener("submit", async (e) => {
       password: pasInp.value,
       fav: []
     });
+    alert("Qeydiyyatdan ugurla kecdiniz!")
     setTimeout(() => {
-      window.location.reload()
+      window.location.reload();
     }, 3000);
   }
 });

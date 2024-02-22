@@ -180,4 +180,11 @@ async function userAll(){
     `
   })
 };
-userAll()
+userAll();
+function deleteUser(id) {
+  axios.delete(`https://nostalgic-pumped-regnosaurus.glitch.me/acount/${id}`)
+setTimeout(() => {
+  window.location.reload()
+}, 1500);
+}
+  
