@@ -91,7 +91,9 @@ document.getElementById("search2").addEventListener("input", async (el) => {
   let url5='https://nostalgic-pumped-regnosaurus.glitch.me/musicData'
   function deleteCard(id) {
     axios.delete(`https://nostalgic-pumped-regnosaurus.glitch.me/musicData/${id}`)
-    window.location.reload();
+    setTimeout(() => {
+      window.location.reload()
+    }, 1500)
   }
      
 // const html = document.documentElement;
