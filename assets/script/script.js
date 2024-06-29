@@ -150,11 +150,15 @@ async function updateLoginText() {
 }
 
 updateLoginText();
-
+let lgs= document.querySelector(".lgs")
 async function logout() {
     let data = await fetchData();
 
     if (logoutBtn && logoutBtn.style.display === "block") {
+        lgs.addEventListener("click",()=>{
+            localStorage.removeItem('currentUser');
+            window.location="./index.html";
+        })
         logoutBtn.addEventListener('click', () => {
             window.location.reload();
             logoutBtn.style.display = "none";
