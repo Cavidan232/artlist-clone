@@ -104,7 +104,7 @@ let logs = document.querySelectorAll(".log");
 let music1 = document.querySelector(".music1");
 let video2 = document.querySelector("#video-container2");
 let list = document.querySelector(".list");
-let urll = "https://nostalgic-pumped-regnosaurus.glitch.me/acount";
+let urll = "https://checkered-glitter-numeric.glitch.me/acount";
 let logoutBtn = document.querySelector('.logout');
 
 async function fetchData() {

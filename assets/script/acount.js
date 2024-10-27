@@ -18,7 +18,7 @@ const saveProfileBtn = document.getElementById("saveProfileBtn");
 
 // Fetch user data
 async function fetchUserData() {
-    const response = await axios.get("https://nostalgic-pumped-regnosaurus.glitch.me/acount");
+    const response = await axios.get("https://checkered-glitter-numeric.glitch.me/acount");
     const userData = response.data;
     return userData;
 }
@@ -45,7 +45,7 @@ saveProfileBtn.addEventListener("click", async (e) => {
     const email = emailInput.value;
 
 
- axios.patch(`https://nostalgic-pumped-regnosaurus.glitch.me/acount/${id2}`, {
+ axios.patch(`https://checkered-glitter-numeric.glitch.me/acount/${id2}`, {
             name: fullName,
             mail: email
         });
@@ -99,7 +99,7 @@ let genreSelect = document.querySelector("#genre");
 
 let tbody = document.querySelector(".tbody");
 async function getUsersongss() {
-    const res = await axios.get('https://nostalgic-pumped-regnosaurus.glitch.me/musicData');
+    const res = await axios.get('https://checkered-glitter-numeric.glitch.me/musicData');
     const data = await res.data;
     console.log(data);
     data.forEach(element => {
@@ -124,7 +124,7 @@ async function getUsersongss() {
 getUsersongss();
 
 function uptadeSong(id){
-    axios.get(`https://nostalgic-pumped-regnosaurus.glitch.me/musicData/${id}`).then((res)=>{
+    axios.get(`https://checkered-glitter-numeric.glitch.me/musicData/${id}`).then((res)=>{
 uptadeId = res.data.id,
 nameInp.value = res.data.title,
  previewImage.src = res.data.posterUrl,
@@ -142,7 +142,7 @@ formAdd.addEventListener("submit",(e)=>{
     console.log("nknk");
 e.preventDefault();
 if (!uptadeId) {
-    axios.post(`https://nostalgic-pumped-regnosaurus.glitch.me/musicData`,{
+    axios.post(`https://checkered-glitter-numeric.glitch.me/musicData`,{
         backgroundImage:   previewImage.src ,
         posterUrl:previewImage.src ,
         title: nameInp.value,
@@ -154,7 +154,7 @@ if (!uptadeId) {
 }
 
 else{
-    axios.patch(`https://nostalgic-pumped-regnosaurus.glitch.me/musicData/${uptadeId}`,{
+    axios.patch(`https://checkered-glitter-numeric.glitch.me/musicData/${uptadeId}`,{
         posterUrl:previewImage.src ,
         backgroundImage:   previewImage.src ,
         posterUrl:previewImage.src ,
@@ -167,7 +167,7 @@ else{
 })
 
 function deleteSong(id) {
-    axios.delete(`https://nostalgic-pumped-regnosaurus.glitch.me/musicData/${id}`)
+    axios.delete(`https://checkered-glitter-numeric.glitch.me/musicData/${id}`)
     window.location.reload();
   }
      

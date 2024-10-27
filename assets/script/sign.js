@@ -46,7 +46,7 @@ let x2 = document.querySelector("#wrong2 i");
 
 formUp.addEventListener("submit", async (e) => {
   e.preventDefault();
-  let res = await axios.get(`https://nostalgic-pumped-regnosaurus.glitch.me/acount`); // axios.get asenkron olarak çalışacak şekilde düzeltildi
+  let res = await axios.get(`https://checkered-glitter-numeric.glitch.me/acount`); // axios.get asenkron olarak çalışacak şekilde düzeltildi
   let data = res.data;
   console.log(data);
   if (nameInp.value.trim() === "" || mailInp.value.trim() === "" || pasInp.value.trim() === "") {
@@ -58,7 +58,7 @@ formUp.addEventListener("submit", async (e) => {
   } else if (data.some(item => item.mail === mailInp.value) || data.some(item => item.name === nameInp.value)) {
    alert("Xahiş olunur başqa ad və ya email daxil edəsiz!")
   } else {
-    await axios.post(`https://nostalgic-pumped-regnosaurus.glitch.me/acount`, {
+    await axios.post(`https://checkered-glitter-numeric.glitch.me/acount`, {
       name: nameInp.value,
       mail: mailInp.value,
       password: pasInp.value,
@@ -88,7 +88,7 @@ form2.addEventListener('submit', (e) => {
   let name = document.querySelector("#user").value;
   let password = document.querySelector("#pas").value;
 
-  fetch('https://nostalgic-pumped-regnosaurus.glitch.me/acount')
+  fetch('https://checkered-glitter-numeric.glitch.me/acount')
     .then(res => res.json())
     .then(data => {
       let currentUserInfo = data.find((user) => user.name === name);
